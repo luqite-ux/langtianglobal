@@ -19,6 +19,9 @@ import { company } from '@/lib/site'
 
 type Params = Promise<{ slug: string }>
 
+export const revalidate = 60
+export const dynamicParams = true
+
 export async function generateStaticParams() {
   const products = await getProducts()
   return products.map((p) => ({ slug: p.slug }))

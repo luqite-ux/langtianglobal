@@ -203,7 +203,7 @@ export function InquiryForm({
           )}
         </Field>
 
-        <CaptchaSlot />
+        <CaptchaSlot refreshKey={state.captchaRefreshKey} />
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button type="submit" size="lg" disabled={isPending} className="h-12 px-8 sm:w-auto">

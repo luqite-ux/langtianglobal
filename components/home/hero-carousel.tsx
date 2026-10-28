@@ -91,7 +91,6 @@ export function HeroCarousel() {
                   fill
                   priority={i === 0}
                   sizes="100vw"
-                  quality={80}
                   className="[object-position:var(--pos-sm)] object-cover lg:[object-position:var(--pos-lg)]"
                   style={
                     {

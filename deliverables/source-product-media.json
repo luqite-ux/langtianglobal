@@ -1,0 +1,168 @@
+[
+  {
+    "row": 4,
+    "slug": "pp-glass-fiber-board",
+    "cell": "G4",
+    "sha256": "99a36ae9dd80390155b20760c3be56a06d93bf73e2565fa26d0e6c1dc426e7ee",
+    "public_path": "/images/products/source/pp-glass-fiber-board-1.jpeg"
+  },
+  {
+    "row": 4,
+    "slug": "pp-glass-fiber-board",
+    "cell": "H4",
+    "sha256": "9ae95cf5fab2592437ef59bdcf3db1e93634c48984fbd5d874b6864deef94d14",
+    "public_path": "/images/products/source/pp-glass-fiber-board-2.jpeg"
+  },
+  {
+    "row": 4,
+    "slug": "pp-glass-fiber-board",
+    "cell": "I4",
+    "sha256": "c12e5acdbe22b4624283573b5e7060102c8a56824731525b2d2566ffca8aa3ce",
+    "public_path": "/images/products/source/pp-glass-fiber-board-3.jpeg"
+  },
+  {
+    "row": 4,
+    "slug": "pp-glass-fiber-board",
+    "cell": "J4",
+    "sha256": "3bd4fb78221328eddf5c41053c811bb80d32411a2fdaebd10057db5c8c785d72",
+    "public_path": "/images/products/source/pp-glass-fiber-board-4.jpeg"
+  },
+  {
+    "row": 4,
+    "slug": "pp-glass-fiber-board",
+    "cell": "K4",
+    "sha256": "afcd9e8e35fdd6bb771821485ff7344dd558b296cac81f0a4c0948894174df71",
+    "public_path": "/images/products/source/pp-glass-fiber-board-5.jpeg"
+  },
+  {
+    "row": 6,
+    "slug": "lwrtud-felt-sheet",
+    "cell": "G6",
+    "sha256": "ce4ab44ba234c3ab626e0f0258cfea7e2d3d10db2c4c9b067aa094051ee1fdf2",
+    "public_path": "/images/products/source/lwrtud-felt-sheet-1.jpeg"
+  },
+  {
+    "row": 6,
+    "slug": "lwrtud-felt-sheet",
+    "cell": "H6",
+    "sha256": "8ac43722050dcc937857b0126606b57f764665a22507ac2d30610074662e19f6",
+    "public_path": "/images/products/source/lwrtud-felt-sheet-2.jpeg"
+  },
+  {
+    "row": 7,
+    "slug": "pet-pp-composite-sheet",
+    "cell": "G7",
+    "sha256": "a34157f72a6d3fc17c23957cd50e0313f7a4294c552423b8f0d0c86982b56093",
+    "public_path": "/images/products/source/pet-pp-composite-sheet-1.jpeg"
+  },
+  {
+    "row": 7,
+    "slug": "pet-pp-composite-sheet",
+    "cell": "H7",
+    "sha256": "c40e4cd1b326bb9f29e5a271a26cc59bced310b7d2e6075135e08b9934becd8c",
+    "public_path": "/images/products/source/pet-pp-composite-sheet-2.jpeg"
+  },
+  {
+    "row": 7,
+    "slug": "pet-pp-composite-sheet",
+    "cell": "I7",
+    "sha256": "631b63521c630f6aa24b05022383d8258b026c835cd204c859b5537ca1019eb6",
+    "public_path": "/images/products/source/pet-pp-composite-sheet-3.jpeg"
+  },
+  {
+    "row": 7,
+    "slug": "pet-pp-composite-sheet",
+    "cell": "J7",
+    "sha256": "94619a262924991d4ff78480d1c3457a56232fbb2beeadb486a1937ed495eca3",
+    "public_path": "/images/products/source/pet-pp-composite-sheet-4.jpeg"
+  },
+  {
+    "row": 8,
+    "slug": "pet-non-woven-pile-carpet",
+    "cell": "G8",
+    "sha256": "56c95cd665242ad7643d23c2a318ccda665b4035c0b2790e8366009d2db7c0a8",
+    "public_path": "/images/products/source/pet-non-woven-pile-carpet-1.jpeg"
+  },
+  {
+    "row": 8,
+    "slug": "pet-non-woven-pile-carpet",
+    "cell": "H8",
+    "sha256": "adef43ec5ba69e97c346c5ed00fea4c3373ce5790ab575922519df29d1d5f87b",
+    "public_path": "/images/products/source/pet-non-woven-pile-carpet-2.jpeg"
+  },
+  {
+    "row": 8,
+    "cell": "I8",
+    "excluded": "factory photo"
+  },
+  {
+    "row": 9,
+    "slug": "phc-fiberglass-composite-panel",
+    "cell": "G9",
+    "sha256": "0d90c1167422591dedabe5ae4ea9fbd657c32656daf91dc6dd2a7f9abb71f284",
+    "public_path": "/images/products/source/phc-fiberglass-composite-panel-1.jpeg"
+  },
+  {
+    "row": 9,
+    "slug": "phc-fiberglass-composite-panel",
+    "cell": "H9",
+    "sha256": "a151fda65ec75df1f9a38520d533d44a26b63eaae384906cbf6ba1345c51f6da",
+    "public_path": "/images/products/source/phc-fiberglass-composite-panel-2.jpeg"
+  },
+  {
+    "row": 9,
+    "slug": "phc-fiberglass-composite-panel",
+    "cell": "I9",
+    "sha256": "c37cee0fb2e67051e240dfb5715e4d32dd44cea0b7e6c8d0f3dec6d55a5f5995",
+    "public_path": "/images/products/source/phc-fiberglass-composite-panel-3.jpeg"
+  },
+  {
+    "row": 9,
+    "slug": "phc-fiberglass-composite-panel",
+    "cell": "J9",
+    "sha256": "5098964e90a9228783f82c62878512669a2a5ee253dc5950cd9a70812f2df47d",
+    "public_path": "/images/products/source/phc-fiberglass-composite-panel-4.jpeg"
+  },
+  {
+    "row": 9,
+    "slug": "phc-fiberglass-composite-panel",
+    "cell": "K9",
+    "sha256": "42aa5ebbeb03a99946097dbc6fad022343ec2d860c6f13f56900979d77984238",
+    "public_path": "/images/products/source/phc-fiberglass-composite-panel-5.jpeg"
+  },
+  {
+    "row": 10,
+    "slug": "pp-bamboo-hemp-fiberboard",
+    "cell": "G10",
+    "sha256": "9970976b4920691c4163659a1892bb63175057e7304b8f430c7f66741ca70be0",
+    "public_path": "/images/products/source/pp-bamboo-hemp-fiberboard-1.jpeg"
+  },
+  {
+    "row": 10,
+    "slug": "pp-bamboo-hemp-fiberboard",
+    "cell": "H10",
+    "sha256": "8b1d9c591bd5bf8373159e880f89cc16b8aaedf10d3dcac905e033cab23788ec",
+    "public_path": "/images/products/source/pp-bamboo-hemp-fiberboard-2.jpeg"
+  },
+  {
+    "row": 10,
+    "slug": "pp-bamboo-hemp-fiberboard",
+    "cell": "I10",
+    "sha256": "f6df63b0c11a4fde12f1ec164760ef3ce843a9ece3ad77b7f7ce846f4efc8199",
+    "public_path": "/images/products/source/pp-bamboo-hemp-fiberboard-3.jpeg"
+  },
+  {
+    "row": 11,
+    "slug": "pet-foam-board",
+    "cell": "G11",
+    "sha256": "c0d33426499f54b84e30ff02d280f6f07dd1713f8496e1da7db73d273327fe88",
+    "public_path": "/images/products/source/pet-foam-board-1.jpeg"
+  },
+  {
+    "row": 11,
+    "slug": "pet-foam-board",
+    "cell": "H11",
+    "sha256": "2ead44823f243e4f2c1883ce9a31108880e3dcd825cd45f1219e835d04b684ed",
+    "public_path": "/images/products/source/pet-foam-board-2.jpeg"
+  }
+]

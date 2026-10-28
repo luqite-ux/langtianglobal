@@ -15,6 +15,8 @@ import {
 } from '@/components/ui/empty'
 import { getPublishedNews } from '@/lib/data'
 
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: 'News',
   description: 'Company news from Jiangsu Langtian Composite Materials.',

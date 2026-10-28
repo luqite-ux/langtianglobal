@@ -1,10 +1,6 @@
 import type { Product, SpecField } from './types'
 
-/**
- * Sample product rows. Spec values are intentionally `null` until each figure
- * is copied from the matching source row; never reuse one product's values for
- * another. MOQ is stored per product for the same reason.
- */
+/** Product specifications and MOQ follow the matching row (4–11) in the supplied workbook. */
 const field = (
   key: string,
   label: string,
@@ -12,7 +8,14 @@ const field = (
   note?: string,
 ): SpecField => ({ key, label, unit, value: null, note })
 
-const noMoq = { value: null, unit: null } as const
+const spec = (key: string, label: string, value: string, unit?: string): SpecField => ({ key, label, value, unit })
+const sourceMoq = { value: 500, unit: 'pcs' } as const
+const sourceImages = (slug: string, count: number, name: string) =>
+  Array.from({ length: count }, (_, index) => ({
+    src: `/images/products/source/${slug}-${index + 1}.jpeg`,
+    alt: `${name}, customer-supplied product photo ${index + 1}`,
+    kind: index === 0 ? 'full' as const : 'detail' as const,
+  }))
 
 export const products: Product[] = [
   {
@@ -37,14 +40,14 @@ export const products: Product[] = [
       'spare-tire-covers',
     ],
     specs: [
-      field('thickness', 'Thickness', 'mm'),
-      field('areal-weight', 'Areal weight', 'g/m²'),
+      spec('thickness', 'Thickness', '1.5–6', 'mm'),
+      spec('areal-weight', 'Areal weight', '500–3000', 'g/m²'),
       field('glass-content', 'Glass fiber content', '%'),
-      field('sheet-size', 'Sheet size', 'mm'),
-      field('surface', 'Surface / color'),
+      spec('width', 'Width', 'up to 2000', 'mm'),
+      spec('surface', 'Color', 'Black or white'),
     ],
-    moq: noMoq,
-    images: [],
+    moq: sourceMoq,
+    images: sourceImages('pp-glass-fiber-board', 5, 'PP glass fiber board'),
     relatedSlugs: ['lwrt-board', 'pet-pp-composite-sheet'],
     status: 'published',
   },
@@ -71,11 +74,11 @@ export const products: Product[] = [
       'spare-tire-covers',
     ],
     specs: [
-      field('thickness', 'Thickness', 'mm'),
-      field('areal-weight', 'Areal weight', 'g/m²'),
+      spec('thickness', 'Thickness', '1.5–6', 'mm'),
+      spec('areal-weight', 'Areal weight', '500–3000', 'g/m²'),
       field('glass-content', 'Glass fiber content', '%'),
-      field('sheet-size', 'Sheet size', 'mm'),
-      field('facing', 'Facing / surface layer'),
+      spec('width', 'Width', 'up to 2000', 'mm'),
+      spec('color', 'Color', 'Black or white'),
       field(
         'thermal-expansion',
         'Thermal expansion ratio',
@@ -83,14 +86,8 @@ export const products: Product[] = [
         'Confirm against the current technical data sheet.',
       ),
     ],
-    moq: noMoq,
-    images: [
-      {
-        src: '/images/products/glass-fibre-surface.jpg',
-        alt: 'Surface detail of a dark composite sheet with visible white fibers and a cut curved edge',
-        kind: 'detail',
-      },
-    ],
+    moq: sourceMoq,
+    images: [],
     relatedSlugs: ['lwrtud-felt-sheet', 'pp-glass-fiber-board'],
     notes: [
       'No thermal expansion multiplier is published on this page. The figure depends on grade and is stated on the technical data sheet.',
@@ -120,19 +117,14 @@ export const products: Product[] = [
     ],
     specs: [
       field('form', 'Form (felt or sheet)'),
-      field('areal-weight', 'Areal weight', 'g/m²'),
-      field('thickness', 'Thickness', 'mm'),
-      field('width', 'Width', 'mm'),
+      spec('areal-weight', 'Areal weight', '500–3000', 'g/m²'),
+      spec('thickness', 'Thickness', '1.5–6', 'mm'),
+      spec('width', 'Width', 'up to 2000', 'mm'),
+      spec('color', 'Color', 'Black or white'),
       field('orientation', 'Fiber orientation'),
     ],
-    moq: noMoq,
-    images: [
-      {
-        src: '/images/products/felt-black.jpg',
-        alt: 'Folded black felt material',
-        kind: 'full',
-      },
-    ],
+    moq: sourceMoq,
+    images: sourceImages('lwrtud-felt-sheet', 2, 'LWRTUD felt or sheet'),
     relatedSlugs: ['lwrt-board', 'pet-non-woven-pile-carpet'],
     status: 'published',
   },
@@ -153,13 +145,14 @@ export const products: Product[] = [
     ],
     applicationSlugs: ['headliners', 'other-interior-structures'],
     specs: [
-      field('thickness', 'Thickness', 'mm'),
-      field('areal-weight', 'Areal weight', 'g/m²'),
+      spec('thickness', 'Thickness', '6–10', 'mm'),
+      spec('areal-weight', 'Areal weight', '500–3000', 'g/m²'),
       field('ratio', 'PET / PP composition'),
-      field('sheet-size', 'Sheet size', 'mm'),
+      spec('width', 'Width', 'up to 2000', 'mm'),
+      spec('color', 'Color', 'Black or white'),
     ],
-    moq: noMoq,
-    images: [],
+    moq: sourceMoq,
+    images: sourceImages('pet-pp-composite-sheet', 4, 'PET/PP composite sheet'),
     relatedSlugs: ['pp-glass-fiber-board', 'pet-foam-board'],
     status: 'published',
   },
@@ -182,19 +175,13 @@ export const products: Product[] = [
     applicationSlugs: ['luggage-compartment-liners', 'other-interior-structures'],
     specs: [
       field('type', 'Type (non-woven or pile)'),
-      field('areal-weight', 'Areal weight', 'g/m²'),
-      field('thickness', 'Thickness', 'mm'),
-      field('width', 'Width', 'mm'),
-      field('color', 'Color'),
+      spec('areal-weight', 'Areal weight', '100–500', 'g/m²'),
+      spec('thickness', 'Thickness', '1–3', 'mm'),
+      spec('width', 'Width', 'up to 2000', 'mm'),
+      spec('color', 'Color', 'Black or white'),
     ],
-    moq: noMoq,
-    images: [
-      {
-        src: '/images/products/felt-grey.jpg',
-        alt: 'Flat grey felt sheet',
-        kind: 'full',
-      },
-    ],
+    moq: sourceMoq,
+    images: sourceImages('pet-non-woven-pile-carpet', 2, 'PET non-woven or pile carpet'),
     relatedSlugs: ['lwrtud-felt-sheet', 'pet-foam-board'],
     status: 'published',
   },
@@ -220,20 +207,14 @@ export const products: Product[] = [
       'other-interior-structures',
     ],
     specs: [
-      field('thickness', 'Panel thickness', 'mm'),
+      spec('thickness', 'Panel thickness', '6–25', 'mm'),
       field('panel-size', 'Panel size', 'mm'),
       field('face', 'Face material'),
       field('core', 'Core structure'),
-      field('areal-weight', 'Areal weight', 'g/m²'),
+      spec('color', 'Color', 'Black'),
     ],
-    moq: noMoq,
-    images: [
-      {
-        src: '/images/products/sandwich-sheet.jpg',
-        alt: 'Dark-faced composite panel seen from the edge, showing a light-colored core',
-        kind: 'full',
-      },
-    ],
+    moq: sourceMoq,
+    images: sourceImages('phc-fiberglass-composite-panel', 5, 'PHC fiberglass composite panel'),
     relatedSlugs: ['pet-foam-board', 'pp-glass-fiber-board'],
     status: 'published',
   },
@@ -256,19 +237,14 @@ export const products: Product[] = [
     applicationSlugs: ['door-panels', 'other-interior-structures'],
     specs: [
       field('fiber-type', 'Natural fiber (bamboo or hemp)'),
-      field('thickness', 'Thickness', 'mm'),
-      field('areal-weight', 'Areal weight', 'g/m²'),
+      spec('thickness', 'Thickness', '1.5–6', 'mm'),
+      spec('areal-weight', 'Areal weight', '500–2000', 'g/m²'),
       field('fiber-content', 'Natural fiber content', '%'),
-      field('board-size', 'Board size', 'mm'),
+      spec('width', 'Width', 'up to 2000', 'mm'),
+      spec('color', 'Color', 'White'),
     ],
-    moq: noMoq,
-    images: [
-      {
-        src: '/images/products/natural-fibre-board.jpg',
-        alt: 'Stack of tan natural-fiber board sheets',
-        kind: 'full',
-      },
-    ],
+    moq: sourceMoq,
+    images: sourceImages('pp-bamboo-hemp-fiberboard', 3, 'PP bamboo or hemp fiberboard'),
     relatedSlugs: ['pp-glass-fiber-board', 'lwrt-board'],
     status: 'published',
   },
@@ -289,13 +265,13 @@ export const products: Product[] = [
     ],
     applicationSlugs: ['headliners', 'other-interior-structures'],
     specs: [
-      field('thickness', 'Thickness', 'mm'),
+      spec('thickness', 'Thickness', '6–25', 'mm'),
       field('density', 'Density', 'kg/m³'),
       field('panel-size', 'Panel size', 'mm'),
-      field('facing', 'Facing options'),
+      spec('color', 'Color', 'Black'),
     ],
-    moq: noMoq,
-    images: [],
+    moq: sourceMoq,
+    images: sourceImages('pet-foam-board', 2, 'PET foam board'),
     relatedSlugs: ['phc-fiberglass-composite-panel', 'pet-pp-composite-sheet'],
     status: 'published',
   },

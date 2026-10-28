@@ -7,6 +7,8 @@ import { JsonLd } from '@/components/site/json-ld'
 import { company, organizationSchema } from '@/lib/site'
 import './globals.css'
 
+export const revalidate = 60
+
 const display = Archivo({
   subsets: ['latin'],
   variable: '--font-archivo',
@@ -21,6 +23,7 @@ const body = IBM_Plex_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://langtianglobal.com'),
   title: {
     default:
       'Langtian | Thermoplastic Composite Sheets and Felts for Automotive Interiors',

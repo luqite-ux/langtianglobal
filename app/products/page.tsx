@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button'
 import { getCategories, getCategory, getProducts, isCategorySlug } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
+export const revalidate = 60
+
 type SearchParams = Promise<{ category?: string | string[] }>
 
 function readCategory(value: string | string[] | undefined) {

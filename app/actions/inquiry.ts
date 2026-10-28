@@ -3,6 +3,7 @@
 import { dispatchInquiry } from '@/lib/inquiries/dispatch'
 import type { InquiryState } from '@/lib/inquiries/types'
 import { readInquiryValues, validateInquiry } from '@/lib/inquiries/validate'
+import { createSupabaseCaptchaContextFromEnv, verifyCaptchaSubmission } from '@/lib/inquiry-captcha'
 
 const failureMessages = {
   'not-configured':
@@ -14,13 +15,28 @@ const failureMessages = {
 } as const
 
 export async function submitInquiry(
-  _previous: InquiryState,
+  previous: InquiryState,
   formData: FormData,
 ): Promise<InquiryState> {
   const values = readInquiryValues(formData)
+  const captchaToken = String(formData.get('captchaToken') ?? '')
+  const captchaScope = String(formData.get('captchaScope') ?? '')
+  const captchaAnswer = String(formData.get('captchaAnswer') ?? '')
+  const refresh = (previous.captchaRefreshKey ?? 0) + 1
+
+  try {
+    const context = createSupabaseCaptchaContextFromEnv()
+    const captcha = await verifyCaptchaSubmission({
+      secret: process.env.CAPTCHA_SECRET || '', ...context,
+      scope: captchaScope, token: captchaToken, answer: captchaAnswer,
+    })
+    if (!captcha.ok) return { status: 'error', message: failureMessages.rejected, values, captchaRefreshKey: refresh }
+  } catch {
+    return { status: 'error', message: failureMessages.unavailable, values, captchaRefreshKey: refresh }
+  }
 
   if (String(formData.get('website') ?? '') !== '') {
-    return { status: 'error', message: failureMessages.rejected, values }
+    return { status: 'error', message: failureMessages.rejected, values, captchaRefreshKey: refresh }
   }
 
   const result = validateInquiry(values)
@@ -30,17 +46,19 @@ export async function submitInquiry(
       message: 'Please correct the highlighted fields and send again.',
       fieldErrors: result.fieldErrors,
       values,
+      captchaRefreshKey: refresh,
     }
   }
 
   const sourcePath = String(formData.get('sourcePath') ?? '/')
-  const captchaToken = String(formData.get('captchaToken') ?? '')
 
   try {
     const dispatched = await dispatchInquiry({
       ...result.data,
       sourcePath: sourcePath.slice(0, 200),
       captchaToken,
+      captchaScope,
+      captchaAnswer,
       submittedAt: new Date().toISOString(),
     })
 
@@ -49,10 +67,11 @@ export async function submitInquiry(
         status: 'error',
         message: failureMessages[dispatched.reason],
         values,
+        captchaRefreshKey: refresh,
       }
     }
   } catch {
-    return { status: 'error', message: failureMessages.unavailable, values }
+    return { status: 'error', message: failureMessages.unavailable, values, captchaRefreshKey: refresh }
   }
 
   return {

@@ -1,0 +1,273 @@
+[
+  {
+    "row": 4,
+    "sku": "LT‑001",
+    "category_zh": "PP玻纤热塑性板材",
+    "category_en": "PP Fiberglass Thermoplastic Sheet",
+    "name_zh": "PP玻纤板",
+    "name_en": "PP Glass Fiber Board",
+    "description": "中文：PP玻纤板由玻璃纤维毡与聚丙烯PP树脂复合制成，具备高强度、抗冲击、耐高温、轻量化特性，材料可回收，隔音吸音、低气味、不易形变。采用模压成型工艺，适配各类汽车内饰结构件，可按客户需求做规格定制，广泛应用于汽车顶棚、天窗盖板、衣帽架、门内饰板、后备箱侧围、尾门饰板等。\nEnglish: PP glass fiber board is made of glass fiber felt and polypropylene PP resin. It has high strength, impact resistance, high temperature resistance, and lightweight characteristics. The material is recyclable, sound insulation and sound absorption, low odor, and is not easy to deform. Adopting the molding process, it is suitable for all kinds of automotive interior structural parts, and can be customized according to customer needs. It is widely used in automotive ceilings, sunroof covers, coat racks, door interior panels, trunk side walls, and tailgate trims. wait.",
+    "specifications": "面密度：500‑3000gsm\n厚度：1.5-6mm\n幅宽：0-2000mm\n颜色：黑色，白色",
+    "moq": "500pcs",
+    "embedded_images": [
+      {
+        "sheet": "产品信息",
+        "cell": "G4",
+        "image_id": "ID_CB728BD8D287448FB4145420B288E5DF",
+        "entry": "xl/media/image14.jpeg",
+        "description": "微信图片_20261006113316_12_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "H4",
+        "image_id": "ID_8CDCD0740C784C09B9B2E32C49AC2CCE",
+        "entry": "xl/media/image15.jpeg",
+        "description": "微信图片_20261006113319_13_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "I4",
+        "image_id": "ID_9511E20A079D463ABE271584BBB02882",
+        "entry": "xl/media/image32.jpeg",
+        "description": "微信图片_20261006151319_31_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "J4",
+        "image_id": "ID_A3C8178F612F4D498312119F32C77D9C",
+        "entry": "xl/media/image33.jpeg",
+        "description": "微信图片_20261006151320_32_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "K4",
+        "image_id": "ID_AF3E0E4B729A4078917FE8551C7D92B4",
+        "entry": "xl/media/image34.jpeg",
+        "description": "微信图片_20261006151322_34_4"
+      }
+    ]
+  },
+  {
+    "row": 5,
+    "sku": null,
+    "category_zh": "LWRT长纤维热塑性板材",
+    "category_en": "LWRT Long‑fiber Thermoplastic Sheet",
+    "name_zh": "LWRT板材",
+    "name_en": "LWRT Board",
+    "description": "中文：LWRT板材为玻纤聚丙烯复合环保板材，无醛无苯，可回收，阻燃性能达标。材料受冲击产生钝角裂口，安全性高，隔热吸音效果优异；加热可膨胀至原厚度2倍，成型后无回弹，尺寸稳定，同等强度下比麻纤板材更轻，适合汽车顶棚、座椅背板、行李箱内饰件、仪表盘基材，支持模压异形定制。\nEnglish: LWRT board is eco‑friendly glass‑fiber polypropylene composite without formaldehyde or benzene and fully recyclable with qualified flame retardancy. It forms blunt cracks upon impact for higher safety, with excellent heat‑insulating and sound‑absorbing performance. It can expand up to 4 times original thickness under heating with zero spring‑back after molding. Lighter than hemp‑fiber board at equal strength, it serves for automotive headliner, seat back panel, luggage interior parts and instrument base, custom compression‑molded shapes are supported.",
+    "specifications": "面密度：500‑3000gsm\n厚度：1.5-6mm\n幅宽：0-2000mm\n颜色：黑色，白色",
+    "moq": "500pcs",
+    "embedded_images": []
+  },
+  {
+    "row": 6,
+    "sku": "LT‑002",
+    "category_zh": "LWRTUD玻纤毡材/板材",
+    "category_en": "LWRTUD glass fiber felt/sheet",
+    "name_zh": "LWRTUD毡材/板材",
+    "name_en": "LWRTUD felt/sheet",
+    "description": "中文：LWRTUD毡材采用玻璃纤维搭配PP基体，复合UD表皮，性能突出，重量轻，热塑性材质可回收，模压成型工艺性能优良。专门用于对强度有较高要求的汽车内饰结构件，支持尺寸、克重定制，适配多种汽车零部件开发。\nEnglish: LWRTUD felt material is made of glass fiber with PP matrix and composite UD skin, which has outstanding performance, light weight, recyclable thermoplastic material and excellent molding process performance. It is specially used for automotive interior structural parts that have high requirements for strength, supports size and weight customization, and is suitable for a variety of auto parts.",
+    "specifications": "面密度：500‑3000gsm\n厚度：1.5-6mm\n幅宽：0-2000mm\n颜色：黑色，白色",
+    "moq": "500pcs",
+    "embedded_images": [
+      {
+        "sheet": "产品信息",
+        "cell": "G6",
+        "image_id": "ID_11A4FA47EB8A43558DBD0BAE933B54C4",
+        "entry": "xl/media/image25.jpeg",
+        "description": "微信图片_20261006144808_22_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "H6",
+        "image_id": "ID_41C8C207C72F432EBEE036AE76C83914",
+        "entry": "xl/media/image27.jpeg",
+        "description": "微信图片_20261006144810_24_4"
+      }
+    ]
+  },
+  {
+    "row": 7,
+    "sku": "LT‑003",
+    "category_zh": "PET/PP复合板材",
+    "category_en": "PET/PP composite sheet",
+    "name_zh": "PET/PP复合板材",
+    "name_en": "PET/PP composite sheet",
+    "description": "中文：PET/PP复合板以PET为芯、PP为增强体系复合而成，轻量、高刚性、耐候，户外暴晒稳定；可热压模塑、无醛可回收、低气味低VOC，广泛用于汽车内饰及户外结构件。\n\nEnglish\nPET/PP composite board combines PET core with PP reinforcement — lightweight, rigid, weather-resistant and stable under outdoor exposure. Thermoplastic-moldable, formaldehyde-free, recyclable, low-odor and low-VOC, it serves automotive interiors and outdoor structural part。",
+    "specifications": "面密度：500‑3000gsm\n厚度：6-10mm\n幅宽：0-2000mm\n颜色：黑色，白色",
+    "moq": "500pcs",
+    "embedded_images": [
+      {
+        "sheet": "产品信息",
+        "cell": "G7",
+        "image_id": "ID_B48C44B000994D2392235717352CEBA1",
+        "entry": "xl/media/image21.jpeg",
+        "description": "微信图片_20261006140043_19_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "H7",
+        "image_id": "ID_C7095977A5C844088D8905CE14EBD3DD",
+        "entry": "xl/media/image23.jpeg",
+        "description": "微信图片_20261006141321_20_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "I7",
+        "image_id": "ID_6E1931AC15714865A2FEE06E4490B5AD",
+        "entry": "xl/media/image31.jpeg",
+        "description": "微信图片_20261006144815_29_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "J7",
+        "image_id": "ID_3B7E90077DC74AE7A3C021F1161D744A",
+        "entry": "xl/media/image35.jpeg",
+        "description": "微信图片_20261006151324_35_4"
+      }
+    ]
+  },
+  {
+    "row": 8,
+    "sku": "LT‑004",
+    "category_zh": "PET无纺布/起绒地毯",
+    "category_en": "PET non-woven/pile carpet",
+    "name_zh": "PET无纺布/起绒地毯",
+    "name_en": "PET non-woven/pile carpet",
+    "description": "中文：PET毡材属于无纺玻纤毡，材质柔韧，可模压成型，吸音隔热效果良好，环保可回收。多用于汽车内饰基材、隔音衬垫，可调整克重、厚度，满足不同降噪及结构支撑需求。\nEnglish: PET non‑woven mat is flexible non‑woven glass‑fiber material, suitable for compression molding. It provides favorable sound‑absorbing & thermal‑insulating performance and is eco‑friendly and recyclable. Mainly used as automotive interior base material and noise‑reducing liner. Gram‑weight and thickness can be adjusted for different noise‑reduction and structural‑support requirements.",
+    "specifications": "面密度：100‑500gsm\n厚度：1-3mm\n幅宽：0-2000mm\n颜色：黑色，白色",
+    "moq": "500pcs",
+    "embedded_images": [
+      {
+        "sheet": "产品信息",
+        "cell": "G8",
+        "image_id": "ID_BE9A3C89708B402F9188CBF9C4FE5F2B",
+        "entry": "xl/media/image19.jpeg",
+        "description": "微信图片_20261006140041_17_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "H8",
+        "image_id": "ID_4AAF172CB74E4A27881EA7F6E93E53D0",
+        "entry": "xl/media/image20.jpeg",
+        "description": "微信图片_20261006140042_18_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "I8",
+        "image_id": "ID_1C87009D009F4631BA2B8610212A08F6",
+        "entry": "xl/media/image4.jpeg",
+        "description": "202207061020564375"
+      }
+    ]
+  },
+  {
+    "row": 9,
+    "sku": "LT‑005",
+    "category_zh": "PHC玻纤复合板",
+    "category_en": "PHC Fiberglass Composite Panel",
+    "name_zh": "PHC玻纤复合板",
+    "name_en": "PHC Fiberglass Composite Panel",
+    "description": "中文：PHC板材为PP玻纤复合板材，结合蜂窝/瓦楞芯结构，质轻、弯曲模量高，尺寸稳定性好，耐撞击、低VOC，可制作不等厚异形件；厚度6-25mm可调，多用于汽车备胎盖板、行李搁物板与各类异形内饰板。\nEnglish: PHC plate is PP glass fiber composite plate, combined with honeycomb/corrugated core structure, light weight, high bending modulus, good dimensional stability, impact resistance, low VOC, can make special-shaped parts of different thicknesses; The thickness is 6-25mm adjustable, and it is mostly used for car spare tire cover plates, luggage shelf plates and various special-shaped interior panels.",
+    "specifications": "厚度：6‑25mm\n\n颜色：黑色",
+    "moq": "500pcs",
+    "embedded_images": [
+      {
+        "sheet": "产品信息",
+        "cell": "G9",
+        "image_id": "ID_F8A1F1D70C144251833D1BF437BF5166",
+        "entry": "xl/media/image24.jpeg",
+        "description": "微信图片_20261006144806_21_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "H9",
+        "image_id": "ID_B5E7406346FF46BB8CF83B62C9B07B29",
+        "entry": "xl/media/image26.jpeg",
+        "description": "微信图片_20261006144809_23_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "I9",
+        "image_id": "ID_2271122DC1394AD9A0A2AD28660606F7",
+        "entry": "xl/media/image28.jpeg",
+        "description": "微信图片_20261006144811_25_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "J9",
+        "image_id": "ID_686DDB47A85F47348C64F065B7C11B10",
+        "entry": "xl/media/image29.jpeg",
+        "description": "微信图片_20261006144812_26_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "K9",
+        "image_id": "ID_0F408936F7FB4A71AE46F98F09209432",
+        "entry": "xl/media/image30.jpeg",
+        "description": "微信图片_20261006144814_28_4"
+      }
+    ]
+  },
+  {
+    "row": 10,
+    "sku": "LT‑006",
+    "category_zh": "植物纤维复合板材（竹纤维/麻纤维)",
+    "category_en": "Vegetable fibre composite board (bamboo fibre/hemp fibre)",
+    "name_zh": "PP竹纤维板/PP麻纤维板",
+    "name_en": "PP bamboo fiberboard/PP hemp fiberboard",
+    "description": "中文：PP竹纤维板由聚丙烯与竹纤维复合而成，轻量化，成本优势明显，可模压成型，适用于汽车内饰装饰件、顶棚、门板、行李舱饰板，支持规格定制，环保可回收。PP麻纤维板以聚丙烯PP为基体、天然麻纤维为增强复合而成，轻量、强度高、可回收，兼具吸音与抗冲击性能；可热压模塑成型，低气味、成本有优势，广泛用于汽车门板、内饰衬板等部件。\n\nEnglish\nPP bamboo fiberboard is composed of polypropylene and bamboo fiber. It is lightweight and has obvious cost advantages. It can be molded and molded. It is suitable for automotive interior decorative parts, ceilings, door panels, and luggage compartment decorative panels. It supports specification customization and is environmentally friendly and recyclable. PP fiberboard is made of polypropylene PP as the matrix and natural hemp fiber as the reinforcement. It is light, high-strength, recyclable, and has sound absorption and impact resistance; It can be molded by hot pressing, low odor, and has advantages in cost. It is widely used in automotive door panels, interior liners and other parts.",
+    "specifications": "面密度：500‑2000gsm\n厚度：1.5-6mm\n幅宽：0-2000mm\n颜色：白色",
+    "moq": "500pcs",
+    "embedded_images": [
+      {
+        "sheet": "产品信息",
+        "cell": "G10",
+        "image_id": "ID_B1567CCE37DB4B508387A51C90A7BB44",
+        "entry": "xl/media/image22.jpeg",
+        "description": "202309151016380402"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "H10",
+        "image_id": "ID_8E9AA44E7E5A47FC8CCF8C4E19F0C804",
+        "entry": "xl/media/image18.jpeg",
+        "description": "微信图片_20261006140039_16_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "I10",
+        "image_id": "ID_B5852A804DFB4475B96C55155D0649F1",
+        "entry": "xl/media/image36.jpeg",
+        "description": "微信图片_20261006151326_36_4"
+      }
+    ]
+  },
+  {
+    "row": 11,
+    "sku": "LT‑007",
+    "category_zh": "PET发泡板",
+    "category_en": "PET foam board",
+    "name_zh": "PET发泡板",
+    "name_en": "PET foam board",
+    "description": "中文：PET发泡板以PET发泡为芯材复合增强而成，轻量、刚性好、耐候，户外暴晒尺寸稳定；可热压模塑、无醛可回收、低气味低VOC，多用于汽车内饰件及户外结构板。\n\nEnglish\nPET foam board uses a PET foam core with reinforced composite layers — lightweight, rigid, weather-resistant and dimensionally stable under outdoor exposure. Thermoplastic-moldable, formaldehyde-free, recyclable, low-odor and low-VOC, it fits automotive interior parts and outdoor panels。",
+    "specifications": "厚度：6‑25mm\n\n颜色：黑色",
+    "moq": "500pcs",
+    "embedded_images": [
+      {
+        "sheet": "产品信息",
+        "cell": "G11",
+        "image_id": "ID_B485EF65FB8848A9911C6354197D1346",
+        "entry": "xl/media/image16.jpeg",
+        "description": "微信图片_20261006140036_14_4"
+      },
+      {
+        "sheet": "产品信息",
+        "cell": "H11",
+        "image_id": "ID_C7D6DEEDD9724B1E9310EF7023B0B51B",
+        "entry": "xl/media/image17.jpeg",
+        "description": "微信图片_20261006140038_15_4"
+      }
+    ]
+  }
+]

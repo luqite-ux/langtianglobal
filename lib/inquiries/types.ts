@@ -16,6 +16,7 @@ export type InquiryState = {
   message?: string
   fieldErrors?: Partial<Record<InquiryField, string>>
   values?: Partial<InquiryValues>
+  captchaRefreshKey?: number
 }
 
 export const initialInquiryState: InquiryState = { status: 'idle' }
@@ -23,6 +24,8 @@ export const initialInquiryState: InquiryState = { status: 'idle' }
 export type InquiryPayload = InquiryValues & {
   sourcePath: string
   captchaToken: string
+  captchaScope: string
+  captchaAnswer: string
   submittedAt: string
 }
 

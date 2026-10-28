@@ -11,6 +11,9 @@ import { company } from '@/lib/site'
 
 type Params = Promise<{ slug: string }>
 
+export const revalidate = 60
+export const dynamicParams = true
+
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const article = await getNewsArticle((await params).slug)
   if (!article) return { title: 'Article not found' }
