@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     template: `%s | Langtian`,
   },
   description: `${company.legalNameEn} makes thermoplastic composite sheets and felts for automotive interiors in Xuyi County, Huai'an, Jiangsu, China. Send an inquiry for materials, specifications and samples.`,
+  alternates: { canonical: '/' },
   applicationName: 'Langtian',
   openGraph: {
     type: 'website',
@@ -37,8 +38,9 @@ export const metadata: Metadata = {
     title: 'Langtian | Thermoplastic Composite Sheets and Felts',
     description:
       'Thermoplastic composite sheets and felts for automotive interiors from Xuyi County, Huai’an, Jiangsu.',
+    url: 'https://langtianglobal.com/',
+    images: [{ url: 'https://langtianglobal.com/images/banners/banner-production-line.jpg' }],
   },
-    generator: 'v0.app'
 }
 
 export const viewport: Viewport = {
