@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import { InquiryForm } from '@/components/inquiry/inquiry-form'
 import { PageIntro } from '@/components/site/page-intro'
 import { Reveal } from '@/components/site/reveal'
@@ -6,12 +7,12 @@ import { Section } from '@/components/site/section'
 import { getProducts } from '@/lib/data'
 import { addressLine, company } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Contact',
   description:
     'Send an inquiry to Jiangsu Langtian Composite Materials about thermoplastic composite sheets and felts for automotive interiors.',
-  alternates: { canonical: '/contact' },
-}
+  path: '/contact',
+})
 
 export default async function ContactPage() {
   const products = await getProducts()

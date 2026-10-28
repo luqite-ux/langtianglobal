@@ -16,6 +16,7 @@ import {
   getProducts,
 } from '@/lib/data'
 import { company } from '@/lib/site'
+import { pageMetadata } from '@/lib/page-metadata'
 
 type Params = Promise<{ slug: string }>
 
@@ -30,11 +31,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const product = await getProduct((await params).slug)
   if (!product) return { title: 'Product not found' }
-  return {
-    title: product.name,
-    description: product.summary,
-    alternates: { canonical: `/products/${product.slug}` },
-  }
+  return pageMetadata({ title: product.name, description: product.summary,
+    path: `/products/${product.slug}`, image: product.images[0]?.src })
 }
 
 export default async function ProductPage({ params }: { params: Params }) {

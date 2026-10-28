@@ -8,6 +8,7 @@ import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { getNewsArticle } from '@/lib/data'
 import { company } from '@/lib/site'
+import { pageMetadata } from '@/lib/page-metadata'
 
 type Params = Promise<{ slug: string }>
 
@@ -17,11 +18,8 @@ export const dynamicParams = true
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const article = await getNewsArticle((await params).slug)
   if (!article) return { title: 'Article not found' }
-  return {
-    title: article.title,
-    description: article.excerpt,
-    alternates: { canonical: `/news/${article.slug}` },
-  }
+  return pageMetadata({ title: article.title, description: article.excerpt,
+    path: `/news/${article.slug}`, image: article.image?.src, type: 'article' })
 }
 
 const dateFormat = new Intl.DateTimeFormat('en-US', {

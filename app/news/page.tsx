@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Newspaper } from 'lucide-react'
@@ -17,11 +18,11 @@ import { getPublishedNews } from '@/lib/data'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'News',
   description: 'Company news from Jiangsu Langtian Composite Materials.',
-  alternates: { canonical: '/news' },
-}
+  path: '/news',
+})
 
 const dateFormat = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',

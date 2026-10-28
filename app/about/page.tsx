@@ -6,13 +6,14 @@ import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { addressLine, company } from '@/lib/site'
+import { pageMetadata } from '@/lib/page-metadata'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'About',
   description:
     'Jiangsu Langtian Composite Materials Co., Ltd. was established in 2021 in Xuyi County, Huai’an, Jiangsu and makes thermoplastic composite sheets and felts for automotive interiors.',
-  alternates: { canonical: '/about' },
-}
+  path: '/about',
+})
 
 const facts = [
   { label: 'Established', value: String(company.founded) },

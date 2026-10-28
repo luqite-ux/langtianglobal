@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FileCheck2 } from 'lucide-react'
@@ -8,12 +9,12 @@ import { Eyebrow, Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { getCertificates } from '@/lib/data'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Quality and certificates',
   description:
     'Review the supplied ISO 14001, IATF 16949 and patent certificate copies, with their printed scope, titles and status caveats.',
-  alternates: { canonical: '/quality' },
-}
+  path: '/quality',
+})
 
 const placeholder = 'See the certificate copy'
 

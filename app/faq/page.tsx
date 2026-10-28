@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Link from 'next/link'
 import { FaqList } from '@/components/faq/faq-list'
 import { JsonLd } from '@/components/site/json-ld'
@@ -9,12 +10,12 @@ import { Button } from '@/components/ui/button'
 import { getFaqs } from '@/lib/data'
 import type { FaqItem } from '@/lib/data/types'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'FAQ',
   description:
     'Answers about Langtian materials, inquiries, samples, minimum order quantities, certificates and location.',
-  alternates: { canonical: '/faq' },
-}
+  path: '/faq',
+})
 
 const topics: { key: FaqItem['topic']; title: string }[] = [
   { key: 'products', title: 'Products and materials' },

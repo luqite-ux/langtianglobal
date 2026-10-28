@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
@@ -8,12 +9,12 @@ import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { getApplications, getProductsForApplication } from '@/lib/data'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Applications',
   description:
     'Automotive interior applications for Langtian materials: headliners, door panels, luggage-compartment liners, spare-tire covers and other interior structures.',
-  alternates: { canonical: '/applications' },
-}
+  path: '/applications',
+})
 
 export default async function ApplicationsPage() {
   const applications = await getApplications()

@@ -7,6 +7,7 @@ import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { getCategories, getCategory, getProducts, isCategorySlug } from '@/lib/data'
 import { cn } from '@/lib/utils'
+import { pageMetadata } from '@/lib/page-metadata'
 
 export const revalidate = 60
 
@@ -24,13 +25,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const slug = readCategory((await searchParams).category)
   const category = slug ? await getCategory(slug) : undefined
-  return {
+  return pageMetadata({
     title: category ? category.name : 'Products',
     description: category
       ? category.summary
       : 'Thermoplastic composite sheets, felts, sandwich panels and natural-fiber boards for automotive interiors.',
-    alternates: { canonical: category ? `/products?category=${category.slug}` : '/products' },
-  }
+    path: category ? `/products?category=${category.slug}` : '/products',
+  })
 }
 
 export default async function ProductsPage({ searchParams }: { searchParams: SearchParams }) {

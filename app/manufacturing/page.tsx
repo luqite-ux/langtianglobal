@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pageMetadata } from '@/lib/page-metadata'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PageIntro } from '@/components/site/page-intro'
@@ -7,12 +8,12 @@ import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { company } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Manufacturing',
   description:
     'Langtian’s factory in Xuyi County: approximately 15,000 square meters, four workshops and five production lines, including three needling lines and two pressing lines.',
-  alternates: { canonical: '/manufacturing' },
-}
+  path: '/manufacturing',
+})
 
 const f = company.facility
 
