@@ -57,7 +57,26 @@ export async function QualityContext() {
               </Link>
             </Reveal>
           ))}
+          <Reveal as="li" delay={160} className="sm:col-span-2">
+            <Link href="/quality#recognition-title" className="bg-card hover:border-primary/70 group grid h-full gap-5 border p-6 transition-colors sm:grid-cols-[120px_1fr]">
+              <Image src="/images/certificates/high-tech-enterprise.jpg" alt="High-tech enterprise certificate naming 江苏朗田复合材料有限公司" width={120} height={180} className="h-36 w-full bg-white object-contain" />
+              <span className="flex flex-col justify-center">
+                <span className="font-display text-xl font-bold">High-tech enterprise certificate copy</span>
+                <span className="text-muted-foreground mt-2 text-sm">Issued 13 December 2023 with a three-year printed term. Confirm current status with the issuing authority.</span>
+                <span className="text-primary mt-4 inline-flex items-center gap-1.5 text-sm font-semibold">View certificate details <ArrowRight aria-hidden="true" className="size-4" /></span>
+              </span>
+            </Link>
+          </Reveal>
         </ul>
+      </div>
+      <div className="mt-10 grid gap-4 sm:grid-cols-2">
+        {(['recognition-wall-01.jpg', 'recognition-wall-02.jpg'] as const).map((file, index) => (
+          <Reveal key={file} delay={index * 80}>
+            <Link href="/about#recognition-display-title" className="group block overflow-hidden">
+              <Image src={`/images/certificates/${file}`} alt={`Langtian's onsite recognition display, view ${index + 1}`} width={850} height={640} className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-[1.02] motion-reduce:transition-none" />
+            </Link>
+          </Reveal>
+        ))}
       </div>
     </Section>
   )
