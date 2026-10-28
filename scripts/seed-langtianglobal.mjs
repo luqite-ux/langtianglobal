@@ -113,7 +113,10 @@ async function run() {
       advantages: [], advantages_i18n: { en: [] }, specs: product.specs,
       image_url: previous?.image_url?.startsWith('https://') ? previous.image_url : (gallery[0] || null), sort_order: index + 1, is_active: true,
       extra_data: { ...previous?.extra_data, images: publishedGallery, moq: product.moq, source_workbook_row: source.row,
-        source_sku: source.sku || null, source_name_zh: source.name_zh,
+        source_sku: source.sku || null, source_category_zh: source.category_zh,
+        source_category_en: source.category_en, source_name_zh: source.name_zh,
+        source_name_en: source.name_en, source_description_raw: source.description,
+        source_specifications_raw: source.specifications, source_moq_raw: source.moq,
         source_description_zh: source.description.split(/English/i)[0].trim(),
         product_form: product.form, visual_description: description },
     }, { onConflict: 'tenant_id,slug' })
