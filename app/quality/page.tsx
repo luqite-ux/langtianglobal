@@ -11,11 +11,22 @@ import { getCertificates } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'Quality and certificates',
   description:
-    'Review the supplied ISO 14001 and IATF 16949 certificate copies, including the scope and dates printed on each copy.',
+    'Review the supplied ISO 14001, IATF 16949 and patent certificate copies, with their printed scope, titles and status caveats.',
   alternates: { canonical: '/quality' },
 }
 
 const placeholder = 'See the certificate copy'
+
+// Titles and numbers transcribed from the six customer-supplied patent certificate PDFs.
+// These describe the supplied copies; current patent register status is not asserted.
+const patentCopies = [
+  { number: 'ZL 2024 1 1300826.X', title: 'Glass fiber board lifting equipment and production process', original: '玻纤板生产用提升设备及玻纤板生产工艺' },
+  { number: 'ZL 2024 1 0152002.6', title: 'Equipment and process for glass fiber board production', original: '一种玻纤板生产用的设备及其生产工艺' },
+  { number: 'ZL 2024 1 1314827.X', title: 'Flame-retardant LWRT board for new energy vehicle chassis and its processing method', original: '一种具阻燃效果的新能源汽车底盘LWRT板及加工工艺' },
+  { number: 'ZL 2024 2 3160183.1', title: 'Electric heating oven with rapid discharge', original: '一种便于快速出料的电热烘箱' },
+  { number: 'ZL 2024 2 3231628.0', title: 'Baking device for GMT sheet production', original: '一种GMT片材生产用烘烤装置' },
+  { number: 'ZL 2024 2 3277232.X', title: 'Preheating device for glass fiber reinforced plastic production', original: '一种玻璃纤维增强塑料生产用预热装置' },
+] as const
 
 export default async function QualityPage() {
   const certificates = await getCertificates()
@@ -92,16 +103,21 @@ export default async function QualityPage() {
               Company recognition
             </h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">
-              A high-tech enterprise certificate names Jiangsu Langtian Composite Materials
-              Co., Ltd. It was issued on 13 December 2023 and states a three-year term.
+              A supplied high-tech enterprise certificate names 江苏朗田复合材料有限公司.
+              It was issued on 13 December 2023 and states a three-year term.
               Please check its current status when making a procurement decision.
+            </p>
+            <p className="text-muted-foreground mt-4 leading-relaxed">
+              A supplied 2025 Jiangsu provincial specialist-enterprise list includes the
+              company at entry 5640. This describes the supplied list; confirm the current
+              designation with the issuing authority.
             </p>
           </Reveal>
           <Reveal delay={80}>
             <figure className="bg-white p-4">
               <Image
                 src="/images/certificates/high-tech-enterprise.jpg"
-                alt="High-tech enterprise certificate naming Jiangsu Langtian Composite Materials Co., Ltd."
+                alt="High-tech enterprise certificate naming 江苏朗田复合材料有限公司"
                 width={1000}
                 height={1500}
                 sizes="(min-width: 1024px) 55vw, 100vw"
@@ -113,6 +129,30 @@ export default async function QualityPage() {
             </figure>
           </Reveal>
         </div>
+      </Section>
+
+      <Section tone="muted" labelledBy="patent-copies-title">
+        <Reveal>
+          <Eyebrow>Customer-supplied documents</Eyebrow>
+          <h2 id="patent-copies-title" className="mt-3 text-3xl font-bold tracking-tight">
+            Patent certificate copies
+          </h2>
+          <p className="text-muted-foreground mt-4 max-w-3xl leading-relaxed">
+            These six copies name 江苏朗田复合材料有限公司 as the patent holder.
+            Titles below are translated for reading; refer to each original certificate and the current patent register before relying on its legal status.
+          </p>
+        </Reveal>
+        <ul className="mt-8 grid gap-4 md:grid-cols-2">
+          {patentCopies.map((patent, index) => (
+            <Reveal as="li" key={patent.number} delay={(index % 2) * 80}>
+              <article className="bg-card h-full border p-5 sm:p-6">
+                <p className="text-primary text-xs font-semibold tracking-widest uppercase">{patent.number}</p>
+                <h3 className="mt-3 text-lg font-semibold leading-snug">{patent.title}</h3>
+                <p lang="zh-CN" className="text-muted-foreground mt-2 text-sm leading-relaxed">{patent.original}</p>
+              </article>
+            </Reveal>
+          ))}
+        </ul>
       </Section>
 
       <Section labelledBy="scope-title">
