@@ -1,0 +1,22 @@
+{
+  "tenantId": "317a84d7-9b80-4785-bd97-59170f7d2472",
+  "slug": "pp-glass-fiber-board",
+  "verifiedAt": "2026-10-28T11:17:42.451Z",
+  "imageCount": 7,
+  "receipt": [
+    {
+      "name": "pp-glass-fiber-board-6.jpeg",
+      "sha256": "713727830cfc42156b4ed0be1a398a0c7824a9b65ef2edc6fc942ef2c8476634",
+      "bytes": 6316154,
+      "key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/seed/713727830cfc4215.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/seed/713727830cfc4215.jpg"
+    },
+    {
+      "name": "pp-glass-fiber-board-7.jpeg",
+      "sha256": "ea61e2c31aa4cc89b6a53ceb0ad766b9562c70238526bc96f7af042f401aaa12",
+      "bytes": 6395235,
+      "key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/seed/ea61e2c31aa4cc89.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/seed/ea61e2c31aa4cc89.jpg"
+    }
+  ]
+}
