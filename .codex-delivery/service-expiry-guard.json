@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "guardVersion": "1",
+  "guardFiles": ["lib/service-status.ts"],
+  "integrationFiles": ["middleware.ts"],
+  "dependencyFiles": ["lib/admin-session.ts"],
+  "expiredPageFiles": ["app/service-expired/page.tsx"],
+  "publicRoutes": ["/", "/products", "/products/pp-glass-fiber-board", "/applications", "/manufacturing", "/quality", "/about", "/faq", "/news", "/contact"],
+  "publicStatusPath": "/api/public/service-status/",
+  "failOpenScenarios": ["query_failed", "timeout", "missing_expiry", "enforcement_disabled", "guard_version_unregistered", "unsupported_protocol_version"],
+  "excludedPaths": ["/admin", "/admin/login", "/api", "/_next", "/favicon.ico", "static-assets"],
+  "defaults": { "serviceExpiryDate": null, "enforcementEnabled": false },
+  "identity": {
+    "taskId": "0e15cdee-24d2-402e-92cf-12f937146acb",
+    "customerTenantId": "317a84d7-9b80-4785-bd97-59170f7d2472",
+    "environmentId": "prj_7DUylpoPq4cuuL5ZyC6y2sHbpfEa"
+  }
+}

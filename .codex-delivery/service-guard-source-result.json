@@ -1,0 +1,731 @@
+{
+  "schemaVersion": 1,
+  "scope": "ISOLATED_SOURCE_BEHAVIOR",
+  "transport": "LOOPBACK_HTTP",
+  "pass": true,
+  "productionVerified": false,
+  "guardVersion": "1",
+  "guardHash": "4e845b57d7c79d9b12602ed3ff72e1822c067ec6949b8ece2df0f90f35c1a436",
+  "routingHash": "97a009642069171dd9c9b1735a6a88a4a81bd6dd792553bda654f5a540126cc8",
+  "dependencyHashes": {
+    "lib/admin-session.ts": "60a21dd18fd8cb166b05f0471cfb4ea041ba2f1d9402d3bb1628daad40c72514"
+  },
+  "protocolVersion": 1,
+  "externalResourcesCreated": 0,
+  "verifiedAt": "2026-10-28T10:46:21.672Z",
+  "checks": [
+    {
+      "scenario": "normal",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "normal",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "renewal",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "query_failed",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "timeout",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": true,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "http_error",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "invalid_payload",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/products",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/products/pp-glass-fiber-board",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/applications",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/manufacturing",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/quality",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/about",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/faq",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/news",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "unsupported_version",
+      "route": "/contact",
+      "pass": true,
+      "httpRequests": 1,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/admin",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/admin/products",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/admin/login",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/admin/logout",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/api/auth/login",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/_next/static/test.js",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/favicon.ico",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/images/test.png",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    },
+    {
+      "scenario": "expired",
+      "route": "/service-expired",
+      "pass": true,
+      "httpRequests": 0,
+      "timeoutAborted": false,
+      "networkViolation": false
+    }
+  ],
+  "fixtureClosed": true
+}
