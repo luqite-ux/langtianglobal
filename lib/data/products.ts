@@ -47,7 +47,7 @@ export const products: Product[] = [
       spec('surface', 'Color', 'Black or white'),
     ],
     moq: sourceMoq,
-    images: sourceImages('pp-glass-fiber-board', 5, 'PP glass fiber board'),
+    images: sourceImages('pp-glass-fiber-board', 7, 'PP glass fiber board'),
     relatedSlugs: ['lwrt-board', 'pet-pp-composite-sheet'],
     status: 'published',
   },
