@@ -29,7 +29,7 @@ export function SamplingProcess() {
         id="process-title"
         eyebrow="Customization and sampling"
         title="From your drawing to a specification"
-        description="The inquiry follows four steps. Nothing on this site is a fixed price, lead time or commitment; each is confirmed in writing for your project."
+        description="Share your part requirements and target quantity. We will discuss the specification, sample options and quotation for your project."
       >
         <Link
           href="/contact"
