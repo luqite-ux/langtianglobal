@@ -87,6 +87,7 @@ export type NewsArticle = {
   title: string
   excerpt: string
   body: string[]
+  bodyHtml?: string
   publishedAt: string
   image?: { src: string; alt: string }
   status: 'published' | 'draft'

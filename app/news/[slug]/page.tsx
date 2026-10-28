@@ -76,11 +76,13 @@ export default async function NewsArticlePage({ params }: { params: Params }) {
               />
             </div>
           )}
-          <div className="text-muted-foreground space-y-5 text-lg leading-relaxed">
-            {article.body.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
-          </div>
+          {article.bodyHtml ? (
+            <div className="article-prose" dangerouslySetInnerHTML={{ __html: article.bodyHtml }} />
+          ) : (
+            <div className="article-prose">
+              {article.body.map((p) => <p key={p}>{p}</p>)}
+            </div>
+          )}
           <Button asChild variant="outline" className="mt-10">
             <Link href="/news">Back to news</Link>
           </Button>

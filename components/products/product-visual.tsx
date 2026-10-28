@@ -1,12 +1,10 @@
-import Image from 'next/image'
 import { LogoMark } from '@/components/site/logo'
 import type { ProductImage } from '@/lib/data/types'
 import { cn } from '@/lib/utils'
 
 /**
- * Product photographs sit on one continuous neutral tile with `contain`, so
- * the whole sheet or felt stays visible and the photo background merges with
- * the tile instead of floating in a frame.
+ * Show each source photograph at its natural ratio so the full product and its
+ * real photographic background remain visible without an inset stage or seam.
  */
 export function ProductVisual({
   image,
@@ -22,18 +20,21 @@ export function ProductVisual({
   return (
     <div
       className={cn(
-        'bg-secondary relative aspect-square w-full overflow-hidden',
+        'bg-secondary relative w-full',
+        !image && 'aspect-square',
         className,
       )}
     >
       {image ? (
-        <Image
+        // Customer-supplied photos have varied native ratios; a natural-sized image
+        // avoids contain letterboxing and cover cropping in both grids and details.
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
           src={image.src}
           alt={image.alt}
-          fill
           sizes={sizes}
-          priority={priority}
-          className="object-contain mix-blend-multiply"
+          loading={priority ? 'eager' : 'lazy'}
+          className="block h-auto w-full"
         />
       ) : (
         <div className="text-muted-foreground absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">

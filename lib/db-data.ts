@@ -2,6 +2,7 @@ import 'server-only'
 import { supabase, tenantId } from './supabase'
 import type { NewsArticle, Product, ProductCategory } from './data/types'
 import type { Locale } from './i18n'
+import sanitizeHtml from 'sanitize-html'
 
 type I18n<T> = Record<string, T> | null
 function value<T>(translations: I18n<T>, locale: Locale | undefined, fallback: T): T {
@@ -69,7 +70,12 @@ export async function liveNews(locale?: Locale): Promise<NewsArticle[] | null> {
     slug: row.slug,
     title: value(row.title_i18n, locale, row.title || ''),
     excerpt: value(row.excerpt_i18n, locale, row.excerpt || ''),
-    body: String(value(row.content_i18n, locale, row.content || '')).split(/\n\n+/).filter(Boolean),
+    body: [],
+    bodyHtml: sanitizeHtml(String(value(row.content_i18n, locale, row.content || '')), {
+      allowedTags: ['p', 'h2', 'h3', 'h4', 'strong', 'em', 'ul', 'ol', 'li', 'a', 'blockquote', 'br'],
+      allowedAttributes: { a: ['href', 'title'] },
+      allowedSchemes: ['http', 'https', 'mailto'],
+    }),
     publishedAt: row.published_at || new Date(0).toISOString(),
     image: row.featured_image ? { src: row.featured_image, alt: row.title || '' } : undefined,
     status: 'published' as const,

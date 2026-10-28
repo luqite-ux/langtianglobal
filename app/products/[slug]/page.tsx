@@ -102,13 +102,13 @@ export default async function ProductPage({ params }: { params: Params }) {
               className="border"
             />
             {extra.length > 0 && (
-              <div className="mt-4 grid grid-cols-2 gap-4">
+              <div className="mt-4 columns-2 gap-4">
                 {extra.map((img) => (
                   <ProductVisual
                     key={img.src}
                     image={img}
                     sizes="(min-width: 1024px) 22vw, 50vw"
-                    className="border"
+                    className="mb-4 break-inside-avoid border"
                   />
                 ))}
               </div>
