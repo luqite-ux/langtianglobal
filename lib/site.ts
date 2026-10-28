@@ -1,7 +1,6 @@
 export const company = {
   brandName: 'Langtian',
   legalNameEn: 'Jiangsu Langtian Composite Materials Co., Ltd.',
-  legalNameZh: '江苏朗田复合材料有限公司',
   founded: 2021,
   address: {
     street: 'Xinhai Avenue 52-8, Xuyi County Economic Development Zone',
@@ -41,7 +40,6 @@ export const organizationSchema = {
   '@type': 'Organization',
   name: company.brandName,
   legalName: company.legalNameEn,
-  alternateName: company.legalNameZh,
   foundingDate: String(company.founded),
   description:
     'Maker of thermoplastic composite sheets and felts for automotive interiors.',

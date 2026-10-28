@@ -47,8 +47,6 @@ export default async function ContactPage() {
                   <dt className="text-sm font-semibold">Company</dt>
                   <dd className="text-muted-foreground mt-1 text-sm">
                     {company.legalNameEn}
-                    <br />
-                    {company.legalNameZh}
                   </dd>
                 </div>
                 <div className="py-4">

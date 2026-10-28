@@ -40,7 +40,7 @@ export default function AboutPage() {
             </h2>
             <div className="text-muted-foreground mt-5 space-y-4 leading-relaxed">
               <p>
-                {company.legalNameEn} ({company.legalNameZh}) was established in{' '}
+                {company.legalNameEn} was established in{' '}
                 {company.founded} in Xuyi County, Huai’an, Jiangsu, China.
               </p>
               <p>
@@ -75,7 +75,7 @@ export default function AboutPage() {
               />
             </div>
             <p className="text-muted-foreground mt-3 text-xs">
-              Factory exterior, supplied photograph.
+              Langtian factory exterior in Xuyi County.
             </p>
           </Reveal>
         </div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
             Company facts
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl">
-            Taken from the supplied source materials.
+            An overview of the company and its production site.
           </p>
         </Reveal>
         <Reveal delay={60}>
@@ -108,8 +108,6 @@ export default function AboutPage() {
               <dt className="text-sm font-semibold">Legal name</dt>
               <dd className="text-muted-foreground mt-1 text-sm">
                 {company.legalNameEn}
-                <br />
-                {company.legalNameZh}
               </dd>
             </div>
             <div>
@@ -118,6 +116,34 @@ export default function AboutPage() {
             </div>
           </dl>
         </Reveal>
+      </Section>
+
+      <Section labelledBy="recognition-display-title">
+        <Reveal>
+          <h2 id="recognition-display-title" className="text-3xl font-bold tracking-tight">
+            Recognition displayed at the factory
+          </h2>
+          <p className="text-muted-foreground mt-3 max-w-2xl">
+            Views of the recognition and certificate display at Langtian's site. Certificate
+            details and dates are listed on the quality page.
+          </p>
+        </Reveal>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {(['recognition-wall-01.jpg', 'recognition-wall-02.jpg'] as const).map((file, index) => (
+            <Reveal key={file} delay={index * 80}>
+              <figure>
+                <Image
+                  src={`/images/certificates/${file}`}
+                  alt={`Recognition display at Langtian's factory, view ${index + 1}`}
+                  width={720}
+                  height={540}
+                  sizes="(min-width: 768px) 45vw, 100vw"
+                  className="h-auto w-full object-cover"
+                />
+              </figure>
+            </Reveal>
+          ))}
+        </div>
       </Section>
 
       <Section labelledBy="next-title">

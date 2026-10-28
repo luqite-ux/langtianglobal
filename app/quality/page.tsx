@@ -25,7 +25,7 @@ export default async function QualityPage() {
       <PageIntro
         eyebrow="Quality and certificates"
         title="Management-system certificates"
-        description="Langtian has supplied ISO 14001 and IATF 16949 certificate scans. Each certificate covers the management-system scope printed on it."
+        description="View the ISO 14001 and IATF 16949 certificate copies, including their stated scope and dates."
         crumbs={[{ label: 'Quality' }]}
       />
 
@@ -82,7 +82,37 @@ export default async function QualityPage() {
         </ul>
       </Section>
 
-      <Section tone="muted" labelledBy="scope-title">
+      <Section tone="muted" labelledBy="recognition-title">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+          <Reveal>
+            <h2 id="recognition-title" className="text-3xl font-bold tracking-tight">
+              Company recognition
+            </h2>
+            <p className="text-muted-foreground mt-4 leading-relaxed">
+              A high-tech enterprise certificate names Jiangsu Langtian Composite Materials
+              Co., Ltd. It was issued on 13 December 2023 and states a three-year term.
+              Please check its current status when making a procurement decision.
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <figure className="bg-white p-4">
+              <Image
+                src="/images/certificates/high-tech-enterprise.jpg"
+                alt="High-tech enterprise certificate naming Jiangsu Langtian Composite Materials Co., Ltd."
+                width={1000}
+                height={1500}
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                className="h-auto w-full object-contain"
+              />
+              <figcaption className="text-muted-foreground mt-3 text-sm">
+                High-tech enterprise certificate, issued 13 December 2023.
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+      </Section>
+
+      <Section labelledBy="scope-title">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
           <Reveal>
             <h2 id="scope-title" className="text-3xl font-bold tracking-tight">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, FileCheck2 } from 'lucide-react'
 import { Reveal } from '@/components/site/reveal'
@@ -14,7 +15,7 @@ export async function QualityContext() {
           className="mb-0 lg:flex-col lg:items-start lg:justify-start"
           eyebrow="Quality and certificates"
           title="Management-system certificates, with their scope"
-          description="Langtian has supplied ISO 14001 and IATF 16949 certificate scans. A management-system certificate covers the scope printed on it; it does not certify every product."
+          description="View the ISO 14001 and IATF 16949 certificate copies, including their stated scope and dates."
         >
           <Link
             href="/quality"
@@ -31,6 +32,18 @@ export async function QualityContext() {
                 href={`/quality#${certificate.slug}`}
                 className="bg-card hover:border-primary/70 group flex h-full flex-col border p-6 transition-colors"
               >
+                {certificate.scanSrc && (
+                  <span className="mb-5 block h-40 overflow-hidden bg-white">
+                    <Image
+                      src={certificate.scanSrc}
+                      alt={`${certificate.standard} certificate copy`}
+                      width={250}
+                      height={350}
+                      sizes="(min-width: 640px) 220px, 45vw"
+                      className="h-full w-full object-contain object-top"
+                    />
+                  </span>
+                )}
                 <FileCheck2 aria-hidden="true" className="text-primary size-7" />
                 <span className="font-display mt-5 text-2xl font-bold">{certificate.standard}</span>
                 <span className="text-muted-foreground mt-1 text-sm">{certificate.title}</span>

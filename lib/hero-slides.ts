@@ -37,7 +37,7 @@ export const heroSlides: HeroSlide[] = [
     id: 'production',
     eyebrow: 'Manufacturing',
     title: 'Needling and pressing lines behind sheet and felt',
-    text: 'The source materials list five production lines in four workshops, made up of three needling lines and two pressing lines.',
+    text: 'Five production lines across four workshops: three needling lines and two pressing lines.',
     image: {
       src: '/images/banners/banner-production-line.jpg',
       alt: 'Banner illustration of a red-lit press line feeding pale composite sheets onto a conveyor',

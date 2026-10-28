@@ -24,18 +24,46 @@ const stats = [
   { value: String(f.pressingLines), label: 'Pressing lines' },
 ]
 
-const photos = [
+const photoGroups = [
   {
-    src: '/images/factory/factory-exterior.jpg',
-    alt: 'Exterior of the Langtian factory building with dark corrugated cladding and tall windows',
-    caption: 'Factory exterior in Xuyi County Economic Development Zone.',
+    title: 'Factory site',
+    description: 'Exterior views of the Xuyi County facility.',
+    images: [
+      ['factory-building-row.jpg', 'Factory buildings and the front yard'],
+      ['factory-entrance.jpg', 'Entrance to the factory building'],
+      ['factory-front.jpg', 'Front of the factory site'],
+    ],
   },
   {
-    src: '/images/factory/fibre-processing-hall.jpg',
-    alt: 'Interior of a production hall with fiber-processing machines and ducting under a steel roof',
-    caption: 'Production hall with fiber-processing equipment and ducting.',
+    title: 'Production equipment',
+    description: 'Equipment and processing lines inside the workshops.',
+    images: [
+      ['production-hall-01.jpg', 'Production equipment in the workshop'],
+      ['pressing-line-01.jpg', 'Large pressing equipment'],
+      ['pressing-machine-01.jpg', 'Sheet processing machine'],
+      ['needling-line-01.jpg', 'Fiber-processing line'],
+      ['sheet-line-01.jpg', 'Sheet production line'],
+      ['pressing-line-02.jpg', 'Pressing equipment seen from the front'],
+      ['production-hall-02.jpg', 'Workshop equipment and production floor'],
+      ['pressing-line-03.jpg', 'Pressing equipment in the workshop'],
+      ['processing-line-01.jpg', 'Long processing line'],
+      ['fiber-processing-machine.jpg', 'Fiber-processing machine and ducting'],
+      ['processing-line-02.jpg', 'Processing line inside the workshop'],
+    ],
   },
-]
+  {
+    title: 'Workshop and materials',
+    description: 'Production floor, material rolls and storage areas.',
+    images: [
+      ['material-rolls.jpg', 'Material rolls in a workshop'],
+      ['workshop-floor-01.jpg', 'Open workshop floor'],
+      ['workshop-floor-02.jpg', 'Equipment in a production hall'],
+      ['workshop-wide.jpg', 'Wide view across the workshop'],
+      ['materials-storage-01.jpg', 'Materials stored inside the workshop'],
+      ['materials-storage-02.jpg', 'Bagged materials in storage'],
+    ],
+  },
+] as const
 
 export default function ManufacturingPage() {
   return (
@@ -43,7 +71,7 @@ export default function ManufacturingPage() {
       <PageIntro
         eyebrow="Manufacturing"
         title="Where the sheets and felts are made"
-        description="Source materials identify an approximately 15,000-square-meter factory with four workshops and five production lines: three needling lines and two pressing lines."
+        description="An approximately 15,000-square-meter factory with four workshops and five production lines: three needling lines and two pressing lines."
         crumbs={[{ label: 'Manufacturing' }]}
       />
 
@@ -53,9 +81,8 @@ export default function ManufacturingPage() {
             Facility at a glance
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl">
-            These are the figures stated in the supplied source materials. Output volumes,
-            capacity and individual equipment specifications are not published here and are
-            discussed per project.
+            Share your required material, format and volume so we can discuss suitable
+            production options for your project.
           </p>
         </Reveal>
         <Reveal delay={60}>
@@ -76,30 +103,37 @@ export default function ManufacturingPage() {
             From the factory
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl">
-            Supplied photographs of the site. More production photographs will be added as
-            they are received.
+            Explore the site, equipment and material-handling areas.
           </p>
         </Reveal>
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
-          {photos.map((p, i) => (
-            <Reveal as="li" key={p.src} delay={i * 80}>
-              <figure>
-                <div className="bg-secondary relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={p.src}
-                    alt={p.alt}
-                    fill
-                    sizes="(min-width: 768px) 45vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <figcaption className="text-muted-foreground mt-3 text-sm">
-                  {p.caption}
-                </figcaption>
-              </figure>
-            </Reveal>
+        <div className="mt-10 space-y-14">
+          {photoGroups.map((group) => (
+            <div key={group.title}>
+              <Reveal>
+                <h3 className="text-xl font-bold">{group.title}</h3>
+                <p className="text-muted-foreground mt-1 text-sm">{group.description}</p>
+              </Reveal>
+              <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {group.images.map(([file, caption], i) => (
+                  <Reveal as="li" key={file} delay={(i % 3) * 60}>
+                    <figure>
+                      <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                        <Image
+                          src={`/images/factory/${file}`}
+                          alt={caption}
+                          fill
+                          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <figcaption className="text-muted-foreground mt-2 text-sm">{caption}</figcaption>
+                    </figure>
+                  </Reveal>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </Section>
 
       <Section labelledBy="process-title">

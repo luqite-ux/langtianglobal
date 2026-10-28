@@ -20,7 +20,7 @@ export function ManufacturingEvidence() {
         tone="dark"
         eyebrow="Manufacturing evidence"
         title="A factory in Xuyi County, shown as it is"
-        description="Source materials identify five production lines: three needling lines and two pressing lines. The photographs below are from the supplied collection."
+        description="Four workshops house five production lines: three needling lines and two pressing lines. See the factory and production hall."
       >
         <Link
           href="/manufacturing"

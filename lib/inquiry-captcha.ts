@@ -184,7 +184,7 @@ function renderSvg(answer: string, nonce: string) {
     })
     .join('')
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="56" viewBox="0 0 160 56" role="img" aria-label="验证码图片"><rect width="160" height="56" rx="8" fill="#f8fafc"/><g fill="none" stroke="#94a3b8" stroke-width="1" opacity=".55">${lines}</g><g fill="#0f172a">${glyphs}</g></svg>`
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="56" viewBox="0 0 160 56" role="img" aria-label="Verification image"><rect width="160" height="56" rx="8" fill="#f8fafc"/><g fill="none" stroke="#94a3b8" stroke-width="1" opacity=".55">${lines}</g><g fill="#0f172a">${glyphs}</g></svg>`
 }
 
 

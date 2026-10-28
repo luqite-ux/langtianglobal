@@ -25,9 +25,6 @@ export async function SiteFooter() {
             <Logo className="h-12" />
           </Link>
           <p className="mt-5 text-sm font-medium">{company.legalNameEn}</p>
-          <p lang="zh-CN" className="mt-1 text-sm text-white/70">
-            {company.legalNameZh}
-          </p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
             Thermoplastic composite sheets and felts for automotive interiors.
           </p>

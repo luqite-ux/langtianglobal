@@ -13,7 +13,7 @@ const sourceMoq = { value: 500, unit: 'pcs' } as const
 const sourceImages = (slug: string, count: number, name: string) =>
   Array.from({ length: count }, (_, index) => ({
     src: `/images/products/source/${slug}-${index + 1}.jpeg`,
-    alt: `${name}, customer-supplied product photo ${index + 1}`,
+    alt: `${name}, product view ${index + 1}`,
     kind: index === 0 ? 'full' as const : 'detail' as const,
   }))
 

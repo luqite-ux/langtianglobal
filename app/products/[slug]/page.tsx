@@ -114,8 +114,7 @@ export default async function ProductPage({ params }: { params: Params }) {
               </div>
             )}
             <p className="text-muted-foreground mt-3 text-xs leading-relaxed">
-              Representative photograph. Appearance, color and surface are confirmed per
-              inquiry.
+              Appearance, color and surface are confirmed for each inquiry.
             </p>
           </Reveal>
 
