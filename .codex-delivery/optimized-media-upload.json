@@ -1,0 +1,191 @@
+{
+  "tenantId": "317a84d7-9b80-4785-bd97-59170f7d2472",
+  "verifiedAt": "2026-10-28T11:00:05.886Z",
+  "count": 23,
+  "receipt": [
+    {
+      "product_slug": "phc-fiberglass-composite-panel",
+      "source_file": "phc-fiberglass-composite-panel-1.jpg",
+      "sha256": "33dc8d12511f9d4e33b05423f71da016b236965806748ee78e56ec0b4ea6085e",
+      "bytes": 940545,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/33dc8d12511f9d4e33b0.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/33dc8d12511f9d4e33b0.jpg"
+    },
+    {
+      "product_slug": "phc-fiberglass-composite-panel",
+      "source_file": "phc-fiberglass-composite-panel-2.jpg",
+      "sha256": "fade065c386a8a35b7e73de09344f3b1e27906f2820c718aa921736176209f5b",
+      "bytes": 1004259,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/fade065c386a8a35b7e7.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/fade065c386a8a35b7e7.jpg"
+    },
+    {
+      "product_slug": "phc-fiberglass-composite-panel",
+      "source_file": "phc-fiberglass-composite-panel-3.jpg",
+      "sha256": "73ab45105b85ca228a2868a82450ee8f3e6cc90193b17862fb3667f6d99961af",
+      "bytes": 1002724,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/73ab45105b85ca228a28.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/73ab45105b85ca228a28.jpg"
+    },
+    {
+      "product_slug": "phc-fiberglass-composite-panel",
+      "source_file": "phc-fiberglass-composite-panel-4.jpg",
+      "sha256": "ad2441a8ab81a61c3fa4440c30df3757d0f4cf04c659ad9bb8863357227f734c",
+      "bytes": 929838,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/ad2441a8ab81a61c3fa4.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/ad2441a8ab81a61c3fa4.jpg"
+    },
+    {
+      "product_slug": "phc-fiberglass-composite-panel",
+      "source_file": "phc-fiberglass-composite-panel-5.jpg",
+      "sha256": "3b84a19f41d4fbbfaa269a1666a1580e5a73f0e8dca10cefa32503d80aaa99b7",
+      "bytes": 957973,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/3b84a19f41d4fbbfaa26.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/3b84a19f41d4fbbfaa26.jpg"
+    },
+    {
+      "product_slug": "pp-bamboo-hemp-fiberboard",
+      "source_file": "pp-bamboo-hemp-fiberboard-1.jpg",
+      "sha256": "2d81fe53bef2082551d0d730da4ebb99666b27da36abf35422a3321138cca11a",
+      "bytes": 760583,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/2d81fe53bef2082551d0.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/2d81fe53bef2082551d0.jpg"
+    },
+    {
+      "product_slug": "pp-bamboo-hemp-fiberboard",
+      "source_file": "pp-bamboo-hemp-fiberboard-2.jpg",
+      "sha256": "66426d02cced7b35d0013a7f38d02d54cb0cbbceac71088149050373165cf711",
+      "bytes": 993260,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/66426d02cced7b35d001.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/66426d02cced7b35d001.jpg"
+    },
+    {
+      "product_slug": "pp-bamboo-hemp-fiberboard",
+      "source_file": "pp-bamboo-hemp-fiberboard-3.jpg",
+      "sha256": "3162c58b453039f00ef040bd8df4f2b79def22382c3f43087deef89599d2033f",
+      "bytes": 906327,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/3162c58b453039f00ef0.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/3162c58b453039f00ef0.jpg"
+    },
+    {
+      "product_slug": "pp-glass-fiber-board",
+      "source_file": "pp-glass-fiber-board-1.jpg",
+      "sha256": "e5ff3d7284e97627543cb524d6fb6b15862a7e0bdf597aaa80857544f7eafca8",
+      "bytes": 596898,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/e5ff3d7284e97627543c.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/e5ff3d7284e97627543c.jpg"
+    },
+    {
+      "product_slug": "pp-glass-fiber-board",
+      "source_file": "pp-glass-fiber-board-2.jpg",
+      "sha256": "26e1eee15a87f458d961a8e46da3ff29ceb750e58ba95ba25783e39f6b18dbef",
+      "bytes": 731733,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/26e1eee15a87f458d961.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/26e1eee15a87f458d961.jpg"
+    },
+    {
+      "product_slug": "pp-glass-fiber-board",
+      "source_file": "pp-glass-fiber-board-3.jpg",
+      "sha256": "77f331d91d36e46530cb73fe6f371b21d504744a599519e5881dc18526f4f3e9",
+      "bytes": 945235,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/77f331d91d36e46530cb.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/77f331d91d36e46530cb.jpg"
+    },
+    {
+      "product_slug": "pp-glass-fiber-board",
+      "source_file": "pp-glass-fiber-board-4.jpg",
+      "sha256": "59b993f10575d78687671976daab29b8c4ae8f6757b9ab8644bcfb2208f53fd4",
+      "bytes": 857025,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/59b993f10575d7868767.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/59b993f10575d7868767.jpg"
+    },
+    {
+      "product_slug": "pp-glass-fiber-board",
+      "source_file": "pp-glass-fiber-board-5.jpg",
+      "sha256": "dd9d58e67a6244a70178fa10afb65fbcf9f30734d4f24044a5253cc28893704f",
+      "bytes": 931556,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/dd9d58e67a6244a70178.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/dd9d58e67a6244a70178.jpg"
+    },
+    {
+      "product_slug": "pet-non-woven-pile-carpet",
+      "source_file": "pet-non-woven-pile-carpet-1.jpg",
+      "sha256": "6eac7ae7780dadd6610db839c7ee0ec95297645ab3ff0c959ae7367cfddf00a2",
+      "bytes": 901390,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/6eac7ae7780dadd6610d.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/6eac7ae7780dadd6610d.jpg"
+    },
+    {
+      "product_slug": "pet-non-woven-pile-carpet",
+      "source_file": "pet-non-woven-pile-carpet-2.jpg",
+      "sha256": "890362eeab41b99806fc8f49a5b80709adb3c93c562b61db6621216aa54c387c",
+      "bytes": 962565,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/890362eeab41b99806fc.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/890362eeab41b99806fc.jpg"
+    },
+    {
+      "product_slug": "lwrtud-felt-sheet",
+      "source_file": "lwrtud-felt-sheet-1.jpg",
+      "sha256": "c4f2228852611d062df8282f2e4224e53bc29f9b4c3e2e760c69570c907f4887",
+      "bytes": 932146,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/c4f2228852611d062df8.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/c4f2228852611d062df8.jpg"
+    },
+    {
+      "product_slug": "lwrtud-felt-sheet",
+      "source_file": "lwrtud-felt-sheet-2.jpg",
+      "sha256": "242ef66f7661c242a42fd4c40fb86f14ea7fa2dad5b65490fe5782553bb4f197",
+      "bytes": 950408,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/242ef66f7661c242a42f.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/242ef66f7661c242a42f.jpg"
+    },
+    {
+      "product_slug": "pet-foam-board",
+      "source_file": "pet-foam-board-1.jpg",
+      "sha256": "36b4bfac7bcf6f7d9e4c6c38f583083b79a792404a5e67165cababc650ad5f6e",
+      "bytes": 534501,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/36b4bfac7bcf6f7d9e4c.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/36b4bfac7bcf6f7d9e4c.jpg"
+    },
+    {
+      "product_slug": "pet-foam-board",
+      "source_file": "pet-foam-board-2.jpg",
+      "sha256": "5c8dc38402051458952823a323e1c56d37a219d48b4764227b238fe9ffbbb322",
+      "bytes": 858329,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/5c8dc384020514589528.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/5c8dc384020514589528.jpg"
+    },
+    {
+      "product_slug": "pet-pp-composite-sheet",
+      "source_file": "pet-pp-composite-sheet-1.jpg",
+      "sha256": "c52d250902e04ce53f431958b9b77eb170a9a7aac8596b7e9b913f83c69fce96",
+      "bytes": 936606,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/c52d250902e04ce53f43.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/c52d250902e04ce53f43.jpg"
+    },
+    {
+      "product_slug": "pet-pp-composite-sheet",
+      "source_file": "pet-pp-composite-sheet-2.jpg",
+      "sha256": "ee786465e774bbc00eb84f466ae8a7d7f295a20833be5193157f43a7f72ed103",
+      "bytes": 893405,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/ee786465e774bbc00eb8.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/ee786465e774bbc00eb8.jpg"
+    },
+    {
+      "product_slug": "pet-pp-composite-sheet",
+      "source_file": "pet-pp-composite-sheet-3.jpg",
+      "sha256": "9e4c05568fbbddc9633f35bca5c83e5dfbc72476606e1390c3eb8f0ed737fdb4",
+      "bytes": 945307,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/9e4c05568fbbddc9633f.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/9e4c05568fbbddc9633f.jpg"
+    },
+    {
+      "product_slug": "pet-pp-composite-sheet",
+      "source_file": "pet-pp-composite-sheet-4.jpg",
+      "sha256": "b3220972955a0a50aa66b044078fd43941ff9b92104dd4f1c0b77546e7edb65d",
+      "bytes": 828925,
+      "r2_key": "products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/b3220972955a0a50aa66.jpg",
+      "url": "https://pub-c7a22068052144a5805830c30d280128.r2.dev/products/317a84d7-9b80-4785-bd97-59170f7d2472/optimized/b3220972955a0a50aa66.jpg"
+    }
+  ]
+}
