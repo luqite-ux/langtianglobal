@@ -11,7 +11,7 @@ import { getCertificates } from '@/lib/data'
 export const metadata: Metadata = {
   title: 'Quality and certificates',
   description:
-    'Langtian holds ISO 14001 and IATF 16949 management-system certificates. Each applies to the scope printed on the certificate.',
+    'Review the supplied ISO 14001 and IATF 16949 certificate copies, including the scope and dates printed on each copy.',
   alternates: { canonical: '/quality' },
 }
 
@@ -41,7 +41,7 @@ export default async function QualityPage() {
               ['Certificate number', cert.certificateNumber],
               ['Issuing body', cert.issuingBody],
               ['Scope', cert.scope],
-              ['Valid until', cert.validUntil],
+              ['Expiry printed on copy', cert.validUntil],
             ] as const
             return (
               <Reveal as="li" key={cert.slug} delay={i * 80}>
@@ -64,6 +64,9 @@ export default async function QualityPage() {
                       </div>
                     ))}
                   </dl>
+                  <p className="text-muted-foreground mt-4 text-sm">
+                    This is a supplied copy. Confirm current registration status with the issuing body before relying on it.
+                  </p>
                   {cert.scanSrc && (
                     <div className="bg-secondary relative mt-6 aspect-[3/4] overflow-hidden">
                       <Image

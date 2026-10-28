@@ -39,9 +39,9 @@ export const faqs: FaqItem[] = [
   {
     id: 'certificates',
     topic: 'quality',
-    question: 'Which certificates does Langtian hold?',
+    question: 'Which certificate copies are available?',
     answer:
-      'ISO 14001 and IATF 16949 management-system certificates. Each certificate applies to the management-system scope printed on it. A management-system certificate does not certify every individual product.',
+      'Supplied ISO 14001 and IATF 16949 management-system certificate copies are available to review. Each copy states its scope and dates; please confirm current registration status with the issuing body. A management-system certificate does not certify every individual product.',
   },
   {
     id: 'location',
