@@ -49,7 +49,7 @@ export function MaterialDifferentiators() {
         id="differentiators-title"
         eyebrow="Materials and processing"
         title="What differs between these materials"
-        description="Descriptions follow the product sources. Figures such as thickness, weight and MOQ stay on each product page and are confirmed per inquiry."
+        description="Compare the material forms here, then check each product page for thickness, areal weight and minimum order quantity."
       />
       <ul className="grid gap-px border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {differentiators.map((item, i) => (

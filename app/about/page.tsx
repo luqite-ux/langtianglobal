@@ -90,18 +90,16 @@ export default function AboutPage() {
             An overview of the company and its production site.
           </p>
         </Reveal>
-        <Reveal delay={60}>
-          <dl className="mt-8 grid gap-px border bg-border sm:grid-cols-2 lg:grid-cols-5">
-            {facts.map((f) => (
-              <div key={f.label} className="bg-card p-5">
+        <dl className="mt-8 grid gap-px border bg-border sm:grid-cols-2 lg:grid-cols-5">
+            {facts.map((f, i) => (
+              <Reveal as="div" key={f.label} delay={Math.min(i * 60, 240)} className="bg-card p-5">
                 <dt className="text-muted-foreground text-xs font-semibold tracking-wide uppercase">
                   {f.label}
                 </dt>
                 <dd className="mt-2 text-lg font-bold">{f.value}</dd>
-              </div>
+              </Reveal>
             ))}
-          </dl>
-        </Reveal>
+        </dl>
         <Reveal delay={100}>
           <dl className="mt-8 grid gap-6 sm:grid-cols-2">
             <div>

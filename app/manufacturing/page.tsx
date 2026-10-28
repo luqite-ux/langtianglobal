@@ -85,16 +85,14 @@ export default function ManufacturingPage() {
             production options for your project.
           </p>
         </Reveal>
-        <Reveal delay={60}>
-          <dl className="mt-8 grid gap-px border bg-border sm:grid-cols-3 lg:grid-cols-5">
-            {stats.map((s) => (
-              <div key={s.label} className="bg-card flex flex-col-reverse justify-end gap-1 p-6">
+        <dl className="mt-8 grid gap-px border bg-border sm:grid-cols-3 lg:grid-cols-5">
+            {stats.map((s, i) => (
+              <Reveal as="div" key={s.label} delay={Math.min(i * 60, 240)} className="bg-card flex flex-col-reverse justify-end gap-1 p-6">
                 <dt className="text-muted-foreground text-sm">{s.label}</dt>
                 <dd className="text-primary text-3xl font-bold tabular-nums">{s.value}</dd>
-              </div>
+              </Reveal>
             ))}
-          </dl>
-        </Reveal>
+        </dl>
       </Section>
 
       <Section tone="muted" labelledBy="photos-title">

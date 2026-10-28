@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/quality' },
 }
 
-const placeholder = 'Shown on the certificate copy'
+const placeholder = 'See the certificate copy'
 
 export default async function QualityPage() {
   const certificates = await getCertificates()

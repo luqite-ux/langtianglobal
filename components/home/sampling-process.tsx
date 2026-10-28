@@ -42,7 +42,7 @@ export function SamplingProcess() {
       <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, i) => (
           <Reveal as="li" key={step.title} delay={i * 80}>
-            <div className="border-primary h-full border-t-4 pt-5">
+            <div className="process-step relative h-full pt-5">
               <span
                 aria-hidden="true"
                 className="text-primary font-display text-4xl font-bold tabular-nums"

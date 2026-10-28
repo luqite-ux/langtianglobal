@@ -29,7 +29,7 @@ export default async function ApplicationsPage() {
       <PageIntro
         eyebrow="Applications"
         title="Materials by automotive interior part"
-        description="Each part links to the products whose sources list it. Suitability for your design is always confirmed against your requirements."
+        description="Explore materials by interior part. Suitability for your design is confirmed against your requirements."
         crumbs={[{ label: 'Applications' }]}
       />
 
@@ -95,8 +95,8 @@ export default async function ApplicationsPage() {
 
         <Reveal className="mt-12 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
           <p className="text-muted-foreground max-w-xl">
-            Working on a part that is not listed? Describe it and we will check it against the
-            product sources.
+            Working on a part that is not listed? Describe it and we will discuss the suitable
+            material options with you.
           </p>
           <Button asChild size="lg">
             <Link href="/contact">Discuss your part</Link>

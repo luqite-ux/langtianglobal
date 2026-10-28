@@ -12,7 +12,7 @@ export async function ApplicationPaths() {
         id="applications-title"
         eyebrow="Automotive applications"
         title="Find materials by interior part"
-        description="Pick the part you are developing to see which products from the source rows are linked to it."
+        description="Pick the part you are developing to explore materials that may suit its structure and surface requirements."
       />
       <ol className="border-t">
         {applications.map((application, i) => {

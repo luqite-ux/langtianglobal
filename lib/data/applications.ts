@@ -25,7 +25,7 @@ export const applications: Application[] = [
       src: '/images/applications/felt-faced-panel.jpg',
       alt: 'Dark teal felt-faced flat panel with die-cut notches and fastener holes',
       caption:
-        'Representative sample photograph: a felt-faced flat panel with notches and fastener holes.',
+        'Felt-faced flat panel with notches and fastener holes.',
     },
   },
   {
@@ -38,7 +38,7 @@ export const applications: Application[] = [
       src: '/images/applications/molded-cover-stack.jpg',
       alt: 'Stack of dark molded composite parts with a circular embossed recess',
       caption:
-        'Representative sample photograph: a stack of molded parts with a circular embossed recess.',
+        'Stack of molded parts with a circular embossed recess.',
     },
   },
   {
@@ -46,6 +46,6 @@ export const applications: Application[] = [
     name: 'Other interior structures',
     summary: 'Further interior parts that use sheet, felt or panel materials.',
     detail:
-      'If your part is not listed, describe it in an inquiry. Suitability is confirmed against the relevant product source and your part requirements.',
+      'If your part is not listed, describe it in an inquiry. Material suitability is confirmed against your part requirements.',
   },
 ]
