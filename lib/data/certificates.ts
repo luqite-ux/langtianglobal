@@ -4,7 +4,7 @@ import type { Certificate } from './types'
 export const certificates: Certificate[] = [
   {
     slug: 'iso-14001',
-    standard: 'ISO 14001',
+    standard: 'ISO 14001:2015',
     title: 'Environmental management system',
     certificateNumber: '69024E0155ROS',
     issuingBody: null,
@@ -14,7 +14,7 @@ export const certificates: Certificate[] = [
   },
   {
     slug: 'iatf-16949',
-    standard: 'IATF 16949',
+    standard: 'IATF 16949:2016',
     title: 'Automotive quality management system',
     certificateNumber: '133961/A/0001/SM/En',
     issuingBody: 'URS',
