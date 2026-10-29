@@ -41,7 +41,7 @@ export const faqs: FaqItem[] = [
     topic: 'products',
     question: 'Which material properties can be discussed for a part?',
     answer:
-      'The supplied product descriptions cover lightweight construction, impact resistance, thermal and acoustic performance, low odor and dimensional stability across different materials. Relevant properties depend on the selected product and specification; request its technical data sheet for a project.',
+      'The supplied product descriptions cover lightweight construction, strength, impact resistance, thermal and acoustic performance, low odor and dimensional stability across different materials. Relevant properties depend on the selected product and specification; request its technical data sheet for a project.',
   },
   {
     id: 'oem-odm',
@@ -62,14 +62,14 @@ export const faqs: FaqItem[] = [
     topic: 'inquiry',
     question: 'Can I ask about samples?',
     answer:
-      'Yes. Choose “Sample request” as the inquiry context and describe the material and size you need. Sample availability is confirmed for each material and project.',
+      'Yes. Choose “Sample request” as the inquiry context and describe the material and size you need. Sample availability and shipping are confirmed for each material and project.',
   },
   {
     id: 'sample-approval',
     topic: 'inquiry',
     question: 'Can a custom material be sampled before production?',
     answer:
-      'Yes. For custom products, the supplied process recommends reviewing a sample before arranging volume production. Sample timing and any charges are discussed for the requested material and quantity.',
+      'Yes. For custom products, the supplied process recommends reviewing a sample before arranging volume production. Sample timing and charges depend on the material and quantity. Any credit or refund of a sample charge against a later bulk order must be agreed in the quotation.',
   },
   {
     id: 'moq-price',
@@ -104,7 +104,7 @@ export const faqs: FaqItem[] = [
     topic: 'inquiry',
     question: 'How are production and sample lead times confirmed?',
     answer:
-      'Sample timing depends on the product and process. Production timing depends on order quantity and complexity; the schedule is confirmed with the order, including any peak-season or urgent requirements.',
+      'Sample timing depends on the product and process. The customer-supplied estimate for a regular production order starts at about 15 days; actual timing depends on quantity and process complexity. The bulk-order schedule is confirmed per order, including any peak-season change. Urgent production can be discussed against current capacity.',
   },
   {
     id: 'progress-updates',
@@ -125,7 +125,7 @@ export const faqs: FaqItem[] = [
     topic: 'quality',
     question: 'How are quality issues discussed?',
     answer:
-      'Contact Langtian with the order reference, affected quantity and inspection details. The response and any next steps are handled under the terms agreed for that order.',
+      'Contact Langtian with the order reference, affected quantity and inspection details. Any return, replacement or replenishment is discussed under the terms agreed for that order.',
   },
   {
     id: 'certificates',
