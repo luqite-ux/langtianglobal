@@ -62,6 +62,7 @@ export default async function ProductPage({ params }: { params: Params }) {
           '@type': 'Product',
           name: product.name,
           description: product.summary,
+          ...(product.sku ? { sku: product.sku } : {}),
           category: category?.name,
           brand: { '@type': 'Brand', name: company.brandName },
           manufacturer: { '@type': 'Organization', name: company.legalNameEn },
@@ -140,6 +141,12 @@ export default async function ProductPage({ params }: { params: Params }) {
                 against the current technical data.
               </p>
               <dl className="mt-5 border-t">
+                {product.sku ? (
+                  <div className="grid gap-1 border-b py-3.5 sm:grid-cols-[minmax(0,12rem)_1fr] sm:gap-6">
+                    <dt className="text-sm font-semibold">Product code</dt>
+                    <dd className="text-muted-foreground text-sm">{product.sku}</dd>
+                  </div>
+                ) : null}
                 <div className="grid gap-1 border-b py-3.5 sm:grid-cols-[minmax(0,12rem)_1fr] sm:gap-6">
                   <dt className="text-sm font-semibold">Form</dt>
                   <dd className="text-muted-foreground text-sm">{product.form}</dd>

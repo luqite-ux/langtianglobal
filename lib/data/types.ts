@@ -34,6 +34,7 @@ export type ProductImage = {
 
 export type Product = {
   slug: string
+  sku?: string
   name: string
   categorySlug: CategorySlug
   form: string

@@ -42,6 +42,7 @@ export async function liveProducts(locale?: Locale): Promise<Product[] | null> {
       : row.image_url ? [{ src: row.image_url, alt: `${row.name} product photo`, kind: 'full' as const }] : []
     return {
       slug: row.slug,
+      sku: typeof extra.source_sku === 'string' ? extra.source_sku : undefined,
       name: value(row.name_i18n, locale, row.name || ''),
       categorySlug: row.category_slug as Product['categorySlug'],
       form: extra.product_form || '',
