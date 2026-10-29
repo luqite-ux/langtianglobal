@@ -5,7 +5,7 @@ import { PageIntro } from '@/components/site/page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
-import { getCategories, getCategory, getProducts, isCategorySlug } from '@/lib/data'
+import { getCategories, getCategory, getProducts } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { pageMetadata } from '@/lib/page-metadata'
 
@@ -15,7 +15,7 @@ type SearchParams = Promise<{ category?: string | string[] }>
 
 function readCategory(value: string | string[] | undefined) {
   const first = Array.isArray(value) ? value[0] : value
-  return isCategorySlug(first) ? first : undefined
+  return first || undefined
 }
 
 export async function generateMetadata({
@@ -37,10 +37,10 @@ export async function generateMetadata({
 export default async function ProductsPage({ searchParams }: { searchParams: SearchParams }) {
   const activeSlug = readCategory((await searchParams).category)
   const [categories, allProducts] = await Promise.all([getCategories(), getProducts()])
-  const products = activeSlug
-    ? allProducts.filter((p) => p.categorySlug === activeSlug)
-    : allProducts
   const active = categories.find((c) => c.slug === activeSlug)
+  const products = active
+    ? allProducts.filter((p) => p.categorySlug === active.slug)
+    : allProducts
 
   const counts = new Map(
     categories.map((c) => [c.slug, allProducts.filter((p) => p.categorySlug === c.slug).length]),
@@ -75,7 +75,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: Sea
         <nav aria-label="Product categories" className="mb-10">
           <ul className="flex flex-wrap gap-2">
             {filters.map((f) => {
-              const isActive = f.slug === activeSlug
+              const isActive = f.slug === active?.slug
               return (
                 <li key={f.label}>
                   <Link

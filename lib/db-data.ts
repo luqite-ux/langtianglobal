@@ -11,31 +11,29 @@ function value<T>(translations: I18n<T>, locale: Locale | undefined, fallback: T
   return chosen ?? fallback
 }
 
-export async function liveCategories(staticCategories: ProductCategory[], locale?: Locale): Promise<ProductCategory[] | null> {
+export async function liveCategories(locale?: Locale): Promise<ProductCategory[] | null> {
   if (!supabase || !tenantId) return null
   const { data, error } = await supabase.from('product_categories')
     .select('slug,name,name_i18n,description,description_i18n,icon')
     .eq('tenant_id', tenantId).eq('is_active', true).order('sort_order')
   if (error) { console.error('Category query failed', error.code); return null }
   return data.map(row => {
-    const fallback = staticCategories.find(item => item.slug === row.slug)
     return {
       slug: row.slug as ProductCategory['slug'],
-      name: value(row.name_i18n, locale, row.name || fallback?.name || ''),
-      summary: value(row.description_i18n, locale, row.description || fallback?.summary || ''),
-      image: { src: row.icon || fallback?.image.src || '', alt: fallback?.image.alt || row.name },
+      name: value(row.name_i18n, locale, row.name || ''),
+      summary: value(row.description_i18n, locale, row.description || ''),
+      image: { src: row.icon || '', alt: row.name },
     }
   })
 }
 
-export async function liveProducts(staticProducts: Product[], locale?: Locale): Promise<Product[] | null> {
+export async function liveProducts(locale?: Locale): Promise<Product[] | null> {
   if (!supabase || !tenantId) return null
   const { data, error } = await supabase.from('products')
     .select('slug,name,name_i18n,description,description_i18n,overview_i18n,category_slug,features_i18n,applications_i18n,advantages_i18n,specs,image_url,extra_data')
     .eq('tenant_id', tenantId).eq('is_active', true).order('sort_order')
   if (error) { console.error('Product query failed', error.code); return null }
   return data.map(row => {
-    const fallback = staticProducts.find(item => item.slug === row.slug)
     const extra = row.extra_data || {}
     const images = Array.isArray(extra.images) && extra.images.length
       ? extra.images.filter((url: unknown) => typeof url === 'string').map((src: string, index: number) => ({
@@ -44,17 +42,17 @@ export async function liveProducts(staticProducts: Product[], locale?: Locale): 
       : row.image_url ? [{ src: row.image_url, alt: `${row.name} product photo`, kind: 'full' as const }] : []
     return {
       slug: row.slug,
-      name: value(row.name_i18n, locale, row.name || fallback?.name || ''),
+      name: value(row.name_i18n, locale, row.name || ''),
       categorySlug: row.category_slug as Product['categorySlug'],
-      form: extra.product_form || fallback?.form || '',
-      summary: value(row.description_i18n, locale, row.description || fallback?.summary || ''),
-      description: String(value(row.overview_i18n, locale, fallback?.description.join('\n\n') || '')).split(/\n\n+/).filter(Boolean),
-      highlights: value(row.features_i18n, locale, fallback?.highlights || []),
-      applicationSlugs: value(row.applications_i18n, locale, fallback?.applicationSlugs || []),
-      specs: Array.isArray(row.specs) ? row.specs : fallback?.specs || [],
-      moq: extra.moq || fallback?.moq || { value: null, unit: null },
+      form: extra.product_form || '',
+      summary: value(row.description_i18n, locale, row.description || ''),
+      description: String(value(row.overview_i18n, locale, '')).split(/\n\n+/).filter(Boolean),
+      highlights: value(row.features_i18n, locale, []),
+      applicationSlugs: value(row.applications_i18n, locale, []),
+      specs: Array.isArray(row.specs) ? row.specs : [],
+      moq: extra.moq || { value: null, unit: null },
       images,
-      relatedSlugs: fallback?.relatedSlugs || [],
+      relatedSlugs: Array.isArray(extra.related_slugs) ? extra.related_slugs : [],
       status: 'published' as const,
     }
   })

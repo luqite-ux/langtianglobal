@@ -3,25 +3,18 @@ import { applications } from './applications'
 import { categories } from './categories'
 import { certificates } from './certificates'
 import { faqs } from './faqs'
-import { news } from './news'
-import { products } from './products'
 import { liveCategories, liveNews, liveProducts } from '@/lib/db-data'
 import type {
   Application,
   ApplicationSlug,
-  CategorySlug,
   FaqItem,
   NewsArticle,
   Product,
   ProductCategory,
 } from './types'
 
-/**
- * Async accessors keep the call sites identical when the sample arrays are
- * replaced by tenant-scoped queries.
- */
 export async function getCategories(locale?: Locale): Promise<ProductCategory[]> {
-  return (await liveCategories(categories, locale)) ?? categories.map((c) => localize(c, locale))
+  return (await liveCategories(locale)) ?? []
 }
 
 export async function getCategory(slug: string, locale?: Locale) {
@@ -29,9 +22,9 @@ export async function getCategory(slug: string, locale?: Locale) {
 }
 
 export async function getProducts(
-  options: { category?: CategorySlug; locale?: Locale } = {},
+  options: { category?: string; locale?: Locale } = {},
 ): Promise<Product[]> {
-  const source = (await liveProducts(products, options.locale)) ?? products
+  const source = (await liveProducts(options.locale)) ?? []
   return source
     .filter((p) => p.status === 'published')
     .filter((p) => !options.category || p.categorySlug === options.category)
@@ -59,17 +52,13 @@ export async function getFaqs(locale?: Locale): Promise<FaqItem[]> {
 }
 
 export async function getPublishedNews(): Promise<NewsArticle[]> {
-  return ((await liveNews()) ?? news)
+  return ((await liveNews()) ?? [])
     .filter((n) => n.status === 'published')
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
 }
 
 export async function getNewsArticle(slug: string) {
   return (await getPublishedNews()).find((n) => n.slug === slug)
-}
-
-export function isCategorySlug(value: string | undefined): value is CategorySlug {
-  return categories.some((c) => c.slug === value)
 }
 
 export { categories, applications }
