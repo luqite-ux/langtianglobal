@@ -94,6 +94,12 @@ export default function ManufacturingPage() {
               </Reveal>
             ))}
         </dl>
+        <Reveal>
+          <p className="text-muted-foreground mt-6 max-w-3xl text-sm leading-relaxed">
+            The site covers {f.siteAreaMu} mu (about 26,700 m²). Langtian reports
+            annual board output of {f.reportedAnnualBoardOutputTonnes.toLocaleString('en-US')} tonnes.
+          </p>
+        </Reveal>
       </Section>
 
       <Section tone="muted" labelledBy="photos-title">

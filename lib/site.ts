@@ -14,7 +14,9 @@ export const company = {
   },
   /** Facts taken from the supplied source materials. Do not extrapolate beyond these. */
   facility: {
+    siteAreaMu: 40,
     approxAreaSqm: 15000,
+    reportedAnnualBoardOutputTonnes: 8000,
     workshops: 4,
     productionLines: 5,
     needlingLines: 3,
