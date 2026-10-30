@@ -1,23 +1,24 @@
-import type { Metadata } from 'next'
-import { pageMetadata } from '@/lib/page-metadata'
+import { cmsPageMetadata } from '@/lib/site-content/metadata'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { PageIntro } from '@/components/site/page-intro'
+import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
-import { getApplications, getProductsForApplication } from '@/lib/data'
+import { getProductsForApplication } from '@/lib/data'
+import { getSiteApplications } from '@/lib/site-content/application-content'
+import { getSiteContent } from '@/lib/site-content/site-content'
+import { cmsText, siteModule } from '@/lib/site-content/read'
 
-export const metadata: Metadata = pageMetadata({
-  title: 'Applications',
-  description:
-    'Automotive interior applications for Langtian materials: headliners, door panels, luggage-compartment liners, spare-tire covers and other interior structures.',
-  path: '/applications',
-})
+export async function generateMetadata() {
+  return cmsPageMetadata('/applications', 'Applications', 'Automotive interior applications for Langtian materials: headliners, door panels, luggage-compartment liners, spare-tire covers and other interior structures.')
+}
 
 export default async function ApplicationsPage() {
-  const applications = await getApplications()
+  const [applications, snapshot] = await Promise.all([getSiteApplications(), getSiteContent('en')])
+  const content = siteModule(snapshot, '/applications', 'application_entries')
+  if (snapshot && !content) throw new Error('Published applications content is missing')
   const linked = await Promise.all(
     applications.map(async (a) => ({
       application: a,
@@ -27,7 +28,7 @@ export default async function ApplicationsPage() {
 
   return (
     <>
-      <PageIntro
+      <CmsPageIntro path="/applications"
         eyebrow="Applications"
         title="Materials by automotive interior part"
         description="Explore materials by interior part. Suitability for your design is confirmed against your requirements."
@@ -50,7 +51,7 @@ export default async function ApplicationsPage() {
                   <p className="text-muted-foreground mt-3 leading-relaxed">
                     {application.detail}
                   </p>
-                  <h3 className="mt-6 text-sm font-semibold">Linked products</h3>
+                  <h3 className="mt-6 text-sm font-semibold">{cmsText(content, 'linked_heading', 'Linked products')}</h3>
                   {products.length > 0 ? (
                     <ul className="mt-3 flex flex-wrap gap-2">
                       {products.map((p) => (
@@ -67,7 +68,7 @@ export default async function ApplicationsPage() {
                     </ul>
                   ) : (
                     <p className="text-muted-foreground mt-2 text-sm">
-                      Describe your part in an inquiry and we will suggest materials.
+                      {cmsText(content, 'empty_products', 'Describe your part in an inquiry and we will suggest materials.')}
                     </p>
                   )}
                 </div>
@@ -96,11 +97,10 @@ export default async function ApplicationsPage() {
 
         <Reveal className="mt-12 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
           <p className="text-muted-foreground max-w-xl">
-            Working on a part that is not listed? Describe it and we will discuss the suitable
-            material options with you.
+            {cmsText(content, 'cta_prompt', 'Working on a part that is not listed? Describe it and we will discuss the suitable material options with you.')}
           </p>
           <Button asChild size="lg">
-            <Link href="/contact">Discuss your part</Link>
+            <Link href="/contact">{cmsText(content, 'cta_label', 'Discuss your part')}</Link>
           </Button>
         </Reveal>
       </Section>

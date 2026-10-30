@@ -1,9 +1,8 @@
-import type { Metadata } from 'next'
-import { pageMetadata } from '@/lib/page-metadata'
+import { cmsPageMetadata } from '@/lib/site-content/metadata'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Newspaper } from 'lucide-react'
-import { PageIntro } from '@/components/site/page-intro'
+import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
@@ -15,14 +14,14 @@ import {
   EmptyTitle,
 } from '@/components/ui/empty'
 import { getPublishedNews } from '@/lib/data'
+import { getSiteContent } from '@/lib/site-content/site-content'
+import { cmsText, siteModule } from '@/lib/site-content/read'
 
 export const revalidate = 60
 
-export const metadata: Metadata = pageMetadata({
-  title: 'News',
-  description: 'Company news from Jiangsu Langtian Composite Materials.',
-  path: '/news',
-})
+export async function generateMetadata() {
+  return cmsPageMetadata('/news', 'News', 'Company news from Jiangsu Langtian Composite Materials.')
+}
 
 const dateFormat = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
@@ -32,11 +31,13 @@ const dateFormat = new Intl.DateTimeFormat('en-US', {
 })
 
 export default async function NewsPage() {
-  const articles = await getPublishedNews()
+  const [articles, snapshot] = await Promise.all([getPublishedNews(), getSiteContent('en')])
+  const content = siteModule(snapshot, '/news', 'news_empty')
+  if (snapshot && !content) throw new Error('Published news page content is missing')
 
   return (
     <>
-      <PageIntro
+      <CmsPageIntro path="/news"
         eyebrow="News"
         title="Company news"
         description="Announcements and updates from Langtian."
@@ -49,18 +50,17 @@ export default async function NewsPage() {
               <EmptyMedia variant="icon">
                 <Newspaper aria-hidden="true" />
               </EmptyMedia>
-              <EmptyTitle>No news has been published yet</EmptyTitle>
+              <EmptyTitle>{cmsText(content, 'title', 'No news has been published yet')}</EmptyTitle>
               <EmptyDescription>
-                Articles will appear here once the company publishes them. In the meantime,
-                you can browse the materials or send an inquiry.
+                {cmsText(content, 'description', 'Articles will appear here once the company publishes them. In the meantime, you can browse the materials or send an inquiry.')}
               </EmptyDescription>
             </EmptyHeader>
             <div className="flex flex-wrap justify-center gap-3">
               <Button asChild>
-                <Link href="/products">Browse products</Link>
+                <Link href="/products">{cmsText(content, 'products_cta', 'Browse products')}</Link>
               </Button>
               <Button asChild variant="outline">
-                <Link href="/contact">Contact us</Link>
+                <Link href="/contact">{cmsText(content, 'contact_cta', 'Contact us')}</Link>
               </Button>
             </div>
           </Empty>

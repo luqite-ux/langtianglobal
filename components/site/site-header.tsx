@@ -17,14 +17,24 @@ import {
 import { Logo } from '@/components/site/logo'
 import { primaryNav } from '@/lib/site'
 import { cn } from '@/lib/utils'
+import { siteTypographyStyle } from '@/lib/site-content/typography'
+
+type NavigationItem = { label: string; href: string }
+type HeaderProps = {
+  items?: NavigationItem[]
+  quoteLabel?: string
+  quoteHref?: string
+  styles?: Record<string, { fontFamily?: string; fontWeight?: number; fontSizeDesktop?: number; fontSizeMobile?: number }>
+}
 
 function isActive(pathname: string, href: string) {
   return href === '/' ? pathname === '/' : pathname.startsWith(href)
 }
 
-export function SiteHeader() {
+export function SiteHeader({ items = [...primaryNav], quoteLabel = 'Request a quote', quoteHref = '/contact', styles }: HeaderProps) {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const labelStyle = siteTypographyStyle(styles, 'items.label', { 'site-sans': 'var(--font-plex)' })
 
   return (
     <header className="bg-background/95 sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/85">
@@ -39,7 +49,7 @@ export function SiteHeader() {
 
         <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-1">
-            {primaryNav.map((item) => {
+            {items.map((item) => {
               const active = isActive(pathname, item.href)
               return (
                 <li key={item.href}>
@@ -51,7 +61,7 @@ export function SiteHeader() {
                       active ? 'text-primary' : 'text-foreground',
                     )}
                   >
-                    {item.label}
+                    <span className="hq-typography" style={labelStyle}>{item.label}</span>
                     {active && (
                       <span
                         aria-hidden="true"
@@ -67,7 +77,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <Button asChild className="hidden sm:inline-flex">
-            <Link href="/contact">Request a quote</Link>
+            <Link href={quoteHref}>{quoteLabel}</Link>
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
@@ -90,7 +100,7 @@ export function SiteHeader() {
               </SheetHeader>
               <nav aria-label="Mobile" className="flex-1 overflow-y-auto p-2">
                 <ul>
-                  {primaryNav.map((item) => {
+                  {items.map((item) => {
                     const active = isActive(pathname, item.href)
                     return (
                       <li key={item.href}>
@@ -105,7 +115,7 @@ export function SiteHeader() {
                                 : 'border-transparent hover:bg-secondary',
                             )}
                           >
-                            {item.label}
+                            <span className="hq-typography" style={labelStyle}>{item.label}</span>
                           </Link>
                         </SheetClose>
                       </li>
@@ -116,7 +126,7 @@ export function SiteHeader() {
               <div className="border-t p-4">
                 <SheetClose asChild>
                   <Button asChild className="w-full">
-                    <Link href="/contact">Request a quote</Link>
+                    <Link href={quoteHref}>{quoteLabel}</Link>
                   </Button>
                 </SheetClose>
               </div>

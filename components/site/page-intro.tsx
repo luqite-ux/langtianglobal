@@ -2,6 +2,8 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { ChevronRight } from 'lucide-react'
 import { Eyebrow } from '@/components/site/section'
+import { siteTypographyStyle } from '@/lib/site-content/typography'
+import type { SiteModuleProps } from '@/lib/site-content/render-page'
 
 type Crumb = { label: string; href?: string }
 
@@ -11,15 +13,19 @@ export function PageIntro({
   description,
   crumbs = [],
   children,
+  styles,
+  contentVersion,
 }: {
   eyebrow: string
   title: string
   description?: string
   crumbs?: Crumb[]
   children?: ReactNode
+  styles?: SiteModuleProps['styles']
+  contentVersion?: string
 }) {
   return (
-    <header className="bg-secondary border-b">
+    <header className="bg-secondary border-b" data-hq-content-version={contentVersion}>
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-14">
         <nav aria-label="Breadcrumb">
           <ol className="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm">
@@ -45,7 +51,7 @@ export function PageIntro({
           </ol>
         </nav>
         <Eyebrow className="mt-8">{eyebrow}</Eyebrow>
-        <h1 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="hq-typography mt-3 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl" style={siteTypographyStyle(styles, 'title', { 'site-display': 'var(--font-archivo)', 'site-sans': 'var(--font-plex)' })}>
           {title}
         </h1>
         {description && (

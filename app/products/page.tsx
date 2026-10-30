@@ -1,13 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ProductCard } from '@/components/products/product-card'
-import { PageIntro } from '@/components/site/page-intro'
+import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { getCategories, getCategory, getProducts } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { pageMetadata } from '@/lib/page-metadata'
+import { cmsPageMetadata } from '@/lib/site-content/metadata'
+import { getSiteContent } from '@/lib/site-content/site-content'
+import { cmsText, siteModule } from '@/lib/site-content/read'
 
 export const revalidate = 60
 
@@ -25,18 +28,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const slug = readCategory((await searchParams).category)
   const category = slug ? await getCategory(slug) : undefined
+  if (!category) return cmsPageMetadata('/products', 'Products', 'Thermoplastic composite sheets, felts, sandwich panels and natural-fiber boards for automotive interiors.')
   return pageMetadata({
-    title: category ? category.name : 'Products',
-    description: category
-      ? category.summary
-      : 'Thermoplastic composite sheets, felts, sandwich panels and natural-fiber boards for automotive interiors.',
-    path: category ? `/products?category=${category.slug}` : '/products',
+    title: category.name,
+    description: category.summary,
+    path: `/products?category=${category.slug}`,
   })
 }
 
 export default async function ProductsPage({ searchParams }: { searchParams: SearchParams }) {
   const activeSlug = readCategory((await searchParams).category)
-  const [categories, allProducts] = await Promise.all([getCategories(), getProducts()])
+  const [categories, allProducts, snapshot] = await Promise.all([getCategories(), getProducts(), getSiteContent('en')])
+  const content = siteModule(snapshot, '/products', 'list_guidance')
+  if (snapshot && !content) throw new Error('Published product list guidance is missing')
   const active = categories.find((c) => c.slug === activeSlug)
   const products = active
     ? allProducts.filter((p) => p.categorySlug === active.slug)
@@ -58,7 +62,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: Sea
 
   return (
     <>
-      <PageIntro
+      <CmsPageIntro path="/products" contentEnabled={!active}
         eyebrow="Products"
         title={active ? active.name : 'Thermoplastic composite sheets and felts'}
         description={
@@ -121,14 +125,13 @@ export default async function ProductsPage({ searchParams }: { searchParams: Sea
 
         <Reveal className="bg-secondary mt-14 flex flex-col items-start justify-between gap-5 border p-6 sm:flex-row sm:items-center sm:p-8">
           <div className="max-w-xl">
-            <h2 className="text-xl font-bold">Not sure which material fits your part?</h2>
+            <h2 className="text-xl font-bold">{cmsText(content, 'title', 'Not sure which material fits your part?')}</h2>
             <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-              The products shown are the rows currently listed on this site, not the complete
-              range. Describe the part and we will point to materials to compare.
+              {cmsText(content, 'description', 'The products shown are the rows currently listed on this site, not the complete range. Describe the part and we will point to materials to compare.')}
             </p>
           </div>
           <Button asChild size="lg">
-            <Link href="/contact">Send an inquiry</Link>
+            <Link href="/contact">{cmsText(content, 'cta_label', 'Send an inquiry')}</Link>
           </Button>
         </Reveal>
       </Section>

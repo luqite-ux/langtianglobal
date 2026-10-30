@@ -5,18 +5,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
 import { heroSlides } from '@/lib/hero-slides'
+import type { HeroSlide } from '@/lib/hero-slides'
+import { siteTypographyStyle } from '@/lib/site-content/typography'
+import type { SiteModuleProps } from '@/lib/site-content/render-page'
 import { cn } from '@/lib/utils'
 
 const INTERVAL_MS = 8000
 
-export function HeroCarousel() {
+export function HeroCarousel({ slides = heroSlides, styles, contentVersion }: { slides?: HeroSlide[]; styles?: SiteModuleProps['styles']; contentVersion?: string }) {
   const [index, setIndex] = useState(0)
   const [userPaused, setUserPaused] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
   const [engaged, setEngaged] = useState(false)
   const [inView, setInView] = useState(true)
   const rootRef = useRef<HTMLElement>(null)
-  const count = heroSlides.length
+  const count = slides.length
 
   useEffect(() => {
     const query = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -52,6 +55,7 @@ export function HeroCarousel() {
 
   return (
     <section
+      data-hq-content-version={contentVersion}
       ref={rootRef}
       aria-roledescription="carousel"
       aria-label="Langtian highlights"
@@ -70,7 +74,7 @@ export function HeroCarousel() {
       </h1>
 
       <div className="grid">
-        {heroSlides.map((slide, i) => {
+        {slides.map((slide, i) => {
           const active = i === index
           const right = slide.copySide === 'right'
           return (
@@ -91,7 +95,7 @@ export function HeroCarousel() {
                   fill
                   priority={i === 0}
                   sizes="100vw"
-                  className="[object-position:var(--pos-sm)] object-cover lg:[object-position:var(--pos-lg)]"
+                  className={cn('[object-position:var(--pos-sm)] object-cover lg:[object-position:var(--pos-lg)]', slide.image.mobileSrc && 'hidden lg:block')}
                   style={
                     {
                       '--pos-sm': slide.image.mobilePosition,
@@ -99,6 +103,17 @@ export function HeroCarousel() {
                     } as React.CSSProperties
                   }
                 />
+                {slide.image.mobileSrc && (
+                  <Image
+                    src={slide.image.mobileSrc}
+                    alt={slide.image.mobileAlt ?? slide.image.alt}
+                    fill
+                    priority={i === 0}
+                    sizes="100vw"
+                    className="[object-position:var(--pos-sm)] object-cover lg:hidden"
+                    style={{ '--pos-sm': slide.image.mobilePosition } as React.CSSProperties}
+                  />
+                )}
               </div>
 
               <div
@@ -126,7 +141,7 @@ export function HeroCarousel() {
                     />
                     {slide.eyebrow}
                   </p>
-                  <h2 className="mt-3 text-[2rem] leading-[1.08] font-bold tracking-tight text-white sm:text-5xl">
+                  <h2 className="hq-typography mt-3 text-[2rem] leading-[1.08] font-bold tracking-tight text-white sm:text-5xl" style={siteTypographyStyle(styles, 'slides.title', { 'site-display': 'var(--font-archivo)', 'site-sans': 'var(--font-plex)' })}>
                     {slide.title}
                   </h2>
                   <p className="mt-4 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">

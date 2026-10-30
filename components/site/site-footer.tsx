@@ -3,6 +3,8 @@ import { Logo } from '@/components/site/logo'
 import { CopyrightYear } from '@/components/site/copyright-year'
 import { getCategories } from '@/lib/data'
 import { addressLine, company } from '@/lib/site'
+import { cmsItems, cmsText } from '@/lib/site-content/read'
+import type { SiteModuleProps } from '@/lib/site-content/render-page'
 
 const companyLinks = [
   { label: 'About', href: '/about' },
@@ -13,9 +15,13 @@ const companyLinks = [
   { label: 'FAQ', href: '/faq' },
 ]
 
-export async function SiteFooter() {
+export async function SiteFooter({ content }: { content?: SiteModuleProps }) {
   const categories = await getCategories()
   const buildYear = new Date().getFullYear()
+  const links = content ? cmsItems(content, 'company_links', companyLinks, item =>
+    typeof item.label === 'string' && typeof item.href === 'string' && /^\/[a-z0-9/-]*$/.test(item.href)
+      ? { label: item.label, href: item.href } : null) : companyLinks
+  if (content && links.length === 0) throw new Error('Published footer company links are missing')
 
   return (
     <footer className="on-dark bg-ink text-ink-foreground">
@@ -26,13 +32,13 @@ export async function SiteFooter() {
           </Link>
           <p className="mt-5 text-sm font-medium">{company.legalNameEn}</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-            Thermoplastic composite sheets and felts for automotive interiors.
+            {cmsText(content, 'description', 'Thermoplastic composite sheets and felts for automotive interiors.')}
           </p>
         </div>
 
         <nav aria-label="Product categories">
           <h2 className="text-sm font-semibold tracking-wide text-white uppercase">
-            Products
+            {cmsText(content, 'products_heading', 'Products')}
           </h2>
           <ul className="mt-4 space-y-2.5 text-sm">
             {categories.map((c) => (
@@ -50,7 +56,7 @@ export async function SiteFooter() {
                 href="/products"
                 className="text-white/75 hover:text-white hover:underline"
               >
-                All products
+                {cmsText(content, 'all_products_label', 'All products')}
               </Link>
             </li>
           </ul>
@@ -58,10 +64,10 @@ export async function SiteFooter() {
 
         <nav aria-label="Company">
           <h2 className="text-sm font-semibold tracking-wide text-white uppercase">
-            Company
+            {cmsText(content, 'company_heading', 'Company')}
           </h2>
           <ul className="mt-4 space-y-2.5 text-sm">
-            {companyLinks.map((l) => (
+            {links.map((l) => (
               <li key={l.href}>
                 <Link
                   href={l.href}
@@ -76,7 +82,7 @@ export async function SiteFooter() {
 
         <div>
           <h2 className="text-sm font-semibold tracking-wide text-white uppercase">
-            Contact
+            {cmsText(content, 'contact_heading', 'Contact')}
           </h2>
           <address className="mt-4 text-sm leading-relaxed text-white/75 not-italic">
             {addressLine}
@@ -98,7 +104,7 @@ export async function SiteFooter() {
             href="/contact"
             className="mt-5 inline-flex h-10 items-center border border-white/40 px-4 text-sm font-medium hover:bg-white hover:text-ink"
           >
-            Send an inquiry
+            {cmsText(content, 'inquiry_label', 'Send an inquiry')}
           </Link>
         </div>
       </div>

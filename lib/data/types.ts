@@ -33,6 +33,7 @@ export type ProductImage = {
 }
 
 export type Product = {
+  id?: string
   slug: string
   sku?: string
   name: string

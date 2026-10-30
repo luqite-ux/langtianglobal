@@ -1,19 +1,17 @@
-import type { Metadata } from 'next'
-import { pageMetadata } from '@/lib/page-metadata'
+import { cmsPageMetadata } from '@/lib/site-content/metadata'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PageIntro } from '@/components/site/page-intro'
+import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
 import { company } from '@/lib/site'
+import { getSiteContent } from '@/lib/site-content/site-content'
+import { cmsItems, cmsText, siteModule } from '@/lib/site-content/read'
 
-export const metadata: Metadata = pageMetadata({
-  title: 'Manufacturing',
-  description:
-    'Langtian’s factory in Xuyi County: approximately 15,000 square meters, four workshops and five production lines, including three needling lines and two pressing lines.',
-  path: '/manufacturing',
-})
+export async function generateMetadata() {
+  return cmsPageMetadata('/manufacturing', 'Manufacturing', 'Langtian’s factory in Xuyi County: approximately 15,000 square meters, four workshops and five production lines, including three needling lines and two pressing lines.')
+}
 
 const f = company.facility
 
@@ -66,10 +64,36 @@ const photoGroups = [
   },
 ] as const
 
-export default function ManufacturingPage() {
+export default async function ManufacturingPage() {
+  const snapshot = await getSiteContent('en')
+  const content = siteModule(snapshot, '/manufacturing', 'facility_content')
+  if (snapshot && !content) throw new Error('Published manufacturing content is missing')
+  const visibleStats = content ? cmsItems(content, 'stats', stats, item =>
+    typeof item.label === 'string' && typeof item.value === 'string' ? { label: item.label, value: item.value } : null) : stats
+  if (content && visibleStats.length === 0) throw new Error('Published manufacturing statistics are missing')
+  const visibleGroups = content ? (() => {
+    const raw = content.values.photo_groups
+    if (!Array.isArray(raw) || raw.length === 0) throw new Error('Published factory photos are missing')
+    return raw.map(group => {
+      if (!group || typeof group !== 'object' || Array.isArray(group)) throw new Error('Invalid factory photo group')
+      const item = group as Record<string, unknown>
+      if (typeof item.title !== 'string' || typeof item.description !== 'string' || !Array.isArray(item.images)) throw new Error('Invalid factory photo group')
+      const images = item.images.map(entry => {
+        if (!entry || typeof entry !== 'object' || Array.isArray(entry)) throw new Error('Invalid factory photo')
+        const row = entry as Record<string, unknown>
+        const image = row.image
+        const imageValue = image && typeof image === 'object' && !Array.isArray(image) ? image as Record<string, unknown> : null
+        if (!imageValue || typeof imageValue.url !== 'string'
+          || !imageValue.url.startsWith('https://') || typeof imageValue.alt !== 'string'
+          || typeof row.caption !== 'string') throw new Error('Invalid factory photo')
+        return { src: imageValue.url, alt: imageValue.alt, caption: row.caption }
+      })
+      return { title: item.title, description: item.description, images }
+    })
+  })() : photoGroups.map(group => ({ ...group, images: group.images.map(([file, caption]) => ({ src: `/images/factory/${file}`, alt: caption, caption })) }))
   return (
     <>
-      <PageIntro
+      <CmsPageIntro path="/manufacturing"
         eyebrow="Manufacturing"
         title="Where the sheets and felts are made"
         description="An approximately 15,000-square-meter factory with four workshops and five production lines: three needling lines and two pressing lines."
@@ -79,15 +103,14 @@ export default function ManufacturingPage() {
       <Section labelledBy="scale-title">
         <Reveal>
           <h2 id="scale-title" className="text-3xl font-bold tracking-tight">
-            Facility at a glance
+            {cmsText(content, 'scale_title', 'Facility at a glance')}
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl">
-            Share your required material, format and volume so we can discuss suitable
-            production options for your project.
+            {cmsText(content, 'scale_intro', 'Share your required material, format and volume so we can discuss suitable production options for your project.')}
           </p>
         </Reveal>
         <dl className="mt-8 grid gap-px border bg-border sm:grid-cols-3 lg:grid-cols-5">
-            {stats.map((s, i) => (
+            {visibleStats.map((s, i) => (
               <Reveal as="div" key={s.label} delay={Math.min(i * 60, 240)} className="bg-card flex flex-col-reverse justify-end gap-1 p-6">
                 <dt className="text-muted-foreground text-sm">{s.label}</dt>
                 <dd className="text-primary text-3xl font-bold tabular-nums">{s.value}</dd>
@@ -96,8 +119,7 @@ export default function ManufacturingPage() {
         </dl>
         <Reveal>
           <p className="text-muted-foreground mt-6 max-w-3xl text-sm leading-relaxed">
-            The site covers {f.siteAreaMu} mu (about 26,700 m²). Langtian reports
-            annual board output of {f.reportedAnnualBoardOutputTonnes.toLocaleString('en-US')} tonnes.
+            {cmsText(content, 'scale_note', `The site covers ${f.siteAreaMu} mu (about 26,700 m²). Langtian reports annual board output of ${f.reportedAnnualBoardOutputTonnes.toLocaleString('en-US')} tonnes.`)}
           </p>
         </Reveal>
       </Section>
@@ -105,33 +127,33 @@ export default function ManufacturingPage() {
       <Section tone="muted" labelledBy="photos-title">
         <Reveal>
           <h2 id="photos-title" className="text-3xl font-bold tracking-tight">
-            From the factory
+            {cmsText(content, 'photos_title', 'From the factory')}
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl">
-            Explore the site, equipment and material-handling areas.
+            {cmsText(content, 'photos_intro', 'Explore the site, equipment and material-handling areas.')}
           </p>
         </Reveal>
         <div className="mt-10 space-y-14">
-          {photoGroups.map((group) => (
+          {visibleGroups.map((group) => (
             <div key={group.title}>
               <Reveal>
                 <h3 className="text-xl font-bold">{group.title}</h3>
                 <p className="text-muted-foreground mt-1 text-sm">{group.description}</p>
               </Reveal>
               <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {group.images.map(([file, caption], i) => (
-                  <Reveal as="li" key={file} delay={(i % 3) * 60}>
+                {group.images.map((image, i) => (
+                  <Reveal as="li" key={image.src} delay={(i % 3) * 60}>
                     <figure>
                       <div className="relative aspect-[4/3] overflow-hidden bg-white">
                         <Image
-                          src={`/images/factory/${file}`}
-                          alt={caption}
+                          src={image.src}
+                          alt={image.alt}
                           fill
                           sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                           className="object-cover"
                         />
                       </div>
-                      <figcaption className="text-muted-foreground mt-2 text-sm">{caption}</figcaption>
+                      <figcaption className="text-muted-foreground mt-2 text-sm">{image.caption}</figcaption>
                     </figure>
                   </Reveal>
                 ))}
@@ -145,27 +167,24 @@ export default function ManufacturingPage() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
           <Reveal>
             <h2 id="process-title" className="text-3xl font-bold tracking-tight">
-              Needling and pressing
+              {cmsText(content, 'process_title', 'Needling and pressing')}
             </h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">
-              The five production lines are split between two processes. Which process a
-              given product passes through is confirmed per product during inquiry.
+              {cmsText(content, 'process_intro', 'The five production lines are split between two processes. Which process a given product passes through is confirmed per product during inquiry.')}
             </p>
           </Reveal>
           <Reveal delay={80}>
             <dl className="divide-y border-y">
               <div className="py-5">
-                <dt className="font-bold">Needling lines ({f.needlingLines})</dt>
+                <dt className="font-bold">{cmsText(content, 'needling_label', `Needling lines (${f.needlingLines})`)}</dt>
                 <dd className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
-                  Needling is a general process in which barbed needles entangle fibers into
-                  a coherent felt or non-woven web.
+                  {cmsText(content, 'needling_text', 'Needling is a general process in which barbed needles entangle fibers into a coherent felt or non-woven web.')}
                 </dd>
               </div>
               <div className="py-5">
-                <dt className="font-bold">Pressing lines ({f.pressingLines})</dt>
+                <dt className="font-bold">{cmsText(content, 'pressing_label', `Pressing lines (${f.pressingLines})`)}</dt>
                 <dd className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
-                  Pressing is a general process in which heat and pressure consolidate
-                  material layers into a sheet or board.
+                  {cmsText(content, 'pressing_text', 'Pressing is a general process in which heat and pressure consolidate material layers into a sheet or board.')}
                 </dd>
               </div>
             </dl>
@@ -179,10 +198,10 @@ export default function ManufacturingPage() {
             id="mfg-cta-title"
             className="max-w-xl text-2xl font-bold text-white sm:text-3xl"
           >
-            Want to discuss a part, a material or a sample?
+            {cmsText(content, 'cta_title', 'Want to discuss a part, a material or a sample?')}
           </h2>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">Send an inquiry</Link>
+            <Link href="/contact">{cmsText(content, 'cta_label', 'Send an inquiry')}</Link>
           </Button>
         </Reveal>
       </Section>

@@ -2,17 +2,20 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/site/reveal'
 import { Section, SectionHeading } from '@/components/site/section'
-import { getApplications, getProducts } from '@/lib/data'
+import { getProducts } from '@/lib/data'
+import { getSiteApplications } from '@/lib/site-content/application-content'
+import { cmsText } from '@/lib/site-content/read'
+import type { SiteModuleProps } from '@/lib/site-content/render-page'
 
-export async function ApplicationPaths() {
-  const [applications, products] = await Promise.all([getApplications(), getProducts()])
+export async function ApplicationPaths({ content }: { content?: SiteModuleProps }) {
+  const [applications, products] = await Promise.all([getSiteApplications(), getProducts()])
   return (
     <Section labelledBy="applications-title">
       <SectionHeading
         id="applications-title"
-        eyebrow="Automotive applications"
-        title="Find materials by interior part"
-        description="Pick the part you are developing to explore materials that may suit its structure and surface requirements."
+        eyebrow={cmsText(content, 'eyebrow', 'Automotive applications')}
+        title={cmsText(content, 'title', 'Find materials by interior part')}
+        description={cmsText(content, 'description', 'Pick the part you are developing to explore materials that may suit its structure and surface requirements.')}
       />
       <ol className="border-t">
         {applications.map((application, i) => {

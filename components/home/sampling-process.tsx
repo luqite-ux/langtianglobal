@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/site/reveal'
 import { Section, SectionHeading } from '@/components/site/section'
+import { cmsItems, cmsText } from '@/lib/site-content/read'
+import type { SiteModuleProps } from '@/lib/site-content/render-page'
 
 const steps = [
   {
@@ -22,25 +24,29 @@ const steps = [
   },
 ]
 
-export function SamplingProcess() {
+export function SamplingProcess({ content }: { content?: SiteModuleProps }) {
+  const visibleSteps = content ? cmsItems(content, 'steps', steps, item =>
+    typeof item.title === 'string' && typeof item.text === 'string'
+      ? { title: item.title, text: item.text } : null) : steps
+  if (content && visibleSteps.length === 0) throw new Error('Published sampling steps are missing')
   return (
     <Section labelledBy="process-title">
       <SectionHeading
         id="process-title"
-        eyebrow="Customization and sampling"
-        title="From your drawing to a specification"
-        description="Share your part requirements and target quantity. We will discuss the specification, sample options and quotation for your project."
+        eyebrow={cmsText(content, 'eyebrow', 'Customization and sampling')}
+        title={cmsText(content, 'title', 'From your drawing to a specification')}
+        description={cmsText(content, 'description', 'Share your part requirements and target quantity. We will discuss the specification, sample options and quotation for your project.')}
       >
         <Link
           href="/contact"
           className="text-primary inline-flex items-center gap-1.5 text-sm font-semibold hover:underline"
         >
-          Request a sample
+          {cmsText(content, 'cta_label', 'Request a sample')}
           <ArrowRight aria-hidden="true" className="size-4" />
         </Link>
       </SectionHeading>
       <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {steps.map((step, i) => (
+        {visibleSteps.map((step, i) => (
           <Reveal as="li" key={step.title} delay={i * 80}>
             <div className="process-step relative h-full pt-5">
               <span

@@ -1,0 +1,2203 @@
+{
+  "pages": {
+    "home": {
+      "order": [
+        "navigation",
+        "hero",
+        "material_families",
+        "representative_products",
+        "application_paths",
+        "manufacturing_evidence",
+        "material_differentiators",
+        "quality_context",
+        "sampling_process",
+        "home_faq",
+        "final_contact",
+        "footer",
+        "seo"
+      ],
+      "modules": {
+        "navigation": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "nav-1",
+                "label": {
+                  "en": "Home"
+                },
+                "href": "/"
+              },
+              {
+                "id": "nav-2",
+                "label": {
+                  "en": "Products"
+                },
+                "href": "/products"
+              },
+              {
+                "id": "nav-3",
+                "label": {
+                  "en": "Applications"
+                },
+                "href": "/applications"
+              },
+              {
+                "id": "nav-4",
+                "label": {
+                  "en": "Manufacturing"
+                },
+                "href": "/manufacturing"
+              },
+              {
+                "id": "nav-5",
+                "label": {
+                  "en": "Quality"
+                },
+                "href": "/quality"
+              },
+              {
+                "id": "nav-6",
+                "label": {
+                  "en": "About"
+                },
+                "href": "/about"
+              },
+              {
+                "id": "nav-7",
+                "label": {
+                  "en": "News"
+                },
+                "href": "/news"
+              },
+              {
+                "id": "nav-8",
+                "label": {
+                  "en": "Contact"
+                },
+                "href": "/contact"
+              }
+            ],
+            "cta_label": {
+              "en": "Request a quote"
+            },
+            "cta_href": "/contact"
+          }
+        },
+        "hero": {
+          "hidden": false,
+          "values": {
+            "slides": [
+              {
+                "id": "factory",
+                "desktop_image": {
+                  "assetId": "2ec7287e-556e-4001-9743-99fdcd782a46",
+                  "alt": {
+                    "en": "Banner illustration of a modern industrial building with red accent lines at dusk"
+                  }
+                },
+                "mobile_image": {
+                  "assetId": "2ec7287e-556e-4001-9743-99fdcd782a46",
+                  "alt": {
+                    "en": "Banner illustration of a modern industrial building with red accent lines at dusk"
+                  }
+                },
+                "eyebrow": {
+                  "en": "Xuyi County, Huai'an, Jiangsu"
+                },
+                "title": {
+                  "en": "Thermoplastic composites for automotive interiors"
+                },
+                "body": {
+                  "en": "Langtian was established in 2021 and makes thermoplastic composite sheets and felts. Send your part and specification to start an inquiry."
+                },
+                "primary_label": {
+                  "en": "Send an inquiry"
+                },
+                "primary_href": "/contact",
+                "secondary_label": {
+                  "en": "About Langtian"
+                },
+                "secondary_href": "/about"
+              },
+              {
+                "id": "production",
+                "desktop_image": {
+                  "assetId": "c83ebc97-e98b-4a84-a16d-551fd778f467",
+                  "alt": {
+                    "en": "Banner illustration of a red-lit press line feeding pale composite sheets onto a conveyor"
+                  }
+                },
+                "mobile_image": {
+                  "assetId": "c83ebc97-e98b-4a84-a16d-551fd778f467",
+                  "alt": {
+                    "en": "Banner illustration of a red-lit press line feeding pale composite sheets onto a conveyor"
+                  }
+                },
+                "eyebrow": {
+                  "en": "Manufacturing"
+                },
+                "title": {
+                  "en": "Needling and pressing lines behind sheet and felt"
+                },
+                "body": {
+                  "en": "Five production lines across four workshops: three needling lines and two pressing lines."
+                },
+                "primary_label": {
+                  "en": "See manufacturing"
+                },
+                "primary_href": "/manufacturing",
+                "secondary_label": {
+                  "en": "Send an inquiry"
+                },
+                "secondary_href": "/contact"
+              },
+              {
+                "id": "materials",
+                "desktop_image": {
+                  "assetId": "733cd116-80f4-428a-a91c-023409194edc",
+                  "alt": {
+                    "en": "Banner illustration of stacked composite boards, felt and a felt roll on a deep red background"
+                  }
+                },
+                "mobile_image": {
+                  "assetId": "733cd116-80f4-428a-a91c-023409194edc",
+                  "alt": {
+                    "en": "Banner illustration of stacked composite boards, felt and a felt roll on a deep red background"
+                  }
+                },
+                "eyebrow": {
+                  "en": "Material families"
+                },
+                "title": {
+                  "en": "Sheet, felt, sandwich and natural-fiber materials"
+                },
+                "body": {
+                  "en": "Compare material families, open each product page for its own specification fields, then ask for the data you need."
+                },
+                "primary_label": {
+                  "en": "Browse products"
+                },
+                "primary_href": "/products",
+                "secondary_label": {
+                  "en": "Request specification"
+                },
+                "secondary_href": "/contact"
+              }
+            ]
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Langtian | Thermoplastic Composite Sheets and Felts for Automotive Interiors"
+            },
+            "description": {
+              "en": "Jiangsu Langtian Composite Materials Co., Ltd. makes thermoplastic composite sheets and felts for automotive interiors in Xuyi County, Huai’an, Jiangsu, China."
+            }
+          }
+        },
+        "material_families": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Material families"
+            },
+            "title": {
+              "en": "Which kind of material does your part need?"
+            },
+            "description": {
+              "en": "Start with the form: flat sheet, felt or non-woven, sandwich panel or natural-fiber board. Each family opens its own product list."
+            }
+          }
+        },
+        "application_paths": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Automotive applications"
+            },
+            "title": {
+              "en": "Find materials by interior part"
+            },
+            "description": {
+              "en": "Pick the part you are developing to explore materials that may suit its structure and surface requirements."
+            }
+          }
+        },
+        "manufacturing_evidence": {
+          "hidden": false,
+          "values": {
+            "factory_image": {
+              "assetId": "2bc089e1-a3a9-44d7-a9dd-2f7a1b49150f",
+              "alt": {
+                "en": "Exterior of the Langtian factory building with grey cladding, tall windows and the Lang Tian sign"
+              }
+            },
+            "hall_image": {
+              "assetId": "da59941c-b954-4e32-93c5-e2a9fe7b7d25",
+              "alt": {
+                "en": "Interior production hall with fiber-processing machinery and metal ducting under a steel roof"
+              }
+            },
+            "copy": [
+              {
+                "id": "eyebrow",
+                "label": "eyebrow",
+                "value": {
+                  "en": "Manufacturing evidence"
+                }
+              },
+              {
+                "id": "title",
+                "label": "title",
+                "value": {
+                  "en": "A factory in Xuyi County, shown as it is"
+                }
+              },
+              {
+                "id": "description",
+                "label": "description",
+                "value": {
+                  "en": "Four workshops house five production lines: three needling lines and two pressing lines. See the factory and production hall."
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "cta label",
+                "value": {
+                  "en": "Manufacturing overview"
+                }
+              },
+              {
+                "id": "factory_caption",
+                "label": "factory caption",
+                "value": {
+                  "en": "Factory exterior, Xuyi County Economic Development Zone."
+                }
+              },
+              {
+                "id": "hall_caption",
+                "label": "hall caption",
+                "value": {
+                  "en": "Production hall with fiber-processing machinery."
+                }
+              }
+            ]
+          }
+        },
+        "material_differentiators": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Materials and processing"
+            },
+            "title": {
+              "en": "What differs between these materials"
+            },
+            "description": {
+              "en": "Compare the material forms here, then check each product page for thickness, areal weight and minimum order quantity."
+            },
+            "items": [
+              {
+                "id": "material-1",
+                "title": {
+                  "en": "Thermoplastic matrix"
+                },
+                "text": {
+                  "en": "PP and PET based materials are thermoplastic, so sheets and felts are formed into interior parts with heat and pressure."
+                },
+                "href": "/products?category=sheet",
+                "cta": {
+                  "en": "Composite sheets"
+                }
+              },
+              {
+                "id": "material-2",
+                "title": {
+                  "en": "Fiber reinforcement"
+                },
+                "text": {
+                  "en": "Glass fiber reinforces the PP and LWRT sheet rows, while bamboo or hemp fibers reinforce the natural-fiber board."
+                },
+                "href": "/products/pp-glass-fiber-board",
+                "cta": {
+                  "en": "PP Glass Fiber Board"
+                }
+              },
+              {
+                "id": "material-3",
+                "title": {
+                  "en": "Felt and surface layers"
+                },
+                "text": {
+                  "en": "LWRTUD felt and PET non-woven or pile carpet are supplied as felt-type layers that can sit with a structural base."
+                },
+                "href": "/products?category=felt",
+                "cta": {
+                  "en": "Felts and non-wovens"
+                }
+              },
+              {
+                "id": "material-4",
+                "title": {
+                  "en": "Sandwich construction"
+                },
+                "text": {
+                  "en": "PHC fiberglass composite panel and PET foam board place face layers around a core instead of using one solid sheet."
+                },
+                "href": "/products?category=sandwich",
+                "cta": {
+                  "en": "Sandwich panels"
+                }
+              },
+              {
+                "id": "material-5",
+                "title": {
+                  "en": "Natural-fiber option"
+                },
+                "text": {
+                  "en": "PP bamboo or hemp fiberboard gives a natural-fiber alternative where the part and the surface requirement allow it."
+                },
+                "href": "/products/pp-bamboo-hemp-fiberboard",
+                "cta": {
+                  "en": "PP Bamboo / Hemp Fiberboard"
+                }
+              },
+              {
+                "id": "material-6",
+                "title": {
+                  "en": "Needling and pressing"
+                },
+                "text": {
+                  "en": "Needling lines make felt-type material and pressing lines consolidate it. Langtian operates three needling lines and two pressing lines."
+                },
+                "href": "/manufacturing",
+                "cta": {
+                  "en": "Manufacturing"
+                }
+              }
+            ]
+          }
+        },
+        "representative_products": {
+          "hidden": false,
+          "values": {
+            "products": [
+              {
+                "id": "feature-1",
+                "product": "211f6a6d-5ffd-4ac9-b3e1-6a9b8c7874f4"
+              },
+              {
+                "id": "feature-2",
+                "product": "e4f683ef-6c31-494b-ab99-85ec275eb731"
+              },
+              {
+                "id": "feature-3",
+                "product": "4a2467f6-f9b0-4685-8621-a9289c747b06"
+              },
+              {
+                "id": "feature-4",
+                "product": "fc5352d0-7a13-4caa-98e9-4618deeaf58a"
+              }
+            ],
+            "copy": [
+              {
+                "id": "eyebrow",
+                "label": "eyebrow",
+                "value": {
+                  "en": "Representative products"
+                }
+              },
+              {
+                "id": "title",
+                "label": "title",
+                "value": {
+                  "en": "See what the materials look like"
+                }
+              },
+              {
+                "id": "description",
+                "label": "description",
+                "value": {
+                  "en": "A selection of product pages. Each page lists its own specification fields and minimum order quantity, confirmed when you inquire."
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "cta label",
+                "value": {
+                  "en": "All products"
+                }
+              }
+            ]
+          }
+        },
+        "quality_context": {
+          "hidden": false,
+          "values": {
+            "copy": [
+              {
+                "id": "eyebrow",
+                "label": "eyebrow",
+                "value": {
+                  "en": "Quality and certificates"
+                }
+              },
+              {
+                "id": "title",
+                "label": "title",
+                "value": {
+                  "en": "Management-system certificates, with their scope"
+                }
+              },
+              {
+                "id": "description",
+                "label": "description",
+                "value": {
+                  "en": "View the ISO 14001 and IATF 16949 certificate copies, including their stated scope and dates."
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "cta label",
+                "value": {
+                  "en": "Quality and certificates"
+                }
+              }
+            ]
+          }
+        },
+        "sampling_process": {
+          "hidden": false,
+          "values": {
+            "steps": [
+              {
+                "id": "step-1",
+                "title": {
+                  "en": "Describe the part"
+                },
+                "text": {
+                  "en": "Send the application, drawing or description, and the material family you are considering."
+                }
+              },
+              {
+                "id": "step-2",
+                "title": {
+                  "en": "Define the specification"
+                },
+                "text": {
+                  "en": "Agree thickness, areal weight, size, surface and expected quantity against the product fields."
+                }
+              },
+              {
+                "id": "step-3",
+                "title": {
+                  "en": "Discuss a sample"
+                },
+                "text": {
+                  "en": "Ask for a sample of the material. Availability is confirmed for each material and project."
+                }
+              },
+              {
+                "id": "step-4",
+                "title": {
+                  "en": "Review the quotation"
+                },
+                "text": {
+                  "en": "Price and minimum order quantity are confirmed for your specification and quantity."
+                }
+              }
+            ],
+            "copy": [
+              {
+                "id": "eyebrow",
+                "label": "eyebrow",
+                "value": {
+                  "en": "Customization and sampling"
+                }
+              },
+              {
+                "id": "title",
+                "label": "title",
+                "value": {
+                  "en": "From your drawing to a specification"
+                }
+              },
+              {
+                "id": "description",
+                "label": "description",
+                "value": {
+                  "en": "Share your part requirements and target quantity. We will discuss the specification, sample options and quotation for your project."
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "cta label",
+                "value": {
+                  "en": "Request a sample"
+                }
+              }
+            ]
+          }
+        },
+        "home_faq": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Buyer questions"
+            },
+            "title": {
+              "en": "Before you send an inquiry"
+            },
+            "cta_label": {
+              "en": "All questions"
+            },
+            "questions": [
+              {
+                "id": "faq-1",
+                "faq_id": "which-material"
+              },
+              {
+                "id": "faq-2",
+                "faq_id": "what-to-send"
+              },
+              {
+                "id": "faq-3",
+                "faq_id": "samples"
+              },
+              {
+                "id": "faq-4",
+                "faq_id": "moq-price"
+              }
+            ]
+          }
+        },
+        "final_contact": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Tell us the part, the material family and the specification you need."
+            },
+            "primary_label": {
+              "en": "Send an inquiry"
+            },
+            "secondary_label": {
+              "en": "Browse products"
+            }
+          }
+        },
+        "footer": {
+          "hidden": false,
+          "values": {
+            "company_links": [
+              {
+                "id": "footer-1",
+                "label": {
+                  "en": "About"
+                },
+                "href": "/about"
+              },
+              {
+                "id": "footer-2",
+                "label": {
+                  "en": "Manufacturing"
+                },
+                "href": "/manufacturing"
+              },
+              {
+                "id": "footer-3",
+                "label": {
+                  "en": "Quality and certificates"
+                },
+                "href": "/quality"
+              },
+              {
+                "id": "footer-4",
+                "label": {
+                  "en": "Applications"
+                },
+                "href": "/applications"
+              },
+              {
+                "id": "footer-5",
+                "label": {
+                  "en": "News"
+                },
+                "href": "/news"
+              },
+              {
+                "id": "footer-6",
+                "label": {
+                  "en": "FAQ"
+                },
+                "href": "/faq"
+              }
+            ],
+            "copy": [
+              {
+                "id": "description",
+                "label": "description",
+                "value": {
+                  "en": "Thermoplastic composite sheets and felts for automotive interiors."
+                }
+              },
+              {
+                "id": "products_heading",
+                "label": "products heading",
+                "value": {
+                  "en": "Products"
+                }
+              },
+              {
+                "id": "all_products_label",
+                "label": "all products label",
+                "value": {
+                  "en": "All products"
+                }
+              },
+              {
+                "id": "company_heading",
+                "label": "company heading",
+                "value": {
+                  "en": "Company"
+                }
+              },
+              {
+                "id": "contact_heading",
+                "label": "contact heading",
+                "value": {
+                  "en": "Contact"
+                }
+              },
+              {
+                "id": "inquiry_label",
+                "label": "inquiry label",
+                "value": {
+                  "en": "Send an inquiry"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "about": {
+      "order": [
+        "page_hero",
+        "about_story",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "About Langtian"
+            },
+            "title": {
+              "en": "A materials maker for automotive interiors"
+            },
+            "description": {
+              "en": "Jiangsu Langtian Composite Materials Co., Ltd. makes thermoplastic composite sheets and felts, supplied for automotive interior structures."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "About"
+            },
+            "description": {
+              "en": "Jiangsu Langtian Composite Materials Co., Ltd. was established in 2021 in Xuyi County, Huai’an, Jiangsu and makes thermoplastic composite sheets and felts for automotive interiors."
+            }
+          }
+        },
+        "about_story": {
+          "hidden": false,
+          "values": {
+            "story_paragraphs": [
+              {
+                "id": "story-1",
+                "text": {
+                  "en": "Jiangsu Langtian Composite Materials Co., Ltd. was established in 2021 in Xuyi County, Huai’an, Jiangsu, China."
+                }
+              },
+              {
+                "id": "story-2",
+                "text": {
+                  "en": "The company produces thermoplastic composite sheets, felts, sandwich panels and natural-fiber boards. Applications include automotive headliners, door panels, luggage-compartment liners, spare-tire covers and other interior structures, depending on the product."
+                }
+              },
+              {
+                "id": "story-3",
+                "text": {
+                  "en": "We work with buyers and engineers on specification: you describe the part, and we propose material families, then confirm figures and quantities in writing for the project."
+                }
+              }
+            ],
+            "factory_image": {
+              "assetId": "2bc089e1-a3a9-44d7-a9dd-2f7a1b49150f",
+              "alt": {
+                "en": "Exterior of the Langtian factory building in Xuyi County, with the Lang Tian sign on the upper corner of the facade"
+              }
+            },
+            "recognition_images": [
+              {
+                "id": "recognition-1",
+                "image": {
+                  "assetId": "d5d0c753-f48b-4a33-9dae-d96f5165e6f6",
+                  "alt": {
+                    "en": "Recognition display at Langtian's factory, view 1"
+                  }
+                }
+              },
+              {
+                "id": "recognition-2",
+                "image": {
+                  "assetId": "4b351c5b-2f98-4f77-84d8-319534bd65d0",
+                  "alt": {
+                    "en": "Recognition display at Langtian's factory, view 2"
+                  }
+                }
+              }
+            ],
+            "copy": [
+              {
+                "id": "story_title",
+                "label": "Story heading",
+                "value": {
+                  "en": "Who we are"
+                }
+              },
+              {
+                "id": "products_cta",
+                "label": "Products button",
+                "value": {
+                  "en": "Browse products"
+                }
+              },
+              {
+                "id": "manufacturing_cta",
+                "label": "Manufacturing button",
+                "value": {
+                  "en": "See manufacturing"
+                }
+              },
+              {
+                "id": "factory_caption",
+                "label": "Factory caption",
+                "value": {
+                  "en": "Langtian factory exterior in Xuyi County."
+                }
+              },
+              {
+                "id": "facts_title",
+                "label": "Facts heading",
+                "value": {
+                  "en": "Company facts"
+                }
+              },
+              {
+                "id": "facts_intro",
+                "label": "Facts introduction",
+                "value": {
+                  "en": "An overview of the company and its production site."
+                }
+              },
+              {
+                "id": "recognition_title",
+                "label": "Recognition heading",
+                "value": {
+                  "en": "Recognition displayed at the factory"
+                }
+              },
+              {
+                "id": "recognition_intro",
+                "label": "Recognition introduction",
+                "value": {
+                  "en": "Views of the recognition and certificate display at Langtian's site. Certificate details and dates are listed on the quality page."
+                }
+              },
+              {
+                "id": "cta_title",
+                "label": "Contact heading",
+                "value": {
+                  "en": "Have a part in development?"
+                }
+              },
+              {
+                "id": "cta_text",
+                "label": "Contact description",
+                "value": {
+                  "en": "Send the application and target specification and we will reply with material families to compare."
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "Contact button",
+                "value": {
+                  "en": "Contact us"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "manufacturing": {
+      "order": [
+        "page_hero",
+        "facility_content",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Manufacturing"
+            },
+            "title": {
+              "en": "Where the sheets and felts are made"
+            },
+            "description": {
+              "en": "An approximately 15,000-square-meter factory with four workshops and five production lines: three needling lines and two pressing lines."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Manufacturing"
+            },
+            "description": {
+              "en": "Langtian’s factory in Xuyi County: approximately 15,000 square meters, four workshops and five production lines, including three needling lines and two pressing lines."
+            }
+          }
+        },
+        "facility_content": {
+          "hidden": false,
+          "values": {
+            "stats": [
+              {
+                "id": "factory-stat-1",
+                "value": {
+                  "en": "~15,000 m²"
+                },
+                "label": {
+                  "en": "Approximate factory area"
+                }
+              },
+              {
+                "id": "factory-stat-2",
+                "value": {
+                  "en": "4"
+                },
+                "label": {
+                  "en": "Workshops"
+                }
+              },
+              {
+                "id": "factory-stat-3",
+                "value": {
+                  "en": "5"
+                },
+                "label": {
+                  "en": "Production lines"
+                }
+              },
+              {
+                "id": "factory-stat-4",
+                "value": {
+                  "en": "3"
+                },
+                "label": {
+                  "en": "Needling lines"
+                }
+              },
+              {
+                "id": "factory-stat-5",
+                "value": {
+                  "en": "2"
+                },
+                "label": {
+                  "en": "Pressing lines"
+                }
+              }
+            ],
+            "photo_groups": [
+              {
+                "id": "factory-group-1",
+                "title": {
+                  "en": "Factory site"
+                },
+                "description": {
+                  "en": "Exterior views of the Xuyi County facility."
+                },
+                "images": [
+                  {
+                    "id": "factory-photo-1-1",
+                    "image": {
+                      "assetId": "2bc089e1-a3a9-44d7-a9dd-2f7a1b49150f",
+                      "alt": {
+                        "en": "Factory buildings and the front yard"
+                      }
+                    },
+                    "caption": {
+                      "en": "Factory buildings and the front yard"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-1-2",
+                    "image": {
+                      "assetId": "9862ce5c-70ec-4fb2-8c77-e9ef8dd5782a",
+                      "alt": {
+                        "en": "Entrance to the factory building"
+                      }
+                    },
+                    "caption": {
+                      "en": "Entrance to the factory building"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-1-3",
+                    "image": {
+                      "assetId": "dcbde8a2-4136-4b26-846c-8153b3c01170",
+                      "alt": {
+                        "en": "Front of the factory site"
+                      }
+                    },
+                    "caption": {
+                      "en": "Front of the factory site"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "factory-group-2",
+                "title": {
+                  "en": "Production equipment"
+                },
+                "description": {
+                  "en": "Equipment and processing lines inside the workshops."
+                },
+                "images": [
+                  {
+                    "id": "factory-photo-2-1",
+                    "image": {
+                      "assetId": "da59941c-b954-4e32-93c5-e2a9fe7b7d25",
+                      "alt": {
+                        "en": "Production equipment in the workshop"
+                      }
+                    },
+                    "caption": {
+                      "en": "Production equipment in the workshop"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-2",
+                    "image": {
+                      "assetId": "1b633def-3cb7-4d5b-9580-30b0d13b702a",
+                      "alt": {
+                        "en": "Large pressing equipment"
+                      }
+                    },
+                    "caption": {
+                      "en": "Large pressing equipment"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-3",
+                    "image": {
+                      "assetId": "55d10779-80f3-4fb1-9fc2-d77ebf79f8c8",
+                      "alt": {
+                        "en": "Sheet processing machine"
+                      }
+                    },
+                    "caption": {
+                      "en": "Sheet processing machine"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-4",
+                    "image": {
+                      "assetId": "42e8a38b-d902-4917-8fae-d3fabab7ce53",
+                      "alt": {
+                        "en": "Fiber-processing line"
+                      }
+                    },
+                    "caption": {
+                      "en": "Fiber-processing line"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-5",
+                    "image": {
+                      "assetId": "a85ba51c-693f-47d0-805b-15ad31c1eb78",
+                      "alt": {
+                        "en": "Sheet production line"
+                      }
+                    },
+                    "caption": {
+                      "en": "Sheet production line"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-6",
+                    "image": {
+                      "assetId": "85a85bec-d81a-49ab-9153-6db7437e4288",
+                      "alt": {
+                        "en": "Pressing equipment seen from the front"
+                      }
+                    },
+                    "caption": {
+                      "en": "Pressing equipment seen from the front"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-7",
+                    "image": {
+                      "assetId": "1cab07bd-9143-4070-9c54-ce3b9dfdefc1",
+                      "alt": {
+                        "en": "Workshop equipment and production floor"
+                      }
+                    },
+                    "caption": {
+                      "en": "Workshop equipment and production floor"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-8",
+                    "image": {
+                      "assetId": "ce0a9216-8553-41ce-ae56-5a99a2004743",
+                      "alt": {
+                        "en": "Pressing equipment in the workshop"
+                      }
+                    },
+                    "caption": {
+                      "en": "Pressing equipment in the workshop"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-9",
+                    "image": {
+                      "assetId": "261de065-47ae-4793-8b5a-fb4b82e16501",
+                      "alt": {
+                        "en": "Long processing line"
+                      }
+                    },
+                    "caption": {
+                      "en": "Long processing line"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-10",
+                    "image": {
+                      "assetId": "8b53e8e9-6ce2-4408-8612-50e32c80f6bc",
+                      "alt": {
+                        "en": "Fiber-processing machine and ducting"
+                      }
+                    },
+                    "caption": {
+                      "en": "Fiber-processing machine and ducting"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-2-11",
+                    "image": {
+                      "assetId": "5ba1fd3e-9519-4b4e-bc0b-a6ff2d895e8b",
+                      "alt": {
+                        "en": "Processing line inside the workshop"
+                      }
+                    },
+                    "caption": {
+                      "en": "Processing line inside the workshop"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "factory-group-3",
+                "title": {
+                  "en": "Workshop and materials"
+                },
+                "description": {
+                  "en": "Production floor, material rolls and storage areas."
+                },
+                "images": [
+                  {
+                    "id": "factory-photo-3-1",
+                    "image": {
+                      "assetId": "a9ee1e07-eb34-4b62-9585-c58bede89bf5",
+                      "alt": {
+                        "en": "Material rolls in a workshop"
+                      }
+                    },
+                    "caption": {
+                      "en": "Material rolls in a workshop"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-3-2",
+                    "image": {
+                      "assetId": "a28e5c70-939d-44e6-9100-db6e57363710",
+                      "alt": {
+                        "en": "Open workshop floor"
+                      }
+                    },
+                    "caption": {
+                      "en": "Open workshop floor"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-3-3",
+                    "image": {
+                      "assetId": "d488e468-95d6-49f7-b2ce-75124b822caa",
+                      "alt": {
+                        "en": "Equipment in a production hall"
+                      }
+                    },
+                    "caption": {
+                      "en": "Equipment in a production hall"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-3-4",
+                    "image": {
+                      "assetId": "96b30b39-1297-4de1-a9cc-09edfde016a3",
+                      "alt": {
+                        "en": "Wide view across the workshop"
+                      }
+                    },
+                    "caption": {
+                      "en": "Wide view across the workshop"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-3-5",
+                    "image": {
+                      "assetId": "78fa7fc6-fa7d-4418-a332-69dbac21ebd6",
+                      "alt": {
+                        "en": "Materials stored inside the workshop"
+                      }
+                    },
+                    "caption": {
+                      "en": "Materials stored inside the workshop"
+                    }
+                  },
+                  {
+                    "id": "factory-photo-3-6",
+                    "image": {
+                      "assetId": "597cb939-b00b-4d10-acba-ffca207dda41",
+                      "alt": {
+                        "en": "Bagged materials in storage"
+                      }
+                    },
+                    "caption": {
+                      "en": "Bagged materials in storage"
+                    }
+                  }
+                ]
+              }
+            ],
+            "copy": [
+              {
+                "id": "scale_title",
+                "label": "Facility heading",
+                "value": {
+                  "en": "Facility at a glance"
+                }
+              },
+              {
+                "id": "scale_intro",
+                "label": "Facility introduction",
+                "value": {
+                  "en": "Share your required material, format and volume so we can discuss suitable production options for your project."
+                }
+              },
+              {
+                "id": "scale_note",
+                "label": "Site and output note",
+                "value": {
+                  "en": "The site covers 40 mu (about 26,700 m²). Langtian reports annual board output of 8,000 tonnes."
+                }
+              },
+              {
+                "id": "photos_title",
+                "label": "Photo heading",
+                "value": {
+                  "en": "From the factory"
+                }
+              },
+              {
+                "id": "photos_intro",
+                "label": "Photo introduction",
+                "value": {
+                  "en": "Explore the site, equipment and material-handling areas."
+                }
+              },
+              {
+                "id": "process_title",
+                "label": "Process heading",
+                "value": {
+                  "en": "Needling and pressing"
+                }
+              },
+              {
+                "id": "process_intro",
+                "label": "Process introduction",
+                "value": {
+                  "en": "The five production lines are split between two processes. Which process a given product passes through is confirmed per product during inquiry."
+                }
+              },
+              {
+                "id": "needling_label",
+                "label": "Needling heading",
+                "value": {
+                  "en": "Needling lines (3)"
+                }
+              },
+              {
+                "id": "needling_text",
+                "label": "Needling explanation",
+                "value": {
+                  "en": "Needling is a general process in which barbed needles entangle fibers into a coherent felt or non-woven web."
+                }
+              },
+              {
+                "id": "pressing_label",
+                "label": "Pressing heading",
+                "value": {
+                  "en": "Pressing lines (2)"
+                }
+              },
+              {
+                "id": "pressing_text",
+                "label": "Pressing explanation",
+                "value": {
+                  "en": "Pressing is a general process in which heat and pressure consolidate material layers into a sheet or board."
+                }
+              },
+              {
+                "id": "cta_title",
+                "label": "Inquiry heading",
+                "value": {
+                  "en": "Want to discuss a part, a material or a sample?"
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "Inquiry button",
+                "value": {
+                  "en": "Send an inquiry"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "quality": {
+      "order": [
+        "page_hero",
+        "certificates",
+        "quality_evidence",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Quality and certificates"
+            },
+            "title": {
+              "en": "Management-system certificates"
+            },
+            "description": {
+              "en": "View the ISO 14001 and IATF 16949 certificate copies, including their stated scope and dates."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Quality and certificates"
+            },
+            "description": {
+              "en": "Review the supplied ISO 14001, IATF 16949 and patent certificate copies, with their printed scope, titles and status caveats."
+            }
+          }
+        },
+        "certificates": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "iso-14001",
+                "slug": "iso-14001",
+                "standard": {
+                  "en": "ISO 14001:2015"
+                },
+                "title": {
+                  "en": "Environmental management system"
+                },
+                "certificate_number": {
+                  "en": "69024E0155ROS"
+                },
+                "scope": {
+                  "en": "Manufacturing and sales of automotive interior lightweight GMT materials and related environmental management activities"
+                },
+                "valid_until": {
+                  "en": "5 June 2027, subject to the certificate terms"
+                },
+                "scan": {
+                  "assetId": "b324ab2f-f22a-46e5-92c8-d766f24830bd",
+                  "alt": {
+                    "en": "ISO 14001:2015 certificate scan"
+                  }
+                }
+              },
+              {
+                "id": "iatf-16949",
+                "slug": "iatf-16949",
+                "standard": {
+                  "en": "IATF 16949:2016"
+                },
+                "title": {
+                  "en": "Automotive quality management system"
+                },
+                "certificate_number": {
+                  "en": "133961/A/0001/SM/En"
+                },
+                "issuing_body": {
+                  "en": "URS"
+                },
+                "scope": {
+                  "en": "Manufacture of plastic sheets used for interior trim parts (lightweight GMT material, plant fiber composite material, PET material); excludes product design under clause 8.3"
+                },
+                "valid_until": {
+                  "en": "28 June 2027, subject to the certificate terms"
+                },
+                "scan": {
+                  "assetId": "e449d652-3d1b-4478-81a2-91937f655259",
+                  "alt": {
+                    "en": "IATF 16949:2016 certificate scan"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "quality_evidence": {
+          "hidden": false,
+          "values": {
+            "recognition_image": {
+              "assetId": "5538311b-6a73-4b8d-851d-969c4743c89c",
+              "alt": {
+                "en": "High-tech enterprise certificate naming 江苏朗田复合材料有限公司"
+              }
+            },
+            "patents": [
+              {
+                "id": "patent-1",
+                "number": "ZL 2024 1 1300826.X",
+                "title": {
+                  "en": "Glass fiber board lifting equipment and production process"
+                },
+                "original": "玻纤板生产用提升设备及玻纤板生产工艺"
+              },
+              {
+                "id": "patent-2",
+                "number": "ZL 2024 1 0152002.6",
+                "title": {
+                  "en": "Equipment and process for glass fiber board production"
+                },
+                "original": "一种玻纤板生产用的设备及其生产工艺"
+              },
+              {
+                "id": "patent-3",
+                "number": "ZL 2024 1 1314827.X",
+                "title": {
+                  "en": "Flame-retardant LWRT board for new energy vehicle chassis and its processing method"
+                },
+                "original": "一种具阻燃效果的新能源汽车底盘LWRT板及加工工艺"
+              },
+              {
+                "id": "patent-4",
+                "number": "ZL 2024 2 3160183.1",
+                "title": {
+                  "en": "Electric heating oven with rapid discharge"
+                },
+                "original": "一种便于快速出料的电热烘箱"
+              },
+              {
+                "id": "patent-5",
+                "number": "ZL 2024 2 3231628.0",
+                "title": {
+                  "en": "Baking device for GMT sheet production"
+                },
+                "original": "一种GMT片材生产用烘烤装置"
+              },
+              {
+                "id": "patent-6",
+                "number": "ZL 2024 2 3277232.X",
+                "title": {
+                  "en": "Preheating device for glass fiber reinforced plastic production"
+                },
+                "original": "一种玻璃纤维增强塑料生产用预热装置"
+              }
+            ],
+            "scope_points": [
+              {
+                "id": "scope-1",
+                "text": {
+                  "en": "ISO 14001 relates to an environmental management system; IATF 16949 relates to an automotive quality management system."
+                }
+              },
+              {
+                "id": "scope-2",
+                "text": {
+                  "en": "A management-system certificate applies to the scope printed on it. It does not certify every individual product."
+                }
+              },
+              {
+                "id": "scope-3",
+                "text": {
+                  "en": "Product properties are specified per material and confirmed against technical data for your project. No test results are published on this site."
+                }
+              },
+              {
+                "id": "scope-4",
+                "text": {
+                  "en": "Need the certificate copies or details verified? Ask in an inquiry and we will provide them."
+                }
+              }
+            ],
+            "copy": [
+              {
+                "id": "certs_title",
+                "label": "Certificates heading",
+                "value": {
+                  "en": "Certificates"
+                }
+              },
+              {
+                "id": "cert_placeholder",
+                "label": "Missing field label",
+                "value": {
+                  "en": "See the certificate copy"
+                }
+              },
+              {
+                "id": "cert_note",
+                "label": "Status warning",
+                "value": {
+                  "en": "This is a supplied copy. Confirm current registration status with the issuing body before relying on it."
+                }
+              },
+              {
+                "id": "recognition_title",
+                "label": "Recognition heading",
+                "value": {
+                  "en": "Company recognition"
+                }
+              },
+              {
+                "id": "recognition_text_1",
+                "label": "Certificate context",
+                "value": {
+                  "en": "A supplied high-tech enterprise certificate names 江苏朗田复合材料有限公司. It was issued on 13 December 2023 and states a three-year term. Please check its current status when making a procurement decision."
+                }
+              },
+              {
+                "id": "recognition_text_2",
+                "label": "Provincial list context",
+                "value": {
+                  "en": "A supplied 2025 Jiangsu provincial specialist-enterprise list includes the company at entry 5640. This describes the supplied list; confirm the current designation with the issuing authority."
+                }
+              },
+              {
+                "id": "recognition_caption",
+                "label": "Image caption",
+                "value": {
+                  "en": "High-tech enterprise certificate, issued 13 December 2023."
+                }
+              },
+              {
+                "id": "patents_eyebrow",
+                "label": "Patent eyebrow",
+                "value": {
+                  "en": "Customer-supplied documents"
+                }
+              },
+              {
+                "id": "patents_title",
+                "label": "Patent heading",
+                "value": {
+                  "en": "Patent certificate copies"
+                }
+              },
+              {
+                "id": "patents_intro",
+                "label": "Patent context",
+                "value": {
+                  "en": "These six copies name 江苏朗田复合材料有限公司 as the patent holder. Titles below are translated for reading; refer to each original certificate and the current patent register before relying on its legal status."
+                }
+              },
+              {
+                "id": "scope_title",
+                "label": "How to read title",
+                "value": {
+                  "en": "How to read these certificates"
+                }
+              },
+              {
+                "id": "scope_cta",
+                "label": "Certificate button",
+                "value": {
+                  "en": "Request certificate copies"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "applications": {
+      "order": [
+        "page_hero",
+        "application_entries",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Applications"
+            },
+            "title": {
+              "en": "Materials by automotive interior part"
+            },
+            "description": {
+              "en": "Explore materials by interior part. Suitability for your design is confirmed against your requirements."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Applications"
+            },
+            "description": {
+              "en": "Automotive interior applications for Langtian materials: headliners, door panels, luggage-compartment liners, spare-tire covers and other interior structures."
+            }
+          }
+        },
+        "application_entries": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "headliners",
+                "slug": "headliners",
+                "name": {
+                  "en": "Automotive headliners"
+                },
+                "summary": {
+                  "en": "Roof-lining substrates and sandwich-type headliner structures."
+                },
+                "detail": {
+                  "en": "Headliner parts are usually judged on weight, stiffness, formability and how well the substrate accepts a decorative layer. Tell us your target thickness and layup so we can point to suitable material families."
+                }
+              },
+              {
+                "id": "door-panels",
+                "slug": "door-panels",
+                "name": {
+                  "en": "Door panels"
+                },
+                "summary": {
+                  "en": "Substrate boards for door-trim parts."
+                },
+                "detail": {
+                  "en": "Door-trim parts often combine a formed substrate with a decorative surface. Share the part drawing, surface requirement and forming route to narrow the choice between sheet and natural-fiber options."
+                }
+              },
+              {
+                "id": "luggage-compartment-liners",
+                "slug": "luggage-compartment-liners",
+                "name": {
+                  "en": "Luggage-compartment liners"
+                },
+                "summary": {
+                  "en": "Lining and floor-type parts for the luggage compartment."
+                },
+                "detail": {
+                  "en": "Luggage-compartment parts typically pair a structural layer with a felt or carpet-type surface. Felt and non-woven materials can be discussed together with the base sheet."
+                },
+                "image": {
+                  "assetId": "979b1b60-c78a-434c-813d-be3e2bc87acb",
+                  "alt": {
+                    "en": "Dark teal felt-faced flat panel with die-cut notches and fastener holes"
+                  }
+                },
+                "caption": {
+                  "en": "Felt-faced flat panel with notches and fastener holes."
+                }
+              },
+              {
+                "id": "spare-tire-covers",
+                "slug": "spare-tire-covers",
+                "name": {
+                  "en": "Spare-tire covers"
+                },
+                "summary": {
+                  "en": "Molded covers for the spare-tire well."
+                },
+                "detail": {
+                  "en": "Spare-tire covers are molded parts, often with embossed features such as a circular recess. Material choice depends on the part geometry and the forming route you use."
+                },
+                "image": {
+                  "assetId": "4dffef4e-c9d0-4a98-b10e-fef909dba239",
+                  "alt": {
+                    "en": "Stack of dark molded composite parts with a circular embossed recess"
+                  }
+                },
+                "caption": {
+                  "en": "Stack of molded parts with a circular embossed recess."
+                }
+              },
+              {
+                "id": "other-interior-structures",
+                "slug": "other-interior-structures",
+                "name": {
+                  "en": "Other interior structures"
+                },
+                "summary": {
+                  "en": "Further interior parts that use sheet, felt or panel materials."
+                },
+                "detail": {
+                  "en": "If your part is not listed, describe it in an inquiry. Material suitability is confirmed against your part requirements."
+                }
+              }
+            ],
+            "copy": [
+              {
+                "id": "linked_heading",
+                "label": "Linked products title",
+                "value": {
+                  "en": "Linked products"
+                }
+              },
+              {
+                "id": "empty_products",
+                "label": "No linked products copy",
+                "value": {
+                  "en": "Describe your part in an inquiry and we will suggest materials."
+                }
+              },
+              {
+                "id": "cta_prompt",
+                "label": "Inquiry prompt",
+                "value": {
+                  "en": "Working on a part that is not listed? Describe it and we will discuss the suitable material options with you."
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "Inquiry button",
+                "value": {
+                  "en": "Discuss your part"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "faq": {
+      "order": [
+        "page_hero",
+        "faq_entries",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "FAQ"
+            },
+            "title": {
+              "en": "Frequently asked questions"
+            },
+            "description": {
+              "en": "Short answers for buyers and engineers. Anything not covered here can go into an inquiry."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "FAQ"
+            },
+            "description": {
+              "en": "Answers about Langtian materials, inquiries, samples, minimum order quantities, certificates and location."
+            }
+          }
+        },
+        "faq_entries": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "what-we-make",
+                "topic": "products",
+                "question": {
+                  "en": "What does Langtian make?"
+                },
+                "answer": {
+                  "en": "Langtian makes thermoplastic composite sheets and felts for automotive interiors. The range includes PP glass fiber board, LWRT board, LWRTUD felt or sheet, PET/PP composite sheet, PET non-woven and pile carpet, PHC fiberglass composite panel, PP bamboo or hemp fiberboard and PET foam board."
+                }
+              },
+              {
+                "id": "which-material",
+                "topic": "products",
+                "question": {
+                  "en": "How do I choose between sheet, felt, sandwich and natural-fiber materials?"
+                },
+                "answer": {
+                  "en": "Start from the part: its function, geometry and surface layer. Sheets are flat structural materials, felts and non-wovens are used as surface or lining layers, sandwich panels place face layers around a core, and natural-fiber boards use bamboo or hemp in a PP matrix. Send your drawing or description and we will suggest material families to compare."
+                }
+              },
+              {
+                "id": "custom-specifications",
+                "topic": "products",
+                "question": {
+                  "en": "Can size, thickness, areal weight, color or molded shape be customized?"
+                },
+                "answer": {
+                  "en": "Yes. Langtian can discuss size, thickness, areal weight, color and compression-molded shapes against the part drawing and material requirements. Available options are confirmed for each product and order."
+                }
+              },
+              {
+                "id": "technical-documents",
+                "topic": "products",
+                "question": {
+                  "en": "Can you provide technical data sheets or test reports?"
+                },
+                "answer": {
+                  "en": "Product technical data sheets can be provided. Tell us which tests or material requirements you need so the relevant reports can be checked for your project."
+                }
+              },
+              {
+                "id": "applications",
+                "topic": "products",
+                "question": {
+                  "en": "Which applications are these materials used for?"
+                },
+                "answer": {
+                  "en": "The supplied product information lists automotive headliners, sunroof covers, parcel shelves, door panels, luggage compartment liners, spare tire covers, tailgate trim and seat backs. Some PET boards are also described for outdoor structural parts. Suitability depends on the part specification."
+                }
+              },
+              {
+                "id": "performance",
+                "topic": "products",
+                "question": {
+                  "en": "Which material properties can be discussed for a part?"
+                },
+                "answer": {
+                  "en": "The supplied product descriptions cover lightweight construction, strength, impact resistance, thermal and acoustic performance, low odor and dimensional stability across different materials. Relevant properties depend on the selected product and specification; request its technical data sheet for a project."
+                }
+              },
+              {
+                "id": "oem-odm",
+                "topic": "products",
+                "question": {
+                  "en": "Do you offer OEM or ODM services?"
+                },
+                "answer": {
+                  "en": "OEM and ODM services are not offered. Send the part requirements to discuss available material and processing options."
+                }
+              },
+              {
+                "id": "what-to-send",
+                "topic": "inquiry",
+                "question": {
+                  "en": "What should I include in an inquiry?"
+                },
+                "answer": {
+                  "en": "The part and application, the material family you are considering, target thickness, areal weight and sheet or roll size, expected quantity, and any drawings or specification requirements. The inquiry form has a field for each of these."
+                }
+              },
+              {
+                "id": "samples",
+                "topic": "inquiry",
+                "question": {
+                  "en": "Can I ask about samples?"
+                },
+                "answer": {
+                  "en": "Yes. Choose “Sample request” as the inquiry context and describe the material and size you need. Sample availability and shipping are confirmed for each material and project."
+                }
+              },
+              {
+                "id": "sample-approval",
+                "topic": "inquiry",
+                "question": {
+                  "en": "Can a custom material be sampled before production?"
+                },
+                "answer": {
+                  "en": "Yes. For custom products, the supplied process recommends reviewing a sample before arranging volume production. Sample timing and charges depend on the material and quantity. Any credit or refund of a sample charge against a later bulk order must be agreed in the quotation."
+                }
+              },
+              {
+                "id": "moq-price",
+                "topic": "inquiry",
+                "question": {
+                  "en": "Where are minimum order quantities and prices?"
+                },
+                "answer": {
+                  "en": "Minimum order quantity is recorded per product and confirmed when you inquire. Prices are quoted for each inquiry based on the specification and quantity; no price list is published on this site."
+                }
+              },
+              {
+                "id": "quote-scope",
+                "topic": "inquiry",
+                "question": {
+                  "en": "Does a quotation include packaging, shipping and taxes?"
+                },
+                "answer": {
+                  "en": "A regular quotation is for the product. Packaging, shipping and taxes are confirmed separately for the order; ask for an itemized quotation if you need one."
+                }
+              },
+              {
+                "id": "volume-pricing",
+                "topic": "inquiry",
+                "question": {
+                  "en": "Can pricing be discussed for different quantities or ongoing orders?"
+                },
+                "answer": {
+                  "en": "Yes. Pricing is discussed against quantity, specification and the order plan. A long-term supply arrangement can also be discussed where applicable."
+                }
+              },
+              {
+                "id": "price-changes",
+                "topic": "inquiry",
+                "question": {
+                  "en": "Can a quoted price change with materials or exchange rates?"
+                },
+                "answer": {
+                  "en": "Material prices and exchange rates can affect a quotation. The applicable price is confirmed when the order is discussed."
+                }
+              },
+              {
+                "id": "lead-time",
+                "topic": "inquiry",
+                "question": {
+                  "en": "How are production and sample lead times confirmed?"
+                },
+                "answer": {
+                  "en": "Sample timing depends on the product and process. The customer-supplied estimate for a regular production order starts at about 15 days; actual timing depends on quantity and process complexity. The bulk-order schedule is confirmed per order, including any peak-season change. Urgent production can be discussed against current capacity."
+                }
+              },
+              {
+                "id": "progress-updates",
+                "topic": "inquiry",
+                "question": {
+                  "en": "Can production progress be shared?"
+                },
+                "answer": {
+                  "en": "Progress updates can be arranged, including updates at agreed production milestones. Confirm the reporting points when placing the order."
+                }
+              },
+              {
+                "id": "inspection",
+                "topic": "quality",
+                "question": {
+                  "en": "Can an order include inspection or a third-party check?"
+                },
+                "answer": {
+                  "en": "Langtian describes quality checks from raw material through finished product and can discuss third-party inspection. State the inspection scope and report requirements before the order is confirmed."
+                }
+              },
+              {
+                "id": "quality-issues",
+                "topic": "quality",
+                "question": {
+                  "en": "How are quality issues discussed?"
+                },
+                "answer": {
+                  "en": "Contact Langtian with the order reference, affected quantity and inspection details. Any return, replacement or replenishment is discussed under the terms agreed for that order."
+                }
+              },
+              {
+                "id": "certificates",
+                "topic": "quality",
+                "question": {
+                  "en": "Which certificate copies are available?"
+                },
+                "answer": {
+                  "en": "Supplied ISO 14001 and IATF 16949 management-system certificate copies are available to review. Each copy states its scope and dates; please confirm current registration status with the issuing body. A management-system certificate does not certify every individual product."
+                }
+              },
+              {
+                "id": "location",
+                "topic": "company",
+                "question": {
+                  "en": "Where is the factory?"
+                },
+                "answer": {
+                  "en": "Xinhai Avenue 52-8, Xuyi County Economic Development Zone, Huai’an, Jiangsu, China."
+                }
+              }
+            ],
+            "copy": [
+              {
+                "id": "topic_products",
+                "label": "Products group",
+                "value": {
+                  "en": "Products and materials"
+                }
+              },
+              {
+                "id": "topic_inquiry",
+                "label": "Inquiries group",
+                "value": {
+                  "en": "Inquiries and samples"
+                }
+              },
+              {
+                "id": "topic_quality",
+                "label": "Quality group",
+                "value": {
+                  "en": "Quality and certificates"
+                }
+              },
+              {
+                "id": "topic_company",
+                "label": "Company group",
+                "value": {
+                  "en": "Company"
+                }
+              },
+              {
+                "id": "cta_prompt",
+                "label": "Contact prompt",
+                "value": {
+                  "en": "Your question is not here?"
+                }
+              },
+              {
+                "id": "cta_label",
+                "label": "Contact button",
+                "value": {
+                  "en": "Ask us directly"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "contact": {
+      "order": [
+        "page_hero",
+        "contact_details",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Contact"
+            },
+            "title": {
+              "en": "Send us your inquiry"
+            },
+            "description": {
+              "en": "Tell us the part, the material you are considering and the quantity or specification. Pricing, minimum order and samples are confirmed per inquiry."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Contact"
+            },
+            "description": {
+              "en": "Send an inquiry to Jiangsu Langtian Composite Materials about thermoplastic composite sheets and felts for automotive interiors."
+            }
+          }
+        },
+        "contact_details": {
+          "hidden": false,
+          "values": {
+            "form_title": {
+              "en": "Inquiry form"
+            },
+            "details_title": {
+              "en": "Company details"
+            },
+            "useful_title": {
+              "en": "Useful to include"
+            },
+            "useful_items": [
+              {
+                "id": "useful-1",
+                "text": {
+                  "en": "The part and where it is used in the vehicle"
+                }
+              },
+              {
+                "id": "useful-2",
+                "text": {
+                  "en": "Material family or product you are considering"
+                }
+              },
+              {
+                "id": "useful-3",
+                "text": {
+                  "en": "Target thickness, areal weight and sheet or roll size"
+                }
+              },
+              {
+                "id": "useful-4",
+                "text": {
+                  "en": "Expected quantity and any sample needs"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "products": {
+      "order": [
+        "page_hero",
+        "list_guidance",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "Products"
+            },
+            "title": {
+              "en": "Thermoplastic composite sheets and felts"
+            },
+            "description": {
+              "en": "Browse by material family. Specification fields and minimum order quantity are recorded per product and confirmed when you inquire."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Products"
+            },
+            "description": {
+              "en": "Thermoplastic composite sheets, felts, sandwich panels and natural-fiber boards for automotive interiors."
+            }
+          }
+        },
+        "list_guidance": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "Not sure which material fits your part?"
+            },
+            "description": {
+              "en": "The products shown are the rows currently listed on this site, not the complete range. Describe the part and we will point to materials to compare."
+            },
+            "cta_label": {
+              "en": "Send an inquiry"
+            }
+          }
+        }
+      }
+    },
+    "news": {
+      "order": [
+        "page_hero",
+        "news_empty",
+        "seo"
+      ],
+      "modules": {
+        "page_hero": {
+          "hidden": false,
+          "values": {
+            "eyebrow": {
+              "en": "News"
+            },
+            "title": {
+              "en": "Company news"
+            },
+            "description": {
+              "en": "Announcements and updates from Langtian."
+            }
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": {
+              "en": "News"
+            },
+            "description": {
+              "en": "Company news from Jiangsu Langtian Composite Materials."
+            }
+          }
+        },
+        "news_empty": {
+          "hidden": false,
+          "values": {
+            "copy": [
+              {
+                "id": "title",
+                "label": "title",
+                "value": {
+                  "en": "No news has been published yet"
+                }
+              },
+              {
+                "id": "description",
+                "label": "description",
+                "value": {
+                  "en": "Articles will appear here once the company publishes them. In the meantime, you can browse the materials or send an inquiry."
+                }
+              },
+              {
+                "id": "products_cta",
+                "label": "products cta",
+                "value": {
+                  "en": "Browse products"
+                }
+              },
+              {
+                "id": "contact_cta",
+                "label": "contact cta",
+                "value": {
+                  "en": "Contact us"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1848 @@
+{
+  "version": 1,
+  "fontFamilies": [
+    {
+      "key": "site-sans",
+      "label": "IBM Plex Sans"
+    },
+    {
+      "key": "site-display",
+      "label": "Archivo"
+    }
+  ],
+  "pages": [
+    {
+      "key": "home",
+      "path": "/",
+      "label": "Home",
+      "modules": [
+        {
+          "key": "navigation",
+          "type": "navigation",
+          "label": "Navigation",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Navigation links",
+              "required": true,
+              "maxItems": 10,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Label",
+                  "localized": true,
+                  "required": true,
+                  "typography": {
+                    "fontFamilies": [
+                      "site-sans"
+                    ],
+                    "fontWeights": [
+                      400,
+                      500,
+                      600
+                    ],
+                    "fontSize": {
+                      "min": 12,
+                      "max": 24
+                    },
+                    "defaults": {
+                      "fontFamily": "site-sans",
+                      "fontWeight": 500,
+                      "fontSizeDesktop": 14,
+                      "fontSizeMobile": 16
+                    }
+                  }
+                },
+                {
+                  "key": "href",
+                  "type": "link",
+                  "label": "Destination",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "cta_label",
+              "type": "text",
+              "label": "Quote button",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_href",
+              "type": "link",
+              "label": "Quote destination",
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "hero",
+          "type": "hero",
+          "label": "Homepage banners",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "slides",
+              "type": "repeat",
+              "label": "Banners",
+              "required": true,
+              "maxItems": 3,
+              "fields": [
+                {
+                  "key": "desktop_image",
+                  "type": "image",
+                  "label": "Desktop image",
+                  "required": true
+                },
+                {
+                  "key": "mobile_image",
+                  "type": "image",
+                  "label": "Mobile image",
+                  "required": true
+                },
+                {
+                  "key": "eyebrow",
+                  "type": "text",
+                  "label": "Eyebrow",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "Title",
+                  "localized": true,
+                  "required": true,
+                  "typography": {
+                    "fontFamilies": [
+                      "site-display",
+                      "site-sans"
+                    ],
+                    "fontWeights": [
+                      500,
+                      600,
+                      700
+                    ],
+                    "fontSize": {
+                      "min": 24,
+                      "max": 72
+                    },
+                    "defaults": {
+                      "fontFamily": "site-display",
+                      "fontWeight": 700,
+                      "fontSizeDesktop": 48,
+                      "fontSizeMobile": 32
+                    }
+                  }
+                },
+                {
+                  "key": "body",
+                  "type": "textarea",
+                  "label": "Description",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "primary_label",
+                  "type": "text",
+                  "label": "Primary button",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "primary_href",
+                  "type": "link",
+                  "label": "Primary destination",
+                  "required": true
+                },
+                {
+                  "key": "secondary_label",
+                  "type": "text",
+                  "label": "Secondary button",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "secondary_href",
+                  "type": "link",
+                  "label": "Secondary destination",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "material_families",
+          "type": "section",
+          "label": "Material families",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "representative_products",
+          "type": "section",
+          "label": "Representative products",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "products",
+              "type": "repeat",
+              "label": "Featured products",
+              "required": true,
+              "maxItems": 8,
+              "fields": [
+                {
+                  "key": "product",
+                  "type": "product",
+                  "label": "Product",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "application_paths",
+          "type": "section",
+          "label": "Automotive applications",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "manufacturing_evidence",
+          "type": "section",
+          "label": "Manufacturing evidence",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "factory_image",
+              "type": "image",
+              "label": "factory image",
+              "required": true
+            },
+            {
+              "key": "hall_image",
+              "type": "image",
+              "label": "hall image",
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "material_differentiators",
+          "type": "section",
+          "label": "Materials and processing",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Material facts",
+              "required": true,
+              "maxItems": 12,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "Title",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "text",
+                  "type": "textarea",
+                  "label": "Description",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "href",
+                  "type": "link",
+                  "label": "Destination",
+                  "required": true
+                },
+                {
+                  "key": "cta",
+                  "type": "text",
+                  "label": "Button",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "quality_context",
+          "type": "section",
+          "label": "Quality and certificates",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sampling_process",
+          "type": "section",
+          "label": "Customization and sampling",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "steps",
+              "type": "repeat",
+              "label": "Inquiry steps",
+              "required": true,
+              "maxItems": 8,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "Title",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "text",
+                  "type": "textarea",
+                  "label": "Description",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "home_faq",
+          "type": "section",
+          "label": "Buyer questions",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "text",
+              "label": "cta label",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "questions",
+              "type": "repeat",
+              "label": "FAQ selection",
+              "required": true,
+              "maxItems": 12,
+              "fields": [
+                {
+                  "key": "faq_id",
+                  "type": "text",
+                  "label": "FAQ ID",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "final_contact",
+          "type": "section",
+          "label": "Closing inquiry",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "primary_label",
+              "type": "text",
+              "label": "primary label",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "secondary_label",
+              "type": "text",
+              "label": "secondary label",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "footer",
+          "type": "section",
+          "label": "Site footer",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "company_links",
+              "type": "repeat",
+              "label": "Company links",
+              "required": true,
+              "maxItems": 12,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Label",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "href",
+                  "type": "link",
+                  "label": "Destination",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Home search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "about",
+      "path": "/about",
+      "label": "About",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "about_story",
+          "type": "about_story",
+          "label": "Company story and recognition",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "story_paragraphs",
+              "type": "repeat",
+              "label": "Company story",
+              "required": true,
+              "maxItems": 10,
+              "fields": [
+                {
+                  "key": "text",
+                  "type": "textarea",
+                  "label": "Paragraph",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "factory_image",
+              "type": "image",
+              "label": "Factory exterior",
+              "required": true
+            },
+            {
+              "key": "recognition_images",
+              "type": "repeat",
+              "label": "Recognition display photos",
+              "required": true,
+              "maxItems": 8,
+              "fields": [
+                {
+                  "key": "image",
+                  "type": "image",
+                  "label": "Customer photo",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "manufacturing",
+      "path": "/manufacturing",
+      "label": "Manufacturing",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "facility_content",
+          "type": "facility",
+          "label": "Factory and process",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "stats",
+              "type": "repeat",
+              "label": "Facility facts",
+              "required": true,
+              "maxItems": 10,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Label",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "text",
+                  "label": "Value",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "photo_groups",
+              "type": "repeat",
+              "label": "Factory photo groups",
+              "required": true,
+              "maxItems": 6,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "Group title",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "description",
+                  "type": "textarea",
+                  "label": "Group description",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "images",
+                  "type": "repeat",
+                  "label": "Photos",
+                  "required": true,
+                  "maxItems": 25,
+                  "fields": [
+                    {
+                      "key": "image",
+                      "type": "image",
+                      "label": "Customer photo",
+                      "required": true
+                    },
+                    {
+                      "key": "caption",
+                      "type": "text",
+                      "label": "Caption",
+                      "localized": true,
+                      "required": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "quality",
+      "path": "/quality",
+      "label": "Quality",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "certificates",
+          "type": "certificates",
+          "label": "Management-system certificates",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Certificate copies",
+              "required": true,
+              "maxItems": 12,
+              "fields": [
+                {
+                  "key": "slug",
+                  "type": "text",
+                  "label": "Anchor",
+                  "required": true
+                },
+                {
+                  "key": "standard",
+                  "type": "text",
+                  "label": "Standard",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "Title",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "certificate_number",
+                  "type": "text",
+                  "label": "Certificate number",
+                  "localized": true,
+                  "required": false
+                },
+                {
+                  "key": "issuing_body",
+                  "type": "text",
+                  "label": "Issuing body",
+                  "localized": true,
+                  "required": false
+                },
+                {
+                  "key": "scope",
+                  "type": "textarea",
+                  "label": "Scope",
+                  "localized": true
+                },
+                {
+                  "key": "valid_until",
+                  "type": "text",
+                  "label": "Date printed on copy",
+                  "localized": true,
+                  "required": false
+                },
+                {
+                  "key": "scan",
+                  "type": "image",
+                  "label": "Customer certificate copy",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "quality_evidence",
+          "type": "quality_evidence",
+          "label": "Recognition and patents",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "recognition_image",
+              "type": "image",
+              "label": "High-tech enterprise certificate",
+              "required": true
+            },
+            {
+              "key": "patents",
+              "type": "repeat",
+              "label": "Customer patent copies",
+              "required": true,
+              "maxItems": 20,
+              "fields": [
+                {
+                  "key": "number",
+                  "type": "text",
+                  "label": "Patent number",
+                  "required": true
+                },
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "English reading title",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "original",
+                  "type": "text",
+                  "label": "Original Chinese title",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "scope_points",
+              "type": "repeat",
+              "label": "Reading notes",
+              "required": true,
+              "maxItems": 10,
+              "fields": [
+                {
+                  "key": "text",
+                  "type": "textarea",
+                  "label": "Note",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "applications",
+      "path": "/applications",
+      "label": "Applications",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "application_entries",
+          "type": "applications",
+          "label": "Application areas",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Applications",
+              "required": true,
+              "maxItems": 20,
+              "fields": [
+                {
+                  "key": "slug",
+                  "type": "text",
+                  "label": "Anchor",
+                  "required": true
+                },
+                {
+                  "key": "name",
+                  "type": "text",
+                  "label": "Name",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "summary",
+                  "type": "textarea",
+                  "label": "Short description",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "detail",
+                  "type": "textarea",
+                  "label": "Detail",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "image",
+                  "type": "image",
+                  "label": "Customer image"
+                },
+                {
+                  "key": "caption",
+                  "type": "text",
+                  "label": "Image caption",
+                  "localized": true,
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "faq",
+      "path": "/faq",
+      "label": "Faq",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "faq_entries",
+          "type": "faq",
+          "label": "Buyer questions",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            },
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Questions",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "topic",
+                  "type": "text",
+                  "label": "Topic",
+                  "required": true
+                },
+                {
+                  "key": "question",
+                  "type": "text",
+                  "label": "Question",
+                  "localized": true,
+                  "required": true
+                },
+                {
+                  "key": "answer",
+                  "type": "textarea",
+                  "label": "Answer",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "path": "/contact",
+      "label": "Contact",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "contact_details",
+          "type": "contact",
+          "label": "Inquiry introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "form_title",
+              "type": "text",
+              "label": "Form heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "details_title",
+              "type": "text",
+              "label": "Company details heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "useful_title",
+              "type": "text",
+              "label": "Buyer guidance heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "useful_items",
+              "type": "repeat",
+              "label": "Useful details to include",
+              "required": true,
+              "maxItems": 12,
+              "fields": [
+                {
+                  "key": "text",
+                  "type": "text",
+                  "label": "Buyer guidance",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "products",
+      "path": "/products",
+      "label": "Products",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "list_guidance",
+          "type": "list_guidance",
+          "label": "Product list guidance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "text",
+              "label": "cta label",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "news",
+      "path": "/news",
+      "label": "News",
+      "modules": [
+        {
+          "key": "page_hero",
+          "type": "hero",
+          "label": "Page introduction",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "eyebrow",
+              "type": "text",
+              "label": "Eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "Title",
+              "localized": true,
+              "required": true,
+              "typography": {
+                "fontFamilies": [
+                  "site-display",
+                  "site-sans"
+                ],
+                "fontWeights": [
+                  500,
+                  600,
+                  700
+                ],
+                "fontSize": {
+                  "min": 22,
+                  "max": 72
+                },
+                "defaults": {
+                  "fontFamily": "site-sans",
+                  "fontWeight": 700,
+                  "fontSizeDesktop": 48,
+                  "fontSizeMobile": 36
+                }
+              }
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "Introduction",
+              "localized": true,
+              "required": true
+            }
+          ]
+        },
+        {
+          "key": "news_empty",
+          "type": "news_empty",
+          "label": "No published news",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "copy",
+              "type": "repeat",
+              "label": "Section copy",
+              "required": true,
+              "maxItems": 50,
+              "fields": [
+                {
+                  "key": "label",
+                  "type": "text",
+                  "label": "Field label",
+                  "required": true
+                },
+                {
+                  "key": "value",
+                  "type": "textarea",
+                  "label": "Visible text",
+                  "localized": true,
+                  "required": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Search appearance",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "localized": true,
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

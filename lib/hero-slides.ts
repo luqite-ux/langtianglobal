@@ -6,6 +6,8 @@ export type HeroSlide = {
   image: {
     src: string
     alt: string
+    mobileSrc?: string
+    mobileAlt?: string
     /** Focal position on small screens, where the photographed subject must stay in view. */
     mobilePosition: string
     /** Focal position on wide screens. */

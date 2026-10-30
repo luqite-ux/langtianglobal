@@ -1,26 +1,28 @@
-import type { Metadata } from 'next'
-import { pageMetadata } from '@/lib/page-metadata'
+import { cmsPageMetadata } from '@/lib/site-content/metadata'
 import { InquiryForm } from '@/components/inquiry/inquiry-form'
-import { PageIntro } from '@/components/site/page-intro'
+import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { getProducts } from '@/lib/data'
 import { addressLine, company } from '@/lib/site'
+import { getSiteContent } from '@/lib/site-content/site-content'
+import { cmsItems, cmsText, siteModule } from '@/lib/site-content/read'
 
-export const metadata: Metadata = pageMetadata({
-  title: 'Contact',
-  description:
-    'Send an inquiry to Jiangsu Langtian Composite Materials about thermoplastic composite sheets and felts for automotive interiors.',
-  path: '/contact',
-})
+export async function generateMetadata() {
+  return cmsPageMetadata('/contact', 'Contact', 'Send an inquiry to Jiangsu Langtian Composite Materials about thermoplastic composite sheets and felts for automotive interiors.')
+}
 
 export default async function ContactPage() {
-  const products = await getProducts()
+  const [products, snapshot] = await Promise.all([getProducts(), getSiteContent('en')])
+  const content = siteModule(snapshot, '/contact', 'contact_details')
+  if (snapshot && !content) throw new Error('Published contact content is missing')
+  const helpful = content ? cmsItems(content, 'useful_items', [], item => typeof item.text === 'string' ? item.text : null) : []
+  if (content && !helpful.length) throw new Error('Published contact guidance is missing')
   const { email, phone } = company.contact
 
   return (
     <>
-      <PageIntro
+      <CmsPageIntro path="/contact"
         eyebrow="Contact"
         title="Send us your inquiry"
         description="Tell us the part, the material you are considering and the quantity or specification. Pricing, minimum order and samples are confirmed per inquiry."
@@ -29,7 +31,7 @@ export default async function ContactPage() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <Reveal className="bg-card border p-6 sm:p-8">
-            <h2 className="text-2xl font-bold">Inquiry form</h2>
+            <h2 className="text-2xl font-bold">{cmsText(content, 'form_title', 'Inquiry form')}</h2>
             <div className="mt-6">
               <InquiryForm
                 idPrefix="contact"
@@ -41,7 +43,7 @@ export default async function ContactPage() {
           <Reveal delay={80} as="div">
             <aside aria-labelledby="company-details-title" className="lg:sticky lg:top-24">
               <h2 id="company-details-title" className="text-2xl font-bold">
-                Company details
+                {cmsText(content, 'details_title', 'Company details')}
               </h2>
               <dl className="mt-6 divide-y border-y">
                 <div className="py-4">
@@ -77,12 +79,14 @@ export default async function ContactPage() {
                   </div>
                 )}
               </dl>
-              <h3 className="mt-8 text-base font-bold">Useful to include</h3>
+              <h3 className="mt-8 text-base font-bold">{cmsText(content, 'useful_title', 'Useful to include')}</h3>
               <ul className="text-muted-foreground mt-3 list-disc space-y-1.5 pl-5 text-sm">
-                <li>The part and where it is used in the vehicle</li>
-                <li>Material family or product you are considering</li>
-                <li>Target thickness, areal weight and sheet or roll size</li>
-                <li>Expected quantity and any sample needs</li>
+                {(content ? helpful : [
+                  'The part and where it is used in the vehicle',
+                  'Material family or product you are considering',
+                  'Target thickness, areal weight and sheet or roll size',
+                  'Expected quantity and any sample needs',
+                ]).map((item, index) => <li key={index}>{item}</li>)}
               </ul>
             </aside>
           </Reveal>

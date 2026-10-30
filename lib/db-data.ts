@@ -30,7 +30,7 @@ export async function liveCategories(locale?: Locale): Promise<ProductCategory[]
 export async function liveProducts(locale?: Locale): Promise<Product[] | null> {
   if (!supabase || !tenantId) return null
   const { data, error } = await supabase.from('products')
-    .select('slug,name,name_i18n,description,description_i18n,overview_i18n,category_slug,features_i18n,applications_i18n,advantages_i18n,specs,image_url,extra_data')
+    .select('id,slug,name,name_i18n,description,description_i18n,overview_i18n,category_slug,features_i18n,applications_i18n,advantages_i18n,specs,image_url,extra_data')
     .eq('tenant_id', tenantId).eq('is_active', true).order('sort_order')
   if (error) { console.error('Product query failed', error.code); return null }
   return data.map(row => {
@@ -41,6 +41,7 @@ export async function liveProducts(locale?: Locale): Promise<Product[] | null> {
         }))
       : row.image_url ? [{ src: row.image_url, alt: `${row.name} product photo`, kind: 'full' as const }] : []
     return {
+      id: row.id,
       slug: row.slug,
       sku: typeof extra.source_sku === 'string' ? extra.source_sku : undefined,
       name: value(row.name_i18n, locale, row.name || ''),

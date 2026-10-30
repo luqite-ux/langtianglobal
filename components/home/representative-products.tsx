@@ -4,6 +4,8 @@ import { ProductCard } from '@/components/products/product-card'
 import { Reveal } from '@/components/site/reveal'
 import { Section, SectionHeading } from '@/components/site/section'
 import { getCategories, getProducts } from '@/lib/data'
+import { cmsItems, cmsText } from '@/lib/site-content/read'
+import type { SiteModuleProps } from '@/lib/site-content/render-page'
 
 const featuredSlugs = [
   'lwrtud-felt-sheet',
@@ -12,25 +14,28 @@ const featuredSlugs = [
   'pp-bamboo-hemp-fiberboard',
 ]
 
-export async function RepresentativeProducts() {
+export async function RepresentativeProducts({ content }: { content?: SiteModuleProps }) {
   const [categories, products] = await Promise.all([getCategories(), getProducts()])
-  const featured = featuredSlugs
-    .map((slug) => products.find((p) => p.slug === slug))
+  const references = content ? cmsItems(content, 'products', [], item =>
+    typeof item.product === 'string' && /^[0-9a-f-]{36}$/i.test(item.product) ? item.product : null) : []
+  if (content && references.length === 0) throw new Error('Published representative products are missing')
+  const featured = (content ? references : featuredSlugs)
+    .map((reference) => products.find((p) => content ? p.id === reference : p.slug === reference))
     .filter((p): p is NonNullable<typeof p> => Boolean(p))
 
   return (
     <Section tone="muted" labelledBy="products-title">
       <SectionHeading
         id="products-title"
-        eyebrow="Representative products"
-        title="See what the materials look like"
-        description="A selection of product pages. Each page lists its own specification fields and minimum order quantity, confirmed when you inquire."
+        eyebrow={cmsText(content, 'eyebrow', 'Representative products')}
+        title={cmsText(content, 'title', 'See what the materials look like')}
+        description={cmsText(content, 'description', 'A selection of product pages. Each page lists its own specification fields and minimum order quantity, confirmed when you inquire.')}
       >
         <Link
           href="/products"
           className="text-primary inline-flex items-center gap-1.5 text-sm font-semibold hover:underline"
         >
-          All products
+          {cmsText(content, 'cta_label', 'All products')}
           <ArrowRight aria-hidden="true" className="size-4" />
         </Link>
       </SectionHeading>

@@ -29,6 +29,18 @@
   --radius: 0.25rem;
 }
 
+@media (max-width: 1023.98px) {
+  .hq-typography[style*="--hq-font-size-mobile:"] {
+    font-size: var(--hq-font-size-mobile);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hq-typography[style*="--hq-font-size-desktop:"] {
+    font-size: var(--hq-font-size-desktop);
+  }
+}
+
 @theme inline {
   --font-sans: var(--font-plex), ui-sans-serif, system-ui, 'PingFang SC',
     'Microsoft YaHei', sans-serif;

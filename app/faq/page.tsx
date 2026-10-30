@@ -1,23 +1,21 @@
-import type { Metadata } from 'next'
-import { pageMetadata } from '@/lib/page-metadata'
+import { cmsPageMetadata } from '@/lib/site-content/metadata'
 import Link from 'next/link'
 import { FaqList } from '@/components/faq/faq-list'
 import { JsonLd } from '@/components/site/json-ld'
-import { PageIntro } from '@/components/site/page-intro'
+import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
-import { getFaqs } from '@/lib/data'
+import { getSiteFaqs } from '@/lib/site-content/faq-content'
 import type { FaqItem } from '@/lib/data/types'
+import { getSiteContent } from '@/lib/site-content/site-content'
+import { cmsText, siteModule } from '@/lib/site-content/read'
 
-export const metadata: Metadata = pageMetadata({
-  title: 'FAQ',
-  description:
-    'Answers about Langtian materials, inquiries, samples, minimum order quantities, certificates and location.',
-  path: '/faq',
-})
+export async function generateMetadata() {
+  return cmsPageMetadata('/faq', 'FAQ', 'Answers about Langtian materials, inquiries, samples, minimum order quantities, certificates and location.')
+}
 
-const topics: { key: FaqItem['topic']; title: string }[] = [
+const topicDefaults: { key: FaqItem['topic']; title: string }[] = [
   { key: 'products', title: 'Products and materials' },
   { key: 'inquiry', title: 'Inquiries and samples' },
   { key: 'quality', title: 'Quality and certificates' },
@@ -25,7 +23,10 @@ const topics: { key: FaqItem['topic']; title: string }[] = [
 ]
 
 export default async function FaqPage() {
-  const faqs = await getFaqs()
+  const [faqs, snapshot] = await Promise.all([getSiteFaqs(), getSiteContent('en')])
+  const content = siteModule(snapshot, '/faq', 'faq_entries')
+  if (snapshot && !content) throw new Error('Published FAQ content is missing')
+  const topics = topicDefaults.map(topic => ({ ...topic, title: cmsText(content, `topic_${topic.key}`, topic.title) }))
 
   return (
     <>
@@ -40,7 +41,7 @@ export default async function FaqPage() {
           })),
         }}
       />
-      <PageIntro
+      <CmsPageIntro path="/faq"
         eyebrow="FAQ"
         title="Frequently asked questions"
         description="Short answers for buyers and engineers. Anything not covered here can go into an inquiry."
@@ -64,9 +65,9 @@ export default async function FaqPage() {
           })}
         </div>
         <Reveal className="bg-secondary mt-14 flex flex-col items-start justify-between gap-5 border p-6 sm:flex-row sm:items-center sm:p-8">
-          <p className="max-w-xl font-medium">Your question is not here?</p>
+          <p className="max-w-xl font-medium">{cmsText(content, 'cta_prompt', 'Your question is not here?')}</p>
           <Button asChild size="lg">
-            <Link href="/contact">Ask us directly</Link>
+            <Link href="/contact">{cmsText(content, 'cta_label', 'Ask us directly')}</Link>
           </Button>
         </Reveal>
       </Section>
