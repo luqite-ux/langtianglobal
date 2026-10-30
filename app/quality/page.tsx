@@ -19,12 +19,12 @@ const placeholder = 'See the certificate copy'
 // Titles and numbers transcribed from the six customer-supplied patent certificate PDFs.
 // These describe the supplied copies; current patent register status is not asserted.
 const patentCopies = [
-  { number: 'ZL 2024 1 1300826.X', title: 'Glass fiber board lifting equipment and production process', original: '玻纤板生产用提升设备及玻纤板生产工艺' },
-  { number: 'ZL 2024 1 0152002.6', title: 'Equipment and process for glass fiber board production', original: '一种玻纤板生产用的设备及其生产工艺' },
-  { number: 'ZL 2024 1 1314827.X', title: 'Flame-retardant LWRT board for new energy vehicle chassis and its processing method', original: '一种具阻燃效果的新能源汽车底盘LWRT板及加工工艺' },
-  { number: 'ZL 2024 2 3160183.1', title: 'Electric heating oven with rapid discharge', original: '一种便于快速出料的电热烘箱' },
-  { number: 'ZL 2024 2 3231628.0', title: 'Baking device for GMT sheet production', original: '一种GMT片材生产用烘烤装置' },
-  { number: 'ZL 2024 2 3277232.X', title: 'Preheating device for glass fiber reinforced plastic production', original: '一种玻璃纤维增强塑料生产用预热装置' },
+  { number: 'ZL 2024 1 1300826.X', title: 'Glass fiber board lifting equipment and production process', original: '玻纤板生产用提升设备及玻纤板生产工艺', scanSrc: '/images/certificates/patents/patent-1300826x.jpg' },
+  { number: 'ZL 2024 1 0152002.6', title: 'Equipment and process for glass fiber board production', original: '一种玻纤板生产用的设备及其生产工艺', scanSrc: '/images/certificates/patents/patent-01520026.jpg' },
+  { number: 'ZL 2024 1 1314827.X', title: 'Flame-retardant LWRT board for new energy vehicle chassis and its processing method', original: '一种具阻燃效果的新能源汽车底盘LWRT板及加工工艺', scanSrc: '/images/certificates/patents/patent-1314827x.jpg' },
+  { number: 'ZL 2024 2 3160183.1', title: 'Electric heating oven with rapid discharge', original: '一种便于快速出料的电热烘箱', scanSrc: '/images/certificates/patents/patent-31601831.jpg' },
+  { number: 'ZL 2024 2 3231628.0', title: 'Baking device for GMT sheet production', original: '一种GMT片材生产用烘烤装置', scanSrc: '/images/certificates/patents/patent-32316280.jpg' },
+  { number: 'ZL 2024 2 3277232.X', title: 'Preheating device for glass fiber reinforced plastic production', original: '一种玻璃纤维增强塑料生产用预热装置', scanSrc: '/images/certificates/patents/patent-3277232x.jpg' },
 ] as const
 
 export default async function QualityPage() {
@@ -33,7 +33,9 @@ export default async function QualityPage() {
   if (snapshot && !content) throw new Error('Published quality evidence is missing')
   const patents = content ? cmsItems(content, 'patents', patentCopies, item =>
     typeof item.number === 'string' && typeof item.title === 'string' && typeof item.original === 'string'
-      ? { number: item.number, title: item.title, original: item.original } : null) : patentCopies
+      && patentCopies.some(copy => copy.number === item.number)
+      ? { number: item.number, title: item.title, original: item.original,
+          scanSrc: patentCopies.find(copy => copy.number === item.number)!.scanSrc } : null) : patentCopies
   const scopeDefaults = [
     'ISO 14001 relates to an environmental management system; IATF 16949 relates to an automotive quality management system.',
     'A management-system certificate applies to the scope printed on it. It does not certify every individual product.',
@@ -153,10 +155,22 @@ export default async function QualityPage() {
         <ul className="mt-8 grid gap-4 md:grid-cols-2">
           {patents.map((patent, index) => (
             <Reveal as="li" key={patent.number} delay={(index % 2) * 80}>
-              <article className="bg-card h-full border p-5 sm:p-6">
-                <p className="text-primary text-xs font-semibold tracking-widest uppercase">{patent.number}</p>
-                <h3 className="mt-3 text-lg font-semibold leading-snug">{patent.title}</h3>
-                <p lang="zh-CN" className="text-muted-foreground mt-2 text-sm leading-relaxed">{patent.original}</p>
+              <article className="bg-card grid h-full grid-cols-[96px_minmax(0,1fr)] gap-4 border p-4 sm:grid-cols-[128px_minmax(0,1fr)] sm:gap-6 sm:p-6">
+                <a href={patent.scanSrc} target="_blank" rel="noopener noreferrer"
+                  aria-label={`View full certificate copy for ${patent.number}`}
+                  className="bg-secondary focus-visible:ring-primary relative block aspect-[0.707] overflow-hidden border focus-visible:ring-2 focus-visible:outline-none">
+                  <Image src={patent.scanSrc} alt={`${patent.number} customer-supplied patent certificate copy`}
+                    fill sizes="(min-width: 640px) 128px, 96px" className="object-contain" />
+                </a>
+                <div className="min-w-0 self-center">
+                  <p className="text-primary text-xs font-semibold tracking-widest uppercase">{patent.number}</p>
+                  <h3 className="mt-3 text-lg font-semibold leading-snug">{patent.title}</h3>
+                  <p lang="zh-CN" className="text-muted-foreground mt-2 text-sm leading-relaxed">{patent.original}</p>
+                  <a href={patent.scanSrc} target="_blank" rel="noopener noreferrer"
+                    className="text-primary mt-4 inline-block text-sm font-semibold underline-offset-4 hover:underline focus-visible:underline">
+                    View certificate copy
+                  </a>
+                </div>
               </article>
             </Reveal>
           ))}
