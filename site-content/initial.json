@@ -201,9 +201,6 @@
         "material_families": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Material families"
-            },
             "title": {
               "en": "Which kind of material does your part need?"
             },
@@ -215,9 +212,6 @@
         "application_paths": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Automotive applications"
-            },
             "title": {
               "en": "Find materials by interior part"
             },
@@ -241,58 +235,29 @@
                 "en": "Interior production hall with fiber-processing machinery and metal ducting under a steel roof"
               }
             },
-            "copy": [
-              {
-                "id": "eyebrow",
-                "label": "eyebrow",
-                "value": {
-                  "en": "Manufacturing evidence"
-                }
-              },
-              {
-                "id": "title",
-                "label": "title",
-                "value": {
-                  "en": "A factory in Xuyi County, shown as it is"
-                }
-              },
-              {
-                "id": "description",
-                "label": "description",
-                "value": {
-                  "en": "Four workshops house five production lines: three needling lines and two pressing lines. See the factory and production hall."
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "cta label",
-                "value": {
-                  "en": "Manufacturing overview"
-                }
-              },
-              {
-                "id": "factory_caption",
-                "label": "factory caption",
-                "value": {
-                  "en": "Factory exterior, Xuyi County Economic Development Zone."
-                }
-              },
-              {
-                "id": "hall_caption",
-                "label": "hall caption",
-                "value": {
-                  "en": "Production hall with fiber-processing machinery."
-                }
-              }
-            ]
+            "eyebrow": {
+              "en": "Manufacturing evidence"
+            },
+            "title": {
+              "en": "A factory in Xuyi County, shown as it is"
+            },
+            "description": {
+              "en": "Four workshops house five production lines: three needling lines and two pressing lines. See the factory and production hall."
+            },
+            "cta_label": {
+              "en": "Manufacturing overview"
+            },
+            "factory_caption": {
+              "en": "Factory exterior, Xuyi County Economic Development Zone."
+            },
+            "hall_caption": {
+              "en": "Production hall with fiber-processing machinery."
+            }
           }
         },
         "material_differentiators": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Materials and processing"
-            },
             "title": {
               "en": "What differs between these materials"
             },
@@ -402,71 +367,35 @@
                 "product": "fc5352d0-7a13-4caa-98e9-4618deeaf58a"
               }
             ],
-            "copy": [
-              {
-                "id": "eyebrow",
-                "label": "eyebrow",
-                "value": {
-                  "en": "Representative products"
-                }
-              },
-              {
-                "id": "title",
-                "label": "title",
-                "value": {
-                  "en": "See what the materials look like"
-                }
-              },
-              {
-                "id": "description",
-                "label": "description",
-                "value": {
-                  "en": "A selection of product pages. Each page lists its own specification fields and minimum order quantity, confirmed when you inquire."
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "cta label",
-                "value": {
-                  "en": "All products"
-                }
-              }
-            ]
+            "eyebrow": {
+              "en": "Representative products"
+            },
+            "title": {
+              "en": "See what the materials look like"
+            },
+            "description": {
+              "en": "A selection of product pages. Each page lists its own specification fields and minimum order quantity, confirmed when you inquire."
+            },
+            "cta_label": {
+              "en": "All products"
+            }
           }
         },
         "quality_context": {
           "hidden": false,
           "values": {
-            "copy": [
-              {
-                "id": "eyebrow",
-                "label": "eyebrow",
-                "value": {
-                  "en": "Quality and certificates"
-                }
-              },
-              {
-                "id": "title",
-                "label": "title",
-                "value": {
-                  "en": "Management-system certificates, with their scope"
-                }
-              },
-              {
-                "id": "description",
-                "label": "description",
-                "value": {
-                  "en": "View the ISO 14001 and IATF 16949 certificate copies, including their stated scope and dates."
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "cta label",
-                "value": {
-                  "en": "Quality and certificates"
-                }
-              }
-            ]
+            "eyebrow": {
+              "en": "Quality and certificates"
+            },
+            "title": {
+              "en": "Management-system certificates, with their scope"
+            },
+            "description": {
+              "en": "View the ISO 14001 and IATF 16949 certificate copies, including their stated scope and dates."
+            },
+            "cta_label": {
+              "en": "Quality and certificates"
+            }
           }
         },
         "sampling_process": {
@@ -510,44 +439,23 @@
                 }
               }
             ],
-            "copy": [
-              {
-                "id": "eyebrow",
-                "label": "eyebrow",
-                "value": {
-                  "en": "Customization and sampling"
-                }
-              },
-              {
-                "id": "title",
-                "label": "title",
-                "value": {
-                  "en": "From your drawing to a specification"
-                }
-              },
-              {
-                "id": "description",
-                "label": "description",
-                "value": {
-                  "en": "Share your part requirements and target quantity. We will discuss the specification, sample options and quotation for your project."
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "cta label",
-                "value": {
-                  "en": "Request a sample"
-                }
-              }
-            ]
+            "eyebrow": {
+              "en": "Customization and sampling"
+            },
+            "title": {
+              "en": "From your drawing to a specification"
+            },
+            "description": {
+              "en": "Share your part requirements and target quantity. We will discuss the specification, sample options and quotation for your project."
+            },
+            "cta_label": {
+              "en": "Request a sample"
+            }
           }
         },
         "home_faq": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Buyer questions"
-            },
             "title": {
               "en": "Before you send an inquiry"
             },
@@ -635,50 +543,24 @@
                 "href": "/faq"
               }
             ],
-            "copy": [
-              {
-                "id": "description",
-                "label": "description",
-                "value": {
-                  "en": "Thermoplastic composite sheets and felts for automotive interiors."
-                }
-              },
-              {
-                "id": "products_heading",
-                "label": "products heading",
-                "value": {
-                  "en": "Products"
-                }
-              },
-              {
-                "id": "all_products_label",
-                "label": "all products label",
-                "value": {
-                  "en": "All products"
-                }
-              },
-              {
-                "id": "company_heading",
-                "label": "company heading",
-                "value": {
-                  "en": "Company"
-                }
-              },
-              {
-                "id": "contact_heading",
-                "label": "contact heading",
-                "value": {
-                  "en": "Contact"
-                }
-              },
-              {
-                "id": "inquiry_label",
-                "label": "inquiry label",
-                "value": {
-                  "en": "Send an inquiry"
-                }
-              }
-            ]
+            "description": {
+              "en": "Thermoplastic composite sheets and felts for automotive interiors."
+            },
+            "products_heading": {
+              "en": "Products"
+            },
+            "all_products_label": {
+              "en": "All products"
+            },
+            "company_heading": {
+              "en": "Company"
+            },
+            "contact_heading": {
+              "en": "Contact"
+            },
+            "inquiry_label": {
+              "en": "Send an inquiry"
+            }
           }
         }
       }
@@ -693,9 +575,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "About Langtian"
-            },
             "title": {
               "en": "A materials maker for automotive interiors"
             },
@@ -764,85 +643,39 @@
                 }
               }
             ],
-            "copy": [
-              {
-                "id": "story_title",
-                "label": "Story heading",
-                "value": {
-                  "en": "Who we are"
-                }
-              },
-              {
-                "id": "products_cta",
-                "label": "Products button",
-                "value": {
-                  "en": "Browse products"
-                }
-              },
-              {
-                "id": "manufacturing_cta",
-                "label": "Manufacturing button",
-                "value": {
-                  "en": "See manufacturing"
-                }
-              },
-              {
-                "id": "factory_caption",
-                "label": "Factory caption",
-                "value": {
-                  "en": "Langtian factory exterior in Xuyi County."
-                }
-              },
-              {
-                "id": "facts_title",
-                "label": "Facts heading",
-                "value": {
-                  "en": "Company facts"
-                }
-              },
-              {
-                "id": "facts_intro",
-                "label": "Facts introduction",
-                "value": {
-                  "en": "An overview of the company and its production site."
-                }
-              },
-              {
-                "id": "recognition_title",
-                "label": "Recognition heading",
-                "value": {
-                  "en": "Recognition displayed at the factory"
-                }
-              },
-              {
-                "id": "recognition_intro",
-                "label": "Recognition introduction",
-                "value": {
-                  "en": "Views of the recognition and certificate display at Langtian's site. Certificate details and dates are listed on the quality page."
-                }
-              },
-              {
-                "id": "cta_title",
-                "label": "Contact heading",
-                "value": {
-                  "en": "Have a part in development?"
-                }
-              },
-              {
-                "id": "cta_text",
-                "label": "Contact description",
-                "value": {
-                  "en": "Send the application and target specification and we will reply with material families to compare."
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "Contact button",
-                "value": {
-                  "en": "Contact us"
-                }
-              }
-            ]
+            "story_title": {
+              "en": "Who we are"
+            },
+            "products_cta": {
+              "en": "Browse products"
+            },
+            "manufacturing_cta": {
+              "en": "See manufacturing"
+            },
+            "factory_caption": {
+              "en": "Langtian factory exterior in Xuyi County."
+            },
+            "facts_title": {
+              "en": "Company facts"
+            },
+            "facts_intro": {
+              "en": "An overview of the company and its production site."
+            },
+            "recognition_title": {
+              "en": "Recognition displayed at the factory"
+            },
+            "recognition_intro": {
+              "en": "Views of the recognition and certificate display at Langtian's site. Certificate details and dates are listed on the quality page."
+            },
+            "cta_title": {
+              "en": "Have a part in development?"
+            },
+            "cta_text": {
+              "en": "Send the application and target specification and we will reply with material families to compare."
+            },
+            "cta_label": {
+              "en": "Contact us"
+            }
           }
         }
       }
@@ -857,9 +690,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Manufacturing"
-            },
             "title": {
               "en": "Where the sheets and felts are made"
             },
@@ -1204,99 +1034,45 @@
                 ]
               }
             ],
-            "copy": [
-              {
-                "id": "scale_title",
-                "label": "Facility heading",
-                "value": {
-                  "en": "Facility at a glance"
-                }
-              },
-              {
-                "id": "scale_intro",
-                "label": "Facility introduction",
-                "value": {
-                  "en": "Share your required material, format and volume so we can discuss suitable production options for your project."
-                }
-              },
-              {
-                "id": "scale_note",
-                "label": "Site and output note",
-                "value": {
-                  "en": "The site covers 40 mu (about 26,700 m²). Langtian reports annual board output of 8,000 tonnes."
-                }
-              },
-              {
-                "id": "photos_title",
-                "label": "Photo heading",
-                "value": {
-                  "en": "From the factory"
-                }
-              },
-              {
-                "id": "photos_intro",
-                "label": "Photo introduction",
-                "value": {
-                  "en": "Explore the site, equipment and material-handling areas."
-                }
-              },
-              {
-                "id": "process_title",
-                "label": "Process heading",
-                "value": {
-                  "en": "Needling and pressing"
-                }
-              },
-              {
-                "id": "process_intro",
-                "label": "Process introduction",
-                "value": {
-                  "en": "The five production lines are split between two processes. Which process a given product passes through is confirmed per product during inquiry."
-                }
-              },
-              {
-                "id": "needling_label",
-                "label": "Needling heading",
-                "value": {
-                  "en": "Needling lines (3)"
-                }
-              },
-              {
-                "id": "needling_text",
-                "label": "Needling explanation",
-                "value": {
-                  "en": "Needling is a general process in which barbed needles entangle fibers into a coherent felt or non-woven web."
-                }
-              },
-              {
-                "id": "pressing_label",
-                "label": "Pressing heading",
-                "value": {
-                  "en": "Pressing lines (2)"
-                }
-              },
-              {
-                "id": "pressing_text",
-                "label": "Pressing explanation",
-                "value": {
-                  "en": "Pressing is a general process in which heat and pressure consolidate material layers into a sheet or board."
-                }
-              },
-              {
-                "id": "cta_title",
-                "label": "Inquiry heading",
-                "value": {
-                  "en": "Want to discuss a part, a material or a sample?"
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "Inquiry button",
-                "value": {
-                  "en": "Send an inquiry"
-                }
-              }
-            ]
+            "scale_title": {
+              "en": "Facility at a glance"
+            },
+            "scale_intro": {
+              "en": "Share your required material, format and volume so we can discuss suitable production options for your project."
+            },
+            "scale_note": {
+              "en": "The site covers 40 mu (about 26,700 m²). Langtian reports annual board output of 8,000 tonnes."
+            },
+            "photos_title": {
+              "en": "From the factory"
+            },
+            "photos_intro": {
+              "en": "Explore the site, equipment and material-handling areas."
+            },
+            "process_title": {
+              "en": "Needling and pressing"
+            },
+            "process_intro": {
+              "en": "The five production lines are split between two processes. Which process a given product passes through is confirmed per product during inquiry."
+            },
+            "needling_label": {
+              "en": "Needling lines (3)"
+            },
+            "needling_text": {
+              "en": "Needling is a general process in which barbed needles entangle fibers into a coherent felt or non-woven web."
+            },
+            "pressing_label": {
+              "en": "Pressing lines (2)"
+            },
+            "pressing_text": {
+              "en": "Pressing is a general process in which heat and pressure consolidate material layers into a sheet or board."
+            },
+            "cta_title": {
+              "en": "Want to discuss a part, a material or a sample?"
+            },
+            "cta_label": {
+              "en": "Send an inquiry"
+            }
           }
         }
       }
@@ -1312,9 +1088,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Quality and certificates"
-            },
             "title": {
               "en": "Management-system certificates"
             },
@@ -1479,92 +1252,42 @@
                 }
               }
             ],
-            "copy": [
-              {
-                "id": "certs_title",
-                "label": "Certificates heading",
-                "value": {
-                  "en": "Certificates"
-                }
-              },
-              {
-                "id": "cert_placeholder",
-                "label": "Missing field label",
-                "value": {
-                  "en": "See the certificate copy"
-                }
-              },
-              {
-                "id": "cert_note",
-                "label": "Status warning",
-                "value": {
-                  "en": "This is a supplied copy. Confirm current registration status with the issuing body before relying on it."
-                }
-              },
-              {
-                "id": "recognition_title",
-                "label": "Recognition heading",
-                "value": {
-                  "en": "Company recognition"
-                }
-              },
-              {
-                "id": "recognition_text_1",
-                "label": "Certificate context",
-                "value": {
-                  "en": "A supplied high-tech enterprise certificate names 江苏朗田复合材料有限公司. It was issued on 13 December 2023 and states a three-year term. Please check its current status when making a procurement decision."
-                }
-              },
-              {
-                "id": "recognition_text_2",
-                "label": "Provincial list context",
-                "value": {
-                  "en": "A supplied 2025 Jiangsu provincial specialist-enterprise list includes the company at entry 5640. This describes the supplied list; confirm the current designation with the issuing authority."
-                }
-              },
-              {
-                "id": "recognition_caption",
-                "label": "Image caption",
-                "value": {
-                  "en": "High-tech enterprise certificate, issued 13 December 2023."
-                }
-              },
-              {
-                "id": "patents_eyebrow",
-                "label": "Patent eyebrow",
-                "value": {
-                  "en": "Customer-supplied documents"
-                }
-              },
-              {
-                "id": "patents_title",
-                "label": "Patent heading",
-                "value": {
-                  "en": "Patent certificate copies"
-                }
-              },
-              {
-                "id": "patents_intro",
-                "label": "Patent context",
-                "value": {
-                  "en": "These six copies name 江苏朗田复合材料有限公司 as the patent holder. Titles below are translated for reading; refer to each original certificate and the current patent register before relying on its legal status."
-                }
-              },
-              {
-                "id": "scope_title",
-                "label": "How to read title",
-                "value": {
-                  "en": "How to read these certificates"
-                }
-              },
-              {
-                "id": "scope_cta",
-                "label": "Certificate button",
-                "value": {
-                  "en": "Request certificate copies"
-                }
-              }
-            ]
+            "certs_title": {
+              "en": "Certificates"
+            },
+            "cert_placeholder": {
+              "en": "See the certificate copy"
+            },
+            "cert_note": {
+              "en": "This is a supplied copy. Confirm current registration status with the issuing body before relying on it."
+            },
+            "recognition_title": {
+              "en": "Company recognition"
+            },
+            "recognition_text_1": {
+              "en": "A supplied high-tech enterprise certificate names 江苏朗田复合材料有限公司. It was issued on 13 December 2023 and states a three-year term. Please check its current status when making a procurement decision."
+            },
+            "recognition_text_2": {
+              "en": "A supplied 2025 Jiangsu provincial specialist-enterprise list includes the company at entry 5640. This describes the supplied list; confirm the current designation with the issuing authority."
+            },
+            "recognition_caption": {
+              "en": "High-tech enterprise certificate, issued 13 December 2023."
+            },
+            "patents_eyebrow": {
+              "en": "Customer-supplied documents"
+            },
+            "patents_title": {
+              "en": "Patent certificate copies"
+            },
+            "patents_intro": {
+              "en": "These six copies name 江苏朗田复合材料有限公司 as the patent holder. Titles below are translated for reading; refer to each original certificate and the current patent register before relying on its legal status."
+            },
+            "scope_title": {
+              "en": "How to read these certificates"
+            },
+            "scope_cta": {
+              "en": "Request certificate copies"
+            }
           }
         }
       }
@@ -1579,9 +1302,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Applications"
-            },
             "title": {
               "en": "Materials by automotive interior part"
             },
@@ -1689,36 +1409,18 @@
                 }
               }
             ],
-            "copy": [
-              {
-                "id": "linked_heading",
-                "label": "Linked products title",
-                "value": {
-                  "en": "Linked products"
-                }
-              },
-              {
-                "id": "empty_products",
-                "label": "No linked products copy",
-                "value": {
-                  "en": "Describe your part in an inquiry and we will suggest materials."
-                }
-              },
-              {
-                "id": "cta_prompt",
-                "label": "Inquiry prompt",
-                "value": {
-                  "en": "Working on a part that is not listed? Describe it and we will discuss the suitable material options with you."
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "Inquiry button",
-                "value": {
-                  "en": "Discuss your part"
-                }
-              }
-            ]
+            "linked_heading": {
+              "en": "Linked products"
+            },
+            "empty_products": {
+              "en": "Describe your part in an inquiry and we will suggest materials."
+            },
+            "cta_prompt": {
+              "en": "Working on a part that is not listed? Describe it and we will discuss the suitable material options with you."
+            },
+            "cta_label": {
+              "en": "Discuss your part"
+            }
           }
         }
       }
@@ -1733,9 +1435,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "FAQ"
-            },
             "title": {
               "en": "Frequently asked questions"
             },
@@ -1960,50 +1659,24 @@
                 }
               }
             ],
-            "copy": [
-              {
-                "id": "topic_products",
-                "label": "Products group",
-                "value": {
-                  "en": "Products and materials"
-                }
-              },
-              {
-                "id": "topic_inquiry",
-                "label": "Inquiries group",
-                "value": {
-                  "en": "Inquiries and samples"
-                }
-              },
-              {
-                "id": "topic_quality",
-                "label": "Quality group",
-                "value": {
-                  "en": "Quality and certificates"
-                }
-              },
-              {
-                "id": "topic_company",
-                "label": "Company group",
-                "value": {
-                  "en": "Company"
-                }
-              },
-              {
-                "id": "cta_prompt",
-                "label": "Contact prompt",
-                "value": {
-                  "en": "Your question is not here?"
-                }
-              },
-              {
-                "id": "cta_label",
-                "label": "Contact button",
-                "value": {
-                  "en": "Ask us directly"
-                }
-              }
-            ]
+            "topic_products": {
+              "en": "Products and materials"
+            },
+            "topic_inquiry": {
+              "en": "Inquiries and samples"
+            },
+            "topic_quality": {
+              "en": "Quality and certificates"
+            },
+            "topic_company": {
+              "en": "Company"
+            },
+            "cta_prompt": {
+              "en": "Your question is not here?"
+            },
+            "cta_label": {
+              "en": "Ask us directly"
+            }
           }
         }
       }
@@ -2018,9 +1691,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Contact"
-            },
             "title": {
               "en": "Send us your inquiry"
             },
@@ -2092,9 +1762,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "Products"
-            },
             "title": {
               "en": "Thermoplastic composite sheets and felts"
             },
@@ -2140,9 +1807,6 @@
         "page_hero": {
           "hidden": false,
           "values": {
-            "eyebrow": {
-              "en": "News"
-            },
             "title": {
               "en": "Company news"
             },
@@ -2165,36 +1829,18 @@
         "news_empty": {
           "hidden": false,
           "values": {
-            "copy": [
-              {
-                "id": "title",
-                "label": "title",
-                "value": {
-                  "en": "No news has been published yet"
-                }
-              },
-              {
-                "id": "description",
-                "label": "description",
-                "value": {
-                  "en": "Articles will appear here once the company publishes them. In the meantime, you can browse the materials or send an inquiry."
-                }
-              },
-              {
-                "id": "products_cta",
-                "label": "products cta",
-                "value": {
-                  "en": "Browse products"
-                }
-              },
-              {
-                "id": "contact_cta",
-                "label": "contact cta",
-                "value": {
-                  "en": "Contact us"
-                }
-              }
-            ]
+            "title": {
+              "en": "No news has been published yet"
+            },
+            "description": {
+              "en": "Articles will appear here once the company publishes them. In the meantime, you can browse the materials or send an inquiry."
+            },
+            "products_cta": {
+              "en": "Browse products"
+            },
+            "contact_cta": {
+              "en": "Contact us"
+            }
           }
         }
       }

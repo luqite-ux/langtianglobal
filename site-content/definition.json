@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "fontFamilies": [
     {
       "key": "site-sans",
@@ -186,13 +186,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "title",
@@ -216,26 +209,32 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "eyebrow",
+              "type": "textarea",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "textarea",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "cta label",
+              "localized": true,
+              "required": true
             },
             {
               "key": "products",
@@ -262,13 +261,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "title",
@@ -292,26 +284,46 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "eyebrow",
+              "type": "textarea",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "textarea",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "cta label",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "factory_caption",
+              "type": "textarea",
+              "label": "factory caption",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "hall_caption",
+              "type": "textarea",
+              "label": "hall caption",
+              "localized": true,
+              "required": true
             },
             {
               "key": "factory_image",
@@ -334,13 +346,6 @@
           "canHide": false,
           "canReorder": false,
           "fields": [
-            {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "eyebrow",
-              "localized": true,
-              "required": true
-            },
             {
               "key": "title",
               "type": "text",
@@ -401,26 +406,32 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "eyebrow",
+              "type": "textarea",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "textarea",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "cta label",
+              "localized": true,
+              "required": true
             }
           ]
         },
@@ -432,26 +443,32 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "eyebrow",
+              "type": "textarea",
+              "label": "eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "textarea",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "cta label",
+              "localized": true,
+              "required": true
             },
             {
               "key": "steps",
@@ -485,13 +502,6 @@
           "canHide": false,
           "canReorder": false,
           "fields": [
-            {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "eyebrow",
-              "localized": true,
-              "required": true
-            },
             {
               "key": "title",
               "type": "text",
@@ -561,26 +571,46 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "products_heading",
+              "type": "textarea",
+              "label": "products heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "all_products_label",
+              "type": "textarea",
+              "label": "all products label",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "company_heading",
+              "type": "textarea",
+              "label": "company heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "contact_heading",
+              "type": "textarea",
+              "label": "contact heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "inquiry_label",
+              "type": "textarea",
+              "label": "inquiry label",
+              "localized": true,
+              "required": true
             },
             {
               "key": "company_links",
@@ -644,13 +674,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "Title",
@@ -695,26 +718,81 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "story_title",
+              "type": "textarea",
+              "label": "Story heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "products_cta",
+              "type": "textarea",
+              "label": "Products button",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "manufacturing_cta",
+              "type": "textarea",
+              "label": "Manufacturing button",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "factory_caption",
+              "type": "textarea",
+              "label": "Factory caption",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "facts_title",
+              "type": "textarea",
+              "label": "Facts heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "facts_intro",
+              "type": "textarea",
+              "label": "Facts introduction",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "recognition_title",
+              "type": "textarea",
+              "label": "Recognition heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "recognition_intro",
+              "type": "textarea",
+              "label": "Recognition introduction",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_title",
+              "type": "textarea",
+              "label": "Contact heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_text",
+              "type": "textarea",
+              "label": "Contact description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "Contact button",
+              "localized": true,
+              "required": true
             },
             {
               "key": "story_paragraphs",
@@ -793,13 +871,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "Title",
@@ -844,26 +915,95 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "scale_title",
+              "type": "textarea",
+              "label": "Facility heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "scale_intro",
+              "type": "textarea",
+              "label": "Facility introduction",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "scale_note",
+              "type": "textarea",
+              "label": "Site and output note",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "photos_title",
+              "type": "textarea",
+              "label": "Photo heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "photos_intro",
+              "type": "textarea",
+              "label": "Photo introduction",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "process_title",
+              "type": "textarea",
+              "label": "Process heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "process_intro",
+              "type": "textarea",
+              "label": "Process introduction",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "needling_label",
+              "type": "textarea",
+              "label": "Needling heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "needling_text",
+              "type": "textarea",
+              "label": "Needling explanation",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "pressing_label",
+              "type": "textarea",
+              "label": "Pressing heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "pressing_text",
+              "type": "textarea",
+              "label": "Pressing explanation",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_title",
+              "type": "textarea",
+              "label": "Inquiry heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "Inquiry button",
+              "localized": true,
+              "required": true
             },
             {
               "key": "stats",
@@ -972,13 +1112,6 @@
           "canHide": false,
           "canReorder": false,
           "fields": [
-            {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
             {
               "key": "title",
               "type": "text",
@@ -1095,26 +1228,88 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "certs_title",
+              "type": "textarea",
+              "label": "Certificates heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cert_placeholder",
+              "type": "textarea",
+              "label": "Missing field label",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cert_note",
+              "type": "textarea",
+              "label": "Status warning",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "recognition_title",
+              "type": "textarea",
+              "label": "Recognition heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "recognition_text_1",
+              "type": "textarea",
+              "label": "Certificate context",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "recognition_text_2",
+              "type": "textarea",
+              "label": "Provincial list context",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "recognition_caption",
+              "type": "textarea",
+              "label": "Image caption",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "patents_eyebrow",
+              "type": "textarea",
+              "label": "Patent eyebrow",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "patents_title",
+              "type": "textarea",
+              "label": "Patent heading",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "patents_intro",
+              "type": "textarea",
+              "label": "Patent context",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "scope_title",
+              "type": "textarea",
+              "label": "How to read title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "scope_cta",
+              "type": "textarea",
+              "label": "Certificate button",
+              "localized": true,
+              "required": true
             },
             {
               "key": "recognition_image",
@@ -1206,13 +1401,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "Title",
@@ -1257,26 +1445,32 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "linked_heading",
+              "type": "textarea",
+              "label": "Linked products title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "empty_products",
+              "type": "textarea",
+              "label": "No linked products copy",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_prompt",
+              "type": "textarea",
+              "label": "Inquiry prompt",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "Inquiry button",
+              "localized": true,
+              "required": true
             },
             {
               "key": "items",
@@ -1366,13 +1560,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "Title",
@@ -1417,26 +1604,46 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "topic_products",
+              "type": "textarea",
+              "label": "Products group",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "topic_inquiry",
+              "type": "textarea",
+              "label": "Inquiries group",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "topic_quality",
+              "type": "textarea",
+              "label": "Quality group",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "topic_company",
+              "type": "textarea",
+              "label": "Company group",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_prompt",
+              "type": "textarea",
+              "label": "Contact prompt",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "cta_label",
+              "type": "textarea",
+              "label": "Contact button",
+              "localized": true,
+              "required": true
             },
             {
               "key": "items",
@@ -1506,13 +1713,6 @@
           "canHide": false,
           "canReorder": false,
           "fields": [
-            {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
             {
               "key": "title",
               "type": "text",
@@ -1634,13 +1834,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "Title",
@@ -1745,13 +1938,6 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "eyebrow",
-              "type": "text",
-              "label": "Eyebrow",
-              "localized": true,
-              "required": true
-            },
-            {
               "key": "title",
               "type": "text",
               "label": "Title",
@@ -1796,26 +1982,32 @@
           "canReorder": false,
           "fields": [
             {
-              "key": "copy",
-              "type": "repeat",
-              "label": "Section copy",
-              "required": true,
-              "maxItems": 50,
-              "fields": [
-                {
-                  "key": "label",
-                  "type": "text",
-                  "label": "Field label",
-                  "required": true
-                },
-                {
-                  "key": "value",
-                  "type": "textarea",
-                  "label": "Visible text",
-                  "localized": true,
-                  "required": true
-                }
-              ]
+              "key": "title",
+              "type": "textarea",
+              "label": "title",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "description",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "products_cta",
+              "type": "textarea",
+              "label": "products cta",
+              "localized": true,
+              "required": true
+            },
+            {
+              "key": "contact_cta",
+              "type": "textarea",
+              "label": "contact cta",
+              "localized": true,
+              "required": true
             }
           ]
         },
