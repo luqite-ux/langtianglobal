@@ -8,8 +8,7 @@ import { MaterialFamilies } from '@/components/home/material-families'
 import { QualityContext } from '@/components/home/quality-context'
 import { RepresentativeProducts } from '@/components/home/representative-products'
 import { SamplingProcess } from '@/components/home/sampling-process'
-import { JsonLd } from '@/components/site/json-ld'
-import { organizationSchema } from '@/lib/site'
+import { getPublicSiteSettings } from '@/lib/public-site-settings'
 import { heroSlides, type HeroSlide } from '@/lib/hero-slides'
 import { getSiteContent, siteContentMetadata } from '@/lib/site-content/site-content'
 import { siteModule } from '@/lib/site-content/read'
@@ -59,7 +58,7 @@ function publishedSlides(value: unknown): HeroSlide[] {
 }
 
 export default async function HomePage() {
-  const snapshot = await getSiteContent('en')
+  const [snapshot, settings] = await Promise.all([getSiteContent('en'), getPublicSiteSettings()])
   const homeModule = (key: string) => {
     const module = siteModule(snapshot, '/', key)
     if (snapshot && !module) throw new Error(`Published homepage module missing: ${key}`)
@@ -69,7 +68,6 @@ export default async function HomePage() {
   const slides = heroCms ? publishedSlides(heroCms.values.slides) : heroSlides
   return (
     <>
-      <JsonLd data={organizationSchema} />
       <HeroCarousel slides={slides} styles={heroCms?.styles} contentVersion={snapshot?.version} />
       <MaterialFamilies content={homeModule('material_families')} />
       <RepresentativeProducts content={homeModule('representative_products')} />
@@ -79,7 +77,7 @@ export default async function HomePage() {
       <QualityContext content={homeModule('quality_context')} />
       <SamplingProcess content={homeModule('sampling_process')} />
       <HomeFaq content={homeModule('home_faq')} />
-      <FinalContact content={homeModule('final_contact')} />
+      <FinalContact content={homeModule('final_contact')} settings={settings} />
     </>
   )
 }

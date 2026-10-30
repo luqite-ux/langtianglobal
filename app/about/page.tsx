@@ -4,7 +4,8 @@ import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { Button } from '@/components/ui/button'
-import { addressLine, company } from '@/lib/site'
+import { company } from '@/lib/site'
+import { getPublicSiteSettings } from '@/lib/public-site-settings'
 import { cmsPageMetadata } from '@/lib/site-content/metadata'
 import { getSiteContent } from '@/lib/site-content/site-content'
 import { cmsImage, cmsItems, cmsText, siteModule } from '@/lib/site-content/read'
@@ -22,7 +23,7 @@ const facts = [
 ]
 
 export default async function AboutPage() {
-  const snapshot = await getSiteContent('en')
+  const [snapshot, settings] = await Promise.all([getSiteContent('en'), getPublicSiteSettings()])
   const content = siteModule(snapshot, '/about', 'about_story')
   if (snapshot && !content) throw new Error('Published About content is missing')
   const facility = siteModule(snapshot, '/manufacturing', 'facility_content')
@@ -124,12 +125,12 @@ export default async function AboutPage() {
             <div>
               <dt className="text-sm font-semibold">Legal name</dt>
               <dd className="text-muted-foreground mt-1 text-sm">
-                {company.legalNameEn}
+                {settings.legalName}
               </dd>
             </div>
             <div>
               <dt className="text-sm font-semibold">Registered address</dt>
-              <dd className="text-muted-foreground mt-1 text-sm">{addressLine}</dd>
+              <dd className="text-muted-foreground mt-1 text-sm">{settings.address}</dd>
             </div>
           </dl>
         </Reveal>

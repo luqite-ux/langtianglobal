@@ -22,6 +22,7 @@ import { siteTypographyStyle } from '@/lib/site-content/typography'
 type NavigationItem = { label: string; href: string }
 type HeaderProps = {
   items?: NavigationItem[]
+  logoUrl?: string
   quoteLabel?: string
   quoteHref?: string
   styles?: Record<string, { fontFamily?: string; fontWeight?: number; fontSizeDesktop?: number; fontSizeMobile?: number }>
@@ -31,7 +32,7 @@ function isActive(pathname: string, href: string) {
   return href === '/' ? pathname === '/' : pathname.startsWith(href)
 }
 
-export function SiteHeader({ items = [...primaryNav], quoteLabel = 'Request a quote', quoteHref = '/contact', styles }: HeaderProps) {
+export function SiteHeader({ items = [...primaryNav], logoUrl, quoteLabel = 'Request a quote', quoteHref = '/contact', styles }: HeaderProps) {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const labelStyle = siteTypographyStyle(styles, 'items.label', { 'site-sans': 'var(--font-plex)' })
@@ -44,7 +45,7 @@ export function SiteHeader({ items = [...primaryNav], quoteLabel = 'Request a qu
           aria-label="Langtian, go to Home"
           className="flex items-center"
         >
-          <Logo />
+          <Logo src={logoUrl} />
         </Link>
 
         <nav aria-label="Primary" className="hidden xl:block">

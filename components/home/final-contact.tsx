@@ -2,11 +2,11 @@ import Link from 'next/link'
 import { MapPin } from 'lucide-react'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
-import { addressLine, company } from '@/lib/site'
+import type { PublicSiteSettings } from '@/lib/public-site-settings'
 import { cmsText } from '@/lib/site-content/read'
 import type { SiteModuleProps } from '@/lib/site-content/render-page'
 
-export function FinalContact({ content }: { content?: SiteModuleProps }) {
+export function FinalContact({ content, settings }: { content?: SiteModuleProps; settings: PublicSiteSettings }) {
   return (
     <Section tone="ink" labelledBy="final-contact-title">
       <Reveal className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-end">
@@ -35,8 +35,8 @@ export function FinalContact({ content }: { content?: SiteModuleProps }) {
         <address className="flex gap-3 text-sm leading-relaxed text-white/80 not-italic">
           <MapPin aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-[oklch(0.78_0.15_28)]" />
           <span>
-            <span className="block font-semibold text-white">{company.legalNameEn}</span>
-            {addressLine}
+            <span className="block font-semibold text-white">{settings.legalName}</span>
+            {settings.address}
           </span>
         </address>
       </Reveal>

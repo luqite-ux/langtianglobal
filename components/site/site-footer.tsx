@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Logo } from '@/components/site/logo'
 import { CopyrightYear } from '@/components/site/copyright-year'
 import { getCategories } from '@/lib/data'
-import { addressLine, company } from '@/lib/site'
+import { getPublicSiteSettings } from '@/lib/public-site-settings'
 import { cmsItems, cmsText } from '@/lib/site-content/read'
 import type { SiteModuleProps } from '@/lib/site-content/render-page'
 
@@ -16,7 +16,7 @@ const companyLinks = [
 ]
 
 export async function SiteFooter({ content }: { content?: SiteModuleProps }) {
-  const categories = await getCategories()
+  const [categories, settings] = await Promise.all([getCategories(), getPublicSiteSettings()])
   const buildYear = new Date().getFullYear()
   const links = content ? cmsItems(content, 'company_links', companyLinks, item =>
     typeof item.label === 'string' && typeof item.href === 'string' && /^\/[a-z0-9/-]*$/.test(item.href)
@@ -28,9 +28,9 @@ export async function SiteFooter({ content }: { content?: SiteModuleProps }) {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Link href="/" aria-label="Langtian, go to Home" className="inline-block">
-            <Logo className="h-12" />
+            <Logo className="h-12" src={settings.logoUrl} />
           </Link>
-          <p className="mt-5 text-sm font-medium">{company.legalNameEn}</p>
+          <p className="mt-5 text-sm font-medium">{settings.legalName}</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
             {cmsText(content, 'description', 'Thermoplastic composite sheets and felts for automotive interiors.')}
           </p>
@@ -85,20 +85,20 @@ export async function SiteFooter({ content }: { content?: SiteModuleProps }) {
             {cmsText(content, 'contact_heading', 'Contact')}
           </h2>
           <address className="mt-4 text-sm leading-relaxed text-white/75 not-italic">
-            {addressLine}
+            {settings.address}
           </address>
           <ul className="mt-3 space-y-1 text-sm text-white/75">
-            {company.contact.email && (
+            {settings.email && (
               <li>
                 <a
                   className="hover:text-white hover:underline"
-                  href={`mailto:${company.contact.email}`}
+                  href={`mailto:${settings.email}`}
                 >
-                  {company.contact.email}
+                  {settings.email}
                 </a>
               </li>
             )}
-            {company.contact.phone && <li>{company.contact.phone}</li>}
+            {settings.phone && <li>{settings.phone}</li>}
           </ul>
           <Link
             href="/contact"
@@ -111,7 +111,7 @@ export async function SiteFooter({ content }: { content?: SiteModuleProps }) {
 
       <div className="border-t border-white/15">
         <p className="mx-auto max-w-7xl px-5 py-5 text-xs text-white/70 sm:px-8">
-          © <CopyrightYear fallbackYear={buildYear} /> {company.legalNameEn} All
+          © <CopyrightYear fallbackYear={buildYear} /> {settings.legalName} All
           rights reserved.
         </p>
       </div>

@@ -4,7 +4,7 @@ import { CmsPageIntro } from '@/components/site/cms-page-intro'
 import { Reveal } from '@/components/site/reveal'
 import { Section } from '@/components/site/section'
 import { getProducts } from '@/lib/data'
-import { addressLine, company } from '@/lib/site'
+import { getPublicSiteSettings } from '@/lib/public-site-settings'
 import { getSiteContent } from '@/lib/site-content/site-content'
 import { cmsItems, cmsText, siteModule } from '@/lib/site-content/read'
 
@@ -13,12 +13,12 @@ export async function generateMetadata() {
 }
 
 export default async function ContactPage() {
-  const [products, snapshot] = await Promise.all([getProducts(), getSiteContent('en')])
+  const [products, snapshot, settings] = await Promise.all([getProducts(), getSiteContent('en'), getPublicSiteSettings()])
   const content = siteModule(snapshot, '/contact', 'contact_details')
   if (snapshot && !content) throw new Error('Published contact content is missing')
   const helpful = content ? cmsItems(content, 'useful_items', [], item => typeof item.text === 'string' ? item.text : null) : []
   if (content && !helpful.length) throw new Error('Published contact guidance is missing')
-  const { email, phone } = company.contact
+  const { email, phone } = settings
 
   return (
     <>
@@ -49,13 +49,13 @@ export default async function ContactPage() {
                 <div className="py-4">
                   <dt className="text-sm font-semibold">Company</dt>
                   <dd className="text-muted-foreground mt-1 text-sm">
-                    {company.legalNameEn}
+                    {settings.legalName}
                   </dd>
                 </div>
                 <div className="py-4">
                   <dt className="text-sm font-semibold">Address</dt>
                   <dd className="text-muted-foreground mt-1 text-sm">
-                    <address className="not-italic">{addressLine}</address>
+                    <address className="not-italic">{settings.address}</address>
                   </dd>
                 </div>
                 {email && (

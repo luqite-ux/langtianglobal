@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
-export function Logo({ className }: { className?: string }) {
+export function Logo({ className, src = '/images/brand/langtian-logo.jpg' }: { className?: string; src?: string }) {
   return (
     <span
       className={cn(
@@ -10,7 +10,7 @@ export function Logo({ className }: { className?: string }) {
       )}
     >
       <Image
-        src="/images/brand/langtian-logo.jpg"
+        src={src}
         alt="Langtian logo"
         fill
         sizes="96px"

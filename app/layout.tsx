@@ -5,7 +5,7 @@ import { cookies } from 'next/headers'
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
 import { JsonLd } from '@/components/site/json-ld'
-import { company, organizationSchema } from '@/lib/site'
+import { getPublicSiteSettings, publicOrganizationSchema } from '@/lib/public-site-settings'
 import { getSiteContent } from '@/lib/site-content/site-content'
 import { siteModule } from '@/lib/site-content/read'
 import './globals.css'
@@ -25,25 +25,27 @@ const body = IBM_Plex_Sans({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getPublicSiteSettings()
+  return {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://langtianglobal.com'),
   title: {
-    default:
-      'Langtian | Thermoplastic Composite Sheets and Felts for Automotive Interiors',
+    default: settings.seoTitle,
     template: `%s | Langtian`,
   },
-  description: `${company.legalNameEn} makes thermoplastic composite sheets and felts for automotive interiors in Xuyi County, Huai'an, Jiangsu, China. Send an inquiry for materials, specifications and samples.`,
+  description: settings.seoDescription,
   alternates: { canonical: '/' },
+  icons: { icon: settings.faviconUrl },
   applicationName: 'Langtian',
   openGraph: {
     type: 'website',
     siteName: 'Langtian',
-    title: 'Langtian | Thermoplastic Composite Sheets and Felts',
-    description:
-      'Thermoplastic composite sheets and felts for automotive interiors from Xuyi County, Huai’an, Jiangsu.',
+    title: settings.seoTitle,
+    description: settings.seoDescription,
     url: 'https://langtianglobal.com/',
     images: [{ url: 'https://langtianglobal.com/images/banners/banner-production-line.jpg' }],
   },
+  }
 }
 
 export const viewport: Viewport = {
@@ -56,7 +58,7 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const preview = (await cookies()).has('__Host-hq-site-preview')
-  const snapshot = await getSiteContent('en')
+  const [snapshot, settings] = await Promise.all([getSiteContent('en'), getPublicSiteSettings()])
   const navigation = siteModule(snapshot, '/', 'navigation')
   const footer = siteModule(snapshot, '/', 'footer')
   if (snapshot && !navigation) throw new Error('Published navigation is missing')
@@ -78,7 +80,7 @@ export default async function RootLayout({
         >
           Skip to main content
         </a>
-        <SiteHeader items={items} quoteLabel={navigation?.values.cta_label as string | undefined} quoteHref={navigation?.values.cta_href as string | undefined} styles={navigation?.styles} />
+        <SiteHeader items={items} logoUrl={settings.logoUrl} quoteLabel={navigation?.values.cta_label as string | undefined} quoteHref={navigation?.values.cta_href as string | undefined} styles={navigation?.styles} />
         {preview && (
           <div className="bg-amber-50 px-4 py-3 text-sm text-amber-950" role="status">
             <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
@@ -91,7 +93,7 @@ export default async function RootLayout({
         )}
         <main id="main">{children}</main>
         <SiteFooter content={footer} />
-        <JsonLd data={organizationSchema} />
+        <JsonLd data={publicOrganizationSchema(settings)} />
         {process.env.NODE_ENV === 'production' && !preview && <Analytics />}
       </body>
     </html>
