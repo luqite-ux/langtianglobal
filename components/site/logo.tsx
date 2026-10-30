@@ -5,7 +5,7 @@ export function Logo({ className, src = '/images/brand/langtian-logo.jpg' }: { c
   return (
     <span
       className={cn(
-        'relative block aspect-[2/1] h-10 shrink-0 overflow-hidden rounded-[3px]',
+        'relative block aspect-square h-14 shrink-0 overflow-hidden rounded-[3px]',
         className,
       )}
     >
@@ -13,7 +13,7 @@ export function Logo({ className, src = '/images/brand/langtian-logo.jpg' }: { c
         src={src}
         alt="Langtian logo"
         fill
-        sizes="96px"
+        sizes="64px"
         className="object-contain"
         priority
       />

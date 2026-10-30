@@ -39,13 +39,13 @@ export function SiteHeader({ items = [...primaryNav], logoUrl, quoteLabel = 'Req
 
   return (
     <header className="bg-background/95 sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/85">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
         <Link
           href="/"
           aria-label="Langtian, go to Home"
           className="flex items-center"
         >
-          <Logo src={logoUrl} />
+          <Logo className="h-16" src={logoUrl} />
         </Link>
 
         <nav aria-label="Primary" className="hidden xl:block">

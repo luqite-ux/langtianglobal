@@ -28,7 +28,7 @@ export async function SiteFooter({ content }: { content?: SiteModuleProps }) {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Link href="/" aria-label="Langtian, go to Home" className="inline-block">
-            <Logo className="h-12" src={settings.logoUrl} />
+            <Logo className="h-16" src={settings.logoUrl} />
           </Link>
           <p className="mt-5 text-sm font-medium">{settings.legalName}</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
