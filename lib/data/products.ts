@@ -10,17 +10,11 @@ const field = (
 
 const spec = (key: string, label: string, value: string, unit?: string): SpecField => ({ key, label, value, unit })
 const sourceMoq = { value: 500, unit: 'pcs' } as const
-const sourceImages = (slug: string, count: number, name: string) =>
-  Array.from({ length: count }, (_, index) => ({
-    src: `/images/products/source/${slug}-${index + 1}.jpeg`,
-    alt: `${name}, product view ${index + 1}`,
-    kind: index === 0 ? 'full' as const : 'detail' as const,
-  }))
 const optimizedImages = (slug: string, count: number, name: string) =>
   Array.from({ length: count }, (_, index) => ({
     src: `/images/products/optimized/${slug}-${index + 1}.jpg`,
     alt: `${name}, supplied edited view ${index + 1}`,
-    kind: 'detail' as const,
+    kind: index === 0 ? 'full' as const : 'detail' as const,
   }))
 
 export const products: Product[] = [
@@ -53,7 +47,7 @@ export const products: Product[] = [
       spec('surface', 'Color', 'Black or white'),
     ],
     moq: sourceMoq,
-    images: [...sourceImages('pp-glass-fiber-board', 7, 'PP glass fiber board'), ...optimizedImages('pp-glass-fiber-board', 5, 'PP glass fiber board')],
+    images: optimizedImages('pp-glass-fiber-board', 5, 'PP glass fiber board'),
     relatedSlugs: ['lwrt-board', 'pet-pp-composite-sheet'],
     status: 'published',
   },
@@ -130,7 +124,7 @@ export const products: Product[] = [
       field('orientation', 'Fiber orientation'),
     ],
     moq: sourceMoq,
-    images: [...sourceImages('lwrtud-felt-sheet', 2, 'LWRTUD felt or sheet'), ...optimizedImages('lwrtud-felt-sheet', 2, 'LWRTUD felt or sheet')],
+    images: optimizedImages('lwrtud-felt-sheet', 2, 'LWRTUD felt or sheet'),
     relatedSlugs: ['lwrt-board', 'pet-non-woven-pile-carpet'],
     status: 'published',
   },
@@ -158,7 +152,7 @@ export const products: Product[] = [
       spec('color', 'Color', 'Black or white'),
     ],
     moq: sourceMoq,
-    images: [...sourceImages('pet-pp-composite-sheet', 4, 'PET/PP composite sheet'), ...optimizedImages('pet-pp-composite-sheet', 4, 'PET/PP composite sheet')],
+    images: optimizedImages('pet-pp-composite-sheet', 4, 'PET/PP composite sheet'),
     relatedSlugs: ['pp-glass-fiber-board', 'pet-foam-board'],
     status: 'published',
   },
@@ -187,7 +181,7 @@ export const products: Product[] = [
       spec('color', 'Color', 'Black or white'),
     ],
     moq: sourceMoq,
-    images: [...sourceImages('pet-non-woven-pile-carpet', 2, 'PET non-woven or pile carpet'), ...optimizedImages('pet-non-woven-pile-carpet', 2, 'PET non-woven or pile carpet')],
+    images: optimizedImages('pet-non-woven-pile-carpet', 2, 'PET non-woven or pile carpet'),
     relatedSlugs: ['lwrtud-felt-sheet', 'pet-foam-board'],
     status: 'published',
   },
@@ -220,7 +214,7 @@ export const products: Product[] = [
       spec('color', 'Color', 'Black'),
     ],
     moq: sourceMoq,
-    images: [...sourceImages('phc-fiberglass-composite-panel', 5, 'PHC fiberglass composite panel'), ...optimizedImages('phc-fiberglass-composite-panel', 5, 'PHC fiberglass composite panel')],
+    images: optimizedImages('phc-fiberglass-composite-panel', 5, 'PHC fiberglass composite panel'),
     relatedSlugs: ['pet-foam-board', 'pp-glass-fiber-board'],
     status: 'published',
   },
@@ -250,7 +244,7 @@ export const products: Product[] = [
       spec('color', 'Color', 'White'),
     ],
     moq: sourceMoq,
-    images: [...sourceImages('pp-bamboo-hemp-fiberboard', 3, 'PP bamboo or hemp fiberboard'), ...optimizedImages('pp-bamboo-hemp-fiberboard', 3, 'PP bamboo or hemp fiberboard')],
+    images: optimizedImages('pp-bamboo-hemp-fiberboard', 3, 'PP bamboo or hemp fiberboard'),
     relatedSlugs: ['pp-glass-fiber-board', 'lwrt-board'],
     status: 'published',
   },
@@ -277,7 +271,7 @@ export const products: Product[] = [
       spec('color', 'Color', 'Black'),
     ],
     moq: sourceMoq,
-    images: [...sourceImages('pet-foam-board', 2, 'PET foam board'), ...optimizedImages('pet-foam-board', 2, 'PET foam board')],
+    images: optimizedImages('pet-foam-board', 2, 'PET foam board'),
     relatedSlugs: ['phc-fiberglass-composite-panel', 'pet-pp-composite-sheet'],
     status: 'published',
   },
