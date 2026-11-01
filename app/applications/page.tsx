@@ -80,7 +80,7 @@ export default async function ApplicationsPage() {
                         alt={application.image.alt}
                         fill
                         sizes="(min-width: 768px) 35vw, 100vw"
-                        className="object-contain mix-blend-multiply"
+                        className="object-cover"
                       />
                     </div>
                     <figcaption className="text-muted-foreground px-5 pb-4 text-xs">

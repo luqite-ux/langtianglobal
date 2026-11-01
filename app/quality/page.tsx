@@ -123,7 +123,7 @@ export default async function QualityPage() {
 
       <Section tone="muted" labelledBy="recognition-title">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
-          <Reveal>
+          <Reveal className="lg:self-center">
             <h2 id="recognition-title" className="text-3xl font-bold tracking-tight">
               {englishText('recognition_title', 'Company recognition')}
             </h2>

@@ -7,6 +7,11 @@ export const applications: Application[] = [
     summary: 'Roof-lining substrates and sandwich-type headliner structures.',
     detail:
       'Headliner parts are usually judged on weight, stiffness, formability and how well the substrate accepts a decorative layer. Tell us your target thickness and layup so we can point to suitable material families.',
+    image: {
+      src: '/images/products/optimized/pp-glass-fiber-board-2.jpg',
+      alt: 'White felt-faced LWRT board supplied for lightweight automotive interior structures',
+      caption: 'White felt-faced LWRT board.',
+    },
   },
   {
     slug: 'door-panels',
@@ -14,6 +19,11 @@ export const applications: Application[] = [
     summary: 'Substrate boards for door-trim parts.',
     detail:
       'Door-trim parts often combine a formed substrate with a decorative surface. Share the part drawing, surface requirement and forming route to narrow the choice between sheet and natural-fiber options.',
+    image: {
+      src: '/images/products/optimized/pp-glass-fiber-board-1.jpg',
+      alt: 'Dark felt-faced LWRT formed panel with cut-outs for an automotive interior part',
+      caption: 'Felt-faced LWRT formed panel.',
+    },
   },
   {
     slug: 'luggage-compartment-liners',
@@ -35,10 +45,9 @@ export const applications: Application[] = [
     detail:
       'Spare-tire covers are molded parts, often with embossed features such as a circular recess. Material choice depends on the part geometry and the forming route you use.',
     image: {
-      src: '/images/applications/molded-cover-stack.jpg',
-      alt: 'Stack of dark molded composite parts with a circular embossed recess',
-      caption:
-        'Stack of molded parts with a circular embossed recess.',
+      src: '/images/products/optimized/pp-glass-fiber-board-3.jpg',
+      alt: 'Stack of black PP glass fiber boards for formed automotive interior structures',
+      caption: 'Black PP glass fiber board stack.',
     },
   },
   {
@@ -47,5 +56,10 @@ export const applications: Application[] = [
     summary: 'Further interior parts that use sheet, felt or panel materials.',
     detail:
       'If your part is not listed, describe it in an inquiry. Material suitability is confirmed against your part requirements.',
+    image: {
+      src: '/images/products/optimized/pp-glass-fiber-board-5.jpg',
+      alt: 'Stack of gray felt-faced LWRT boards for automotive interior structures',
+      caption: 'Gray felt-faced LWRT board stack.',
+    },
   },
 ]

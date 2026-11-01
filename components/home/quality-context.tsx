@@ -31,7 +31,7 @@ export async function QualityContext({ content }: { content?: SiteModuleProps })
       <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
         <SectionHeading
           id="quality-title"
-          className="mb-0 lg:flex-col lg:items-start lg:justify-start"
+          className="mb-0 lg:flex-col lg:items-start lg:justify-start lg:pt-12"
           eyebrow={cmsText(content, 'eyebrow', 'Quality and certificates')}
           title={cmsText(content, 'title', 'Management-system certificates, with their scope')}
           description={cmsText(content, 'description', 'View the ISO 14001 and IATF 16949 certificate copies, including their stated scope and dates.')}
@@ -76,18 +76,18 @@ export async function QualityContext({ content }: { content?: SiteModuleProps })
               </Link>
             </Reveal>
           ))}
-          <Reveal as="li" delay={160} className="sm:col-span-2">
-            <Link href="/quality#recognition-title" className="bg-card hover:border-primary/70 group grid h-full gap-5 border p-6 transition-colors sm:grid-cols-[120px_1fr]">
-              <Image src={recognitionImage.src} alt={recognitionImage.alt} width={120} height={180} className="h-36 w-full bg-white object-contain" />
-              <span className="flex flex-col justify-center">
-                <span className="font-display text-xl font-bold">{cmsText(quality, 'recognition_title', 'High-tech enterprise certificate copy')}</span>
-                <span className="text-muted-foreground mt-2 text-sm">{cmsText(quality, 'recognition_text_1', 'Issued 13 December 2023 with a three-year printed term. Confirm current status with the issuing authority.')}</span>
-                <span className="text-primary mt-4 inline-flex items-center gap-1.5 text-sm font-semibold">View certificate details <ArrowRight aria-hidden="true" className="size-4" /></span>
-              </span>
-            </Link>
-          </Reveal>
         </ul>
       </div>
+      <Reveal delay={160} className="mt-8 lg:mt-10">
+        <Link href="/quality#recognition-title" className="bg-card hover:border-primary/70 group grid min-h-48 w-full gap-6 border p-6 transition-colors sm:grid-cols-[160px_1fr] sm:items-center sm:p-8">
+          <Image src={recognitionImage.src} alt={recognitionImage.alt} width={160} height={220} className="h-40 w-full bg-white object-contain" />
+          <span className="flex flex-col justify-center">
+            <span className="font-display text-xl font-bold">{cmsText(quality, 'recognition_title', 'High-tech enterprise certificate copy')}</span>
+            <span className="text-muted-foreground mt-2 text-sm">{cmsText(quality, 'recognition_text_1', 'Issued 13 December 2023 with a three-year printed term. Confirm current status with the issuing authority.')}</span>
+            <span className="text-primary mt-4 inline-flex items-center gap-1.5 text-sm font-semibold">View certificate details <ArrowRight aria-hidden="true" className="size-4" /></span>
+          </span>
+        </Link>
+      </Reveal>
       <div className="mt-10 grid gap-4 sm:grid-cols-2">
         {wallImages.map((image, index) => (
           <Reveal key={image.src} delay={index * 80}>

@@ -16,6 +16,12 @@ const optimizedImages = (slug: string, count: number, name: string) =>
     alt: `${name}, supplied edited view ${index + 1}`,
     kind: index === 0 ? 'full' as const : 'detail' as const,
   }))
+const productImages = (slug: string, indexes: number[], name: string) =>
+  indexes.map((index, position) => ({
+    src: `/images/products/optimized/${slug}-${index}.jpg`,
+    alt: `${name}, supplied edited view ${index}`,
+    kind: position === 0 ? 'full' as const : 'detail' as const,
+  }))
 
 export const products: Product[] = [
   {
@@ -47,7 +53,7 @@ export const products: Product[] = [
       spec('surface', 'Color', 'Black or white'),
     ],
     moq: sourceMoq,
-    images: optimizedImages('pp-glass-fiber-board', 5, 'PP glass fiber board'),
+    images: productImages('pp-glass-fiber-board', [3, 4], 'PP glass fiber board'),
     relatedSlugs: ['lwrt-board', 'pet-pp-composite-sheet'],
     status: 'published',
   },
@@ -87,7 +93,7 @@ export const products: Product[] = [
       ),
     ],
     moq: sourceMoq,
-    images: [],
+    images: productImages('pp-glass-fiber-board', [1, 2, 5], 'LWRT board'),
     relatedSlugs: ['lwrtud-felt-sheet', 'pp-glass-fiber-board'],
     notes: [
       'No thermal expansion multiplier is published on this page. The figure depends on grade and is stated on the technical data sheet.',
