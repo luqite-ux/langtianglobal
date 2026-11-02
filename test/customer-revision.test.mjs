@@ -42,3 +42,10 @@ test('application images fill their frames and quality layouts match the request
   assert.match(homeQuality, /lg:pt-12/)
   assert.match(qualityPage, /lg:self-center/)
 })
+
+test('product category artwork fills the card image stage without side gaps', async () => {
+  const source = await read('components/products/category-card.tsx')
+
+  assert.match(source, /className="object-cover transition-transform/)
+  assert.doesNotMatch(source, /object-contain mix-blend-multiply/)
+})
